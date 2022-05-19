@@ -7,7 +7,7 @@
 
 <h3>Sürümler 📮</h3>
 
-- pyrogram version 0.9.0 
+- pyrogram  1.3.6
 
 <h3>Yeni Eklenen 💡</h3>
 
