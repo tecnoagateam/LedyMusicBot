@@ -56,7 +56,7 @@ async def bilgi(_, message: Message):
                          "✦ Ana menyu", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "🍁 Admin 🍁", url="https://t.me/Tenha055")
+                         "🍁 Support 🍁", url="https://t.me/Tenha055")
                  ]
              ]
          )
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🍁 Admin 🍁", url="https://t.me/Tenha055")
+            "🍁 Support 🍁", url="https://t.me/Tenha055")
         ]
       ]
      ))
@@ -95,7 +95,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Admin 🍁", url="https://t.me/Tenha055")
+                         "🍁 Support 🍁", url="https://t.me/Tenha055")
                  ],
                  [
                      InlineKeyboardButton(
@@ -113,7 +113,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Admin 🍁", url="https://t.me/Tenha055")
+                         "🍁 Support 🍁", url="https://t.me/Tenha055")
                  ],
                  [
                      InlineKeyboardButton(
@@ -139,7 +139,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🔊 Asistan", url="https://t.me/LedyMusicAssistant"
                     ),
                     InlineKeyboardButton(
-                        "🍁 Support", url="https://t.me/SOQrup"
+                        "🍁 Support 🍁", url="https://t.me/SOQrup"
                     )
                 ],
                 [
