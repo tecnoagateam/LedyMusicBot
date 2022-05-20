@@ -16,23 +16,23 @@ from pytgcalls.types.input_stream import InputStream
 
 ACTV_CALLS = []
 
-@Client.on_message(command(["durdur", "pause"]) & other_filters)
+@Client.on_message(command(["dayandir", "pause"]) & other_filters)
 @errors
 @authorized_users_only
 async def durdur(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
-    a = await message.reply_text("▶️ **Müzik duraklatıldı!**\n\n• Müzik kullanımına devam etmek için **komut » devam**")
+    a = await message.reply_text("▶️ **Müsiqi dayandırıldı!**\n\n• Müsiqini yayınlamağa davam etmək üçün **Əmr » davam**")
     await sleep(3)
     await a.delete()
     
 
 
-@Client.on_message(command(["devam", "resume"]) & other_filters)
+@Client.on_message(command(["davam", "resume"]) & other_filters)
 @errors
 @authorized_users_only
 async def devam(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **Müzik devam ediyor!**\n\n• Müzik kullanımı duraklatmak için **komut » durdur**")
+    a = await message.reply_text("⏸ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr » duyandir**")
     await sleep(3)
     await a.delete()
     
@@ -46,7 +46,7 @@ async def stop(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("🙄 **Şu anda müzik çalmıyor**")
+        await message.reply_text("🙄 **İmdi müsiqi yayinlanmır**")
     else:
         try:
             queues.clear(chat_id)
@@ -55,7 +55,7 @@ async def stop(_, message: Message):
         await callsmusic.pytgcalls.leave_group_call(chat_id)
         await _.send_message(
             message.chat.id,
-            "✅ **Müzik durduruldu !**\n\n• **Userbot sesli sohbet bağlantısı kesildi. !**"
+            "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
 @Client.on_message(command(["atla", "skip"]) & other_filters)
