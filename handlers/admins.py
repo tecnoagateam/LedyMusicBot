@@ -133,7 +133,7 @@ async def change_ses(client, message):
        callsmusic.pytgcalls.change_volume_call(chat_id, volume=int(range))
        await message.reply(f"✅ **ayarlandı:** ```{range}%```")
     except Exception as e:
-       await message.reply(f"**hata:** {e}")
+       await message.reply(f"**xəta:** {e}")
 
 @Client.on_message(command(["yenile", "reload"]) & other_filters)
 @errors
