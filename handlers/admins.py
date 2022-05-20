@@ -46,7 +46,7 @@ async def stop(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("🙄 **İmdi müsiqi yayinlanmır**")
+        await message.reply_text("🙄 **İndi müsiqi yayinlanmır**")
     else:
         try:
             queues.clear(chat_id)
@@ -67,7 +67,7 @@ async def atla(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        a = await message.reply_text("Atlatılacak bişey yok!")
+        a = await message.reply_text("Atladılacaq birşey yox!")
         await sleep(3)
         await a.delete()
     else:
@@ -85,26 +85,26 @@ async def atla(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("➡️ **Şarkı 💫 Atlatıldı.**")
+        a = await message.reply_text("➡️ **Musiqi 💫 Atladıldı.**")
         await sleep(3)
         await a.delete()
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
-# Gayet güzel çalışıyor. @Mahoaga Tarafından Eklenmiştir. 
+# Gayet güzel çalışıyor. @Tenha055 Tarafından Eklenmiştir. 
 @Client.on_message(command("ver") & other_filters)
 @authorized_users_only
 async def authenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("Kullanıcıya Yetki Vermek için yanıtlayınız!")
+        await message.reply("Kullancıya Yetki Vermək üçün yanıtlayın!")
         return
     if message.reply_to_message.from_user.id not in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.append(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("kullanıcı yetkili.")
+        await message.reply("kullancı yetkili.")
     else:
-        await message.reply("✔ Kullanıcı Zaten Yetkili!")
+        await message.reply("✔ Kullancı Artıq Yetkili!")
 
 
 @Client.on_message(command("al") & other_filters)
@@ -112,7 +112,7 @@ async def authenticate(client, message):
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("✅ Kullanıcıyı yetkisizleştirmek için mesaj atınız!")
+        await message.reply("✅ Kullancıyı yetkisizləşdirmək üçün yanıtlayın!")
         return
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
@@ -120,7 +120,7 @@ async def deautenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("kullanıcı yetkisiz")
     else:
-        await message.reply("✅ Kullanıcının yetkisi alındı!")
+        await message.reply("✅ Kullancının yetkisi alındı!")
 
 
 # Sesli sohbet için 0-200 arası yeni komut eklenmiş oldu. 
@@ -131,11 +131,11 @@ async def change_ses(client, message):
     chat_id = message.chat.id
     try:
        callsmusic.pytgcalls.change_volume_call(chat_id, volume=int(range))
-       await message.reply(f"✅ **Birim olarak ayarlandı:** ```{range}%```")
+       await message.reply(f"✅ **ayarlandı:** ```{range}%```")
     except Exception as e:
        await message.reply(f"**hata:** {e}")
 
-@Client.on_message(command("reload") & other_filters)
+@Client.on_message(command(["yenile", "reload"]) & other_filters)
 @errors
 @authorized_users_only
 async def update_admin(client, message):
@@ -147,5 +147,5 @@ async def update_admin(client, message):
     admins[message.chat.id] = new_admins
     await client.send_message(
         message.chat.id,
-        "✅ **Bot yeniden başladı!**\n✅ **Admin listesi güncellendi!**"
+        "✅ **Bot yenidən başladı!**\n✅ **Admin Siyahısı yeniləndi!**"
     )
