@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
-                caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə müsiqi oynada bilən botam. Qrupa mənə admin hüquqları verməyiniz şərt.**"""),
+                caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli söhbətlərdə müsiqi oynada bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -27,7 +27,7 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Əmrlər" , callback_data= "cbbilgi"
+                        "📚 Əmrlər" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
                         "📱 Rəsmi Kanal", url=f"https://t.me/ledyplaylist"
@@ -40,7 +40,7 @@ async def start(_, message: Message):
   
 
 
-@Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"]))
+@Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
       await message.reply_text(" ❗ Qeyd:\nBotun aktif çalışması üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
@@ -63,7 +63,7 @@ async def bilgi(_, message: Message):
     )
 
 
-@Client.on_callback_query(filters.regex("cbbilgi"))
+@Client.on_callback_query(filters.regex("cbmelumat"))
 async def cbbilgi(_, query: CallbackQuery):
     await query.edit_message_text(" ❗ Qeyd:\nBotun aktif çalışması üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🍁 Support 🍁", url="https://t.me/Tenha055")
+            "🍁 Support 🍁", url="https://t.me/SOQrup")
         ]
       ]
      ))
@@ -95,11 +95,11 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Support 🍁", url="https://t.me/Tenha055")
+                         "🍁 Support 🍁", url="https://t.me/SOQrup")
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri ⬅️", callback_data="cbbilgi")
+                         "⬅️ Geri ⬅️", callback_data="cbmelumat")
                  ] 
              ]
          )
@@ -113,11 +113,11 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Support 🍁", url="https://t.me/Tenha055")
+                         "🍁 Support 🍁", url="https://t.me/SOQrup")
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri ⬅️", callback_data="cbbilgi")
+                         "⬅️ Geri ⬅️", callback_data="cbmelumat")
                  ] 
              ]
          )
@@ -144,7 +144,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Əmrlər" , callback_data= "cbbilgi"
+                        "📚 Əmrlər" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
                         "📱 Rəsmi Kanal ", url=f"https://t.me/ledyplaylist"
