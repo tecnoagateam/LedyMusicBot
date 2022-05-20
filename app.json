@@ -1,8 +1,9 @@
 {
-  "name": "Ledy Music",
-  "description": "Telegram'ınızın Grup Sesli Sohbeti'nde şarkı çalmak için Açık Kaynaklı bot. Powered by Mehmetbaba55.",
+  "name": "🍁 Ledy Music 🍁",
+  "description": "Telegram Səsli söhbət yayın Bot'u.",
+  "logo": ""
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/AzeMusic/supermusic",
+  "repository": "https://github.com/AzeMusic/LedyMusicBot",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
