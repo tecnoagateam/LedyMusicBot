@@ -8,7 +8,6 @@
     "SESSION_NAME": {
       "description": "Pyrogram oturum dizesi (Replit.com)",
       "required": true
-      "value": "@tenha055 ə yaz diyər"
     },
     "BOT_TOKEN": {
       "description": "Bir bot belirteci @botfather ile alınız",
@@ -21,23 +20,23 @@
     },
     "BOT_USARNAME": {
       "description": "Müzik Oynatıcı Bot Kullanıcı İsmi @ olmadan yazınız.",
-      "required": true,
+      "required": false,
       "value": "SSmusicLedy_bot"
      
     },
     "API_ID": {
       "description": "my.telegram'dan uygulama kimliği.org/apps",
-      "required": true
+      "required": false,
       "value": "18052289"
     },
     "API_HASH": {
       "description": "My.telegram'dan uygulama apı-hash.org/apps",
-      "required": true
+      "required": false,
       "value": "552525f45a3066fee54ca7852235c19c"
     },
     "SUDO_USERS": {
       "description": "Her yerde yönetici olarak sayılan kullanıcı kimliklerinin listesi (Müzik hesabınının id'si).",
-      "required": true
+      "required": false,
       "value": "1924693109"
     },
     "DURATION_LIMIT": {
