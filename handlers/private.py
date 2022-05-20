@@ -19,7 +19,7 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/LedyMusicAssistant"
+                        "🔊 Assistant", url="https://t.me/LedyMusicAssistant"
                     ),
                     InlineKeyboardButton(
                         "🛠️ Support", url="https://t.me/SOQrup"
@@ -47,16 +47,16 @@ async def bilgi(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "✦ Hərkəs üçün əmrlər", callback_data="herkes")
+                         "🍁 Hərkəs üçün Əmrlər", callback_data="herkes")
                  ],[                     
                      InlineKeyboardButton(
-                         "✦ Adminlər üçün Əmrlər", callback_data="admin")
+                         "🍁 Adminlər üçün Əmrlər", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
-                         "✦ Ana menyu", callback_data="cbstart")
+                         "🍁 Ana menyu", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "🍁 Support 🍁", url="https://t.me/Tenha055")
+                         "🛠️ Support", url="https://t.me/SOQrup")
                  ]
              ]
          )
@@ -78,11 +78,11 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🏠 Ana Menüyu", callback_data="cbstart")
+            "🏠 Ana Menyu", callback_data="cbstart")
         ],
         [
           InlineKeyboardButton(
-            "🍁 Support 🍁", url="https://t.me/SOQrup")
+            "🛠️ Support ", url="https://t.me/SOQrup")
         ]
       ]
      ))
@@ -95,7 +95,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Support 🍁", url="https://t.me/SOQrup")
+                         "🛠️ Support", url="https://t.me/SOQrup")
                  ],
                  [
                      InlineKeyboardButton(
@@ -113,7 +113,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Support 🍁", url="https://t.me/SOQrup")
+                         "🛠️ Support", url="https://t.me/SOQrup")
                  ],
                  [
                      InlineKeyboardButton(
@@ -131,15 +131,15 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Qrubuna Əlavə et ❱ ➕", url=f"https://t.me/SSmusicLedy_bot?startgroup=true"
+                        "🍁 ❰ Qrubuna Əlavə et ❱ 🍁", url=f"https://t.me/SSmusicLedy_bot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/LedyMusicAssistant"
+                        "🔊 Assistant", url="https://t.me/LedyMusicAssistant"
                     ),
                     InlineKeyboardButton(
-                        "🍁 Support 🍁", url="https://t.me/SOQrup"
+                        "🛠️ Support", url="https://t.me/SOQrup"
                     )
                 ],
                 [
