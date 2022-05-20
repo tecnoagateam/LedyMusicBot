@@ -11,14 +11,14 @@ async def showid(client, message):
     if chat_type == "private":
         user_id = message.chat.id
         await message.reply_text(
-            f"<code>{user_id}</code>",
+            f"Sənin ID-in: <code>{user_id}</code>",
             quote=True
         )
 
     elif chat_type in ["group", "supergroup"]:
         _id = ""
         _id += (
-            "<b>Söhbet kimliyi</b>: "
+            "<b>Söhbət kimliyi</b>: "
             f"<code>{message.chat.id}</code>\n"
         )
         if message.reply_to_message:
