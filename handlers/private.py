@@ -90,7 +90,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu 😉\n\n ▶️ /oynat <song name> - istədiyin musiqini oynat\n 🍁 \n 🎵 /bul <song name> - istədiyiniz musiqini sürətli endirə bilərsiniz \n 🎵 /vbul istədiyiniz videonu sürətli endirə bilərsiniz\n 🔍 /ara <query> - YouTube-dən video linkləri axtar \n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu 😉\n\n ▶️ /oynad <song name> - istədiyin musiqini oynad\n 🍁 \n 🎵 /tap <song name> - istədiyiniz musiqini sürətli endirə bilərsiniz \n 🎵 /vtap istədiyiniz videonu sürətli endirə bilərsiniz\n 🔍 /ara <query> - YouTube-dən video linkləri axtar \n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -108,7 +108,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Ərmlər menyusu🤩\n\n ▶️ /devam - musiqi oynatmaqa davam et\n ⏸️ /durdur - çalan parçayı duraklatmak için\n 🔄 /atla- Sıraya alınmış müzik parçasını atlatır.\n ⏹ /son - müzik çalmayı durdurma\n 🔼 /ver botun sadece yönetici için kullanılabilir olan komutlarını kullanabilmesi için kullanıcıya yetki ver\n 🔽 /al botun yönetici komutlarını kullanabilen kullanıcının yetkisini al\n\n ⚪ /asistan - Müzik asistanı grubunuza katılır.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Ərmlər menyusu🤩\n\n ▶️ /davam - musiqi oynatmaqa davam et\n ⏸️ /dayandir - oynayan treki duraklatmak için\n 🔄 /atla- Sıraya alınmış müsiqini atladır.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün kullanılabən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n\n ⚪ /assistant - assistanr qrubunuza qatılır.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
