@@ -33,7 +33,7 @@ def authorized_users_only(func: Callable) -> Callable:
 
 # Utils Helper
 def humanbytes(size):
-    """baytları Baytlara Dönüştür ki İnsan Okuyabilsin"""
+    """İnsanların oxuya bilməsi üçün baytları bayta çevirin"""
     if not size:
         return ""
     power = 2 ** 10
