@@ -1,4 +1,4 @@
-   **Telegram səsli söhbət Music Bot'u**
+   **Telegram səsli söhbət Musiqi Bot'u**
 
 :::::::::::::::::::::::::**LEDY MUSİC**::::::::::::::::::::::::::
 ![🍁 Ledy Music 🍁](https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg)
