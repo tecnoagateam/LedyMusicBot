@@ -1,4 +1,4 @@
-   **Telegram  Səsli  Səhbət  Yayın  Bot'u**
+   **Telegram  Səsli  Səhbət  Yayın  Bot'u 🎧**
  __________
 :::::::::::::::::::::::::**LEDY MUSİC**::::::::::::::::::::::::::
 ![🍁 Ledy Music 🍁](https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg)
