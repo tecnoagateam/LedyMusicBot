@@ -25,6 +25,5 @@
 <summary><b>Credits</b></summary>
 <br>
 
-  •[``MR AĞA``](https://github.com/AzeMusic)
-•
+  •[``MR AĞA``](https://github.com/AzeMusic)•
   
