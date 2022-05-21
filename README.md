@@ -13,3 +13,5 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AzeMusic/LedyMusicBot)
 
 
+<a href="https://t.me/ledyplaylist"><img src="https://img.shields.io/badge/Kanal%20Ledy%3F-yes-blue?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/SOQrup"><img src="https://img.shields.io/badge/Support%20Ledy%3F-yes-blue?&style=flat-square?&logo=telegram" width=220px></a></p>
