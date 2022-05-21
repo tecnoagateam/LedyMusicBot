@@ -17,6 +17,4 @@
   ------
  <a href="https://t.me/SOQrup"><img src="https://img.shields.io/badge/Dəstək%20Support%3F-blue?&style=flat-?&logo=telegram" width=220px></a></p>
  __________________
- |                |
- |
- |
+ 
