@@ -5,7 +5,7 @@
   <img src="https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg">
 </p> 
 
- 
+ ![logo](https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg)
 
 
 <h4>🔺 Herokuya Dağıt 🔻</h4>
