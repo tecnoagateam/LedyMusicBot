@@ -21,7 +21,7 @@
 <a href="https://t.me/SOQrup"><img src="https://img.shields.io/badge/Dəstək%20Support%3F-blue?&style=?&logo=telegram" width=220px></a></p>
  __________________
  
-[![MR AĞA](https://t.me/Tenha055)](https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg)
+[![MR AĞA](https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg)](https://t.me/Tenha055)
 
 
 <details>
