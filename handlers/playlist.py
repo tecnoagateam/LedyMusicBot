@@ -1,4 +1,4 @@
-from config import BOT_NAME
+from config import BOT_USERNAME
 
 from pyrogram import Client
 from pyrogram.types import (
@@ -17,7 +17,7 @@ keyboard = InlineKeyboardMarkup(
 )
 
 
-@Client.on_message(command(["playlist", f"playlist@{BOT_NAME}", "novbe", f"novbe@{BOT_NAME}"]) & other_filters)
+@Client.on_message(command(["playlist", f"playlist@{BOT_USERNAME}", "novbe", f"novbe@{BOT_USERNAME}"]) & other_filters)
 @check_blacklist()
 async def playlist(client, m: Message):
     chat_id = m.chat.id
