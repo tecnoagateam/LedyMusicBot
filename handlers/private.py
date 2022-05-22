@@ -10,7 +10,7 @@ async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
                 caption=(f"""✧══════════•❀•═════════✧
- **Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}! Super Fast Bot🍁\nSəsli söhbətlərdə müsiqi oynada bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧══════════•❀•═════════✧
+**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music🍁\nSəsli söhbətlərdə müsiqi oynada bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧══════════•❀•═════════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -76,7 +76,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "👑 Admin Əmrləri ",callback_data ="admin")
+            "🧑‍✈️ Admin Əmrləri 🧑‍✈️",callback_data ="admin")
         ],
         [
           InlineKeyboardButton(
@@ -92,7 +92,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu 😉\n\n ▶️ /oynad <song name> - istədiyin musiqini oynad\n 🍁 \n 🎵 /tap <song name> - istədiyiniz musiqini sürətli endirə bilərsiniz \n 🎵 /vtap istədiyiniz videonu sürətli endirə bilərsiniz\n 🔍 /axtar <query> - YouTube-dən video linkləri axtar \n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu:\n\n ▶️ /oynad <song name> - istədiyin musiqiyi dinlə\n  \n 🎵 /tap <song name> - istədiyin musiqini sürətli endirə bilərsən \n 🎥 /vtap istədiyin videonu sürətli endirə bilərsən\n 🔍 /axtar <query> - YouTube-dən video linkləri axtar \n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -110,7 +110,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Ərmlər menyusu🤩\n\n ▶️ /davam - musiqi oynatmaqa davam et\n ⏸️ /dayandir - oynayan treki duraklatmak üçün\n 🔄 /atla- Sıraya alınmış müsiqini atladır.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n\n ⚪ /assistantelavet - assistant qrubunuza qatılar.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Əmrlər menyusu:\n\n ▶️ /davam - musiqi oynatmağa davam et\n ⏸️ /dayandir - oynayan musiqini dayandırmaq üçün\n 🔄 /atla- Oynadılan müsiqini atladır.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n\n ⚪ /assistantelavet - assistant qrubunuza qatılar.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
