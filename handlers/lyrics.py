@@ -14,10 +14,10 @@ from pyrogram import Client as pbot
 
 @pbot.on_message(filters.command(["lyric", "lyrics"]))
 async def _(client, message):
-    lel = await message.reply("Searching For Lyrics.....")
+    lel = await message.reply("Mahnı Sözləri Axtarılır...")
     query = message.text
     if not query:
-        await lel.edit("`What I am Supposed to find `")
+        await lel.edit("`Mən nə tapmalıyam`")
         return
 
     song = ""
@@ -26,9 +26,9 @@ async def _(client, message):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
+            reply = "Həmin mahnı üçün heç bir söz tapılmadı!"
     else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
+        reply = "lyrics tapılmadı! ifaçı adı ilə birlikdə mahnı ilə birlikdə cəhd edin."
 
     if len(reply) > 4095:
         with io.BytesIO(str.encode(reply)) as out_file:
