@@ -13,7 +13,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>İlk Məni  Yönətici Etməlisən</b>",
+            "<b>İlk Öncə Məni  Yönətici Etməlisən</b>",
         )
         return
 
@@ -27,7 +27,7 @@ async def addchannel(client, message):
         await USER.send_message(message.chat.id,"Sənin əmrinə Gəldim")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>Assistan Artıq Qrupta Var</b>",
+            "<b>Assistant uğurla Qrupa Qoşuldu</b>",
         )
         pass
     except Exception as e:
