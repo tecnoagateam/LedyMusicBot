@@ -145,7 +145,7 @@ async def play(_, message: Message):
     url = get_url(message)
 
     if audio:
-        if round(audio.duration / 60) > DURATION_LIMIT:
+        if round(audio.duration / 400) > DURATION_LIMIT:
             raise DurationLimitError(
                 f"❌ Daha uzun videolar {DURATION_LIMIT} dəqiqələrin oynadılamasına icazə verilməz!"
             )
