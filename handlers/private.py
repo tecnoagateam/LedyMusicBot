@@ -9,8 +9,8 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
-                caption=(f"""✧══════════•❀•═════════✧/n
-**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}! Super Fast Bot🍁\nSəsli söhbətlərdə müsiqi oynada bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**/n✧══════════•❀•═════════✧
+                caption=(f"""✧══════════•❀•═════════✧
+ **Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}! Super Fast Bot🍁\nSəsli söhbətlərdə müsiqi oynada bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧══════════•❀•═════════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
