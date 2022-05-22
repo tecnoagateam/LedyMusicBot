@@ -7,7 +7,6 @@ from pyrogram.types import (
     Message,
 )
 
-from callsmusic.decorators import check_blacklist
 from callsmusic.queues import QUEUE, get_queue
 from callsmusic.callsmusic import command, other_filters
 
