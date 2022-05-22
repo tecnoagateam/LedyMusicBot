@@ -1,14 +1,12 @@
 import asyncio
 
-from pyrogram import Client
-from pyrogram import filters
-from pyrogram.types import Dialog
-from pyrogram.types import Chat
-from pyrogram.types import Message
+from pyrogram import Client, filters
+from pyrogram.types import Dialog, Chat, Message
 from pyrogram.errors import UserAlreadyParticipant
 
-from VCsMusicBot.services.callsmusic.callsmusic import client as USER
-from VCsMusicBot.config import SUDO_USERS
+from callsmusic.callsmusic import client as aditya
+from config import SUDO_USERS
+import asyncio
 
 @Client.on_message(filters.command(["broadcast", "yayin"]))
 async def broadcast(_, message: Message):
