@@ -1,4 +1,4 @@
-from config import BOT_USERNAME
+from config import BOT_NAME
 
 from pyrogram import Client
 from pyrogram.types import (
