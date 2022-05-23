@@ -27,7 +27,7 @@ async def addchannel(client, message):
         await USER.send_message(message.chat.id,"Sənin əmrinə Gəldim")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>Assistant uğurla Qrupa Qoşuldu</b>",
+            "<b>Assistant artıq Qrupdadır</b>",
         )
         pass
     except Exception as e:
@@ -38,7 +38,7 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-            "<b>Assistan Artıq Qrupta Var</b>",
+            "<b>🌿 Assistan uğurla Qrupa Qosuldu 🌿</b>",
         )
     
 @USER.on_message(filters.group & filters.command(["ayril", "assistantleave"]))
