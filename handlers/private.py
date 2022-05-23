@@ -9,8 +9,8 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
-                caption=(f"""✧══════════•❀•═════════✧
-**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music🍁\nSəsli söhbətlərdə müsiqi oynada bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧══════════•❀•═════════✧
+                caption=(f"""✧═════════•❀•═════════✧
+**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -52,13 +52,13 @@ async def bilgi(_, message: Message):
                          "🍁 Hərkəs üçün Əmrlər", callback_data="herkes")
                  ],[                     
                      InlineKeyboardButton(
-                         "🍁 Adminlər üçün Əmrlər", callback_data="admin")
+                         "🧑‍✈️ Adminlər üçün Əmrlər", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
-                         "🍁 Ana menyu", callback_data="cbstart")
+                         "🏠 Ana menyu", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "🛠️ Support", url="https://t.me/SOQrup")
+                         "🛠️ Dəstək", url="https://t.me/SOQrup")
                  ]
              ]
          )
@@ -84,7 +84,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🛠️ Support ", url="https://t.me/SOQrup")
+            "🛠️ Dəstək ", url="https://t.me/SOQrup")
         ]
       ]
      ))
@@ -97,7 +97,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🛠️ Support", url="https://t.me/SOQrup")
+                         "🛠️ Dəstək", url="https://t.me/SOQrup")
                  ],
                  [
                      InlineKeyboardButton(
@@ -115,7 +115,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🛠️ Support", url="https://t.me/SOQrup")
+                         "🛠️ Dəstək", url="https://t.me/SOQrup")
                  ],
                  [
                      InlineKeyboardButton(
@@ -128,7 +128,9 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə müsiqi oynada bilən botam. Qrupda admin hüquqları verməyiniz şərt..**""",
+    await query.edit_message_text(f"""**✧═════════•❀•═════════✧
+**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧    
+"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -141,7 +143,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🔊 Assistant", url="https://t.me/LedyMusicAssistant"
                     ),
                     InlineKeyboardButton(
-                        "🛠️ Support", url="https://t.me/SOQrup"
+                        "🛠️ Dəstək", url="https://t.me/SOQrup"
                     )
                 ],
                 [
