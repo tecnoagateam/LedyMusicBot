@@ -9,14 +9,14 @@
 [![🍁 𝗟 Ξ 𝗗 𝗬  𝗠 𝗨 𝗦 İ 𝗖 🍁](https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg)](https://t.me/SSmusicLedy_bot)
 :::::::::::::::::::::::::**LΞDY MUSİC**::::::::::::::::::::::::::
 
+        
+        ✧𝗟 Ξ 𝗗 𝗬 ❀ 𝗠 𝗨 𝗦 İ 𝗖✧
+     
+ 
 
      ✧═════════•❀•══════════✧
 
-   
-          
-        ✧𝗟 Ξ 𝗗 𝗬 ❀ 𝗠 𝗨 𝗦 İ 𝗖✧
-
-
+             
 <details>
 <summary><b>🏹 HEROKU DEPLOY 🏹</b></summary>
 <br>
