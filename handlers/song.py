@@ -49,13 +49,13 @@ def bul(client, message):
         )
         print(str(e))
         return
-    m.edit("`Musiqi yuklənir, Biraz gözləyin...⏱`")
+    m.edit("`Musiqini göndərirəm, Biraz gözləyin...⏱`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"☑️ **Ad**: [{title[:35]}]({link})\n🎬 **servis**: YouTube\n⏱️ **Vaxt**: `{duration}`\n👁‍🗨 **İzlənmə**: `{views}`\n📤 **Tərəfindən**: @SSmusicLedy_bot"
+        rep = f"🍁 **Ad**: [{title[:35]}]({link})\n🎬 **Servis**: YouTube\n⏱️ **Müddət**: `{duration}`\n👁‍🗨 **İzlənmə**: `{views}`\n📤 **Tərəfindən**: @SSmusicLedy_bot"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
