@@ -24,7 +24,7 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id,"Sənin əmrinə Gəldim")
+        await USER.send_message(message.chat.id,"♥️ Sənin əmrinə Gəldim ♥️")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>Assistant artıq Qrupdadır</b>",
