@@ -129,8 +129,7 @@ async def admin(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(f"""**✧═════════•❀•═════════✧
-**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧    
-"""),
+**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧    """,
          reply_markup=InlineKeyboardMarkup(
             [
                 [
