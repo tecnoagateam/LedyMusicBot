@@ -72,11 +72,11 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Music Adı: {title}", (255, 255, 255), font=font)
+    draw.text((190, 550), f"Ad: {title}", (255, 255, 255), font=font)
     draw.text(
-        (190, 590), f"Music vaxtı : {duration}", (255, 255, 255), font=font
+        (190, 590), f"Müddət: {duration}", (255, 255, 255), font=font
     )
-    draw.text((190, 630), f"İzlenme sayısı: {views}", (255, 255, 255), font=font)
+    draw.text((190, 630), f"İzlenme: {views}", (255, 255, 255), font=font)
     draw.text((190, 670),
         f"Sifariş: {requested_by}",
         (255, 255, 255),
@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Biraz gözləyin...**")
+    lel = await message.reply("🔄 **Səsliyə Qoşuluram...**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -161,7 +161,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🍁 Qapat",
+                        text="🍁 Bağla",
                         callback_data="cls")
                    
                 ]
@@ -198,10 +198,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🛠️ Support", url=f"https://t.me/SOQrup"),
+                InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup"),
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
-                InlineKeyboardButton("🍁 Qapat", callback_data="cls"),
+                InlineKeyboardButton("🍁 Bağlat", callback_data="cls"),
             ],
         ]
     )
@@ -229,10 +229,10 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit("🤔 **Dinləmək istədiyin musiqi nədir?**")
-        await lel.edit("🔎 **Biraz gözləyin...**")
+        await lel.edit("🔎 **Biraz Gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔄 **Səs İşlənir...🔥**")
+        await lel.edit("🔄 **Səsliyə Qoşuluram...**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -263,10 +263,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🛠️ Support", url=f"https://t.me/SOQrup"),
+                InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup"),
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
-                InlineKeyboardButton("🍁 Qapat", callback_data="cls"),
+                InlineKeyboardButton("🍁 Bağla", callback_data="cls"),
             ],
         ]
     )
@@ -286,7 +286,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**🎵 Musiqi:** {}\n**🕒 vaxt:** {} min\n**👉 sifarişçi:** {}\n\n**🚧 Hissə yeri:** {}".format(
+        caption="**🎵 Ad:** {}\n**🕒 Müddət:** {} min\n**🌿 Sifarişçi:** {}\n\n**🚧 Növbə:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -306,7 +306,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 musiqi:** {}\n**🕒 vaxt:** {} min\n**👉 sifarişçi:** {}\n\n**☑️ İndi burda yayınlanır `{}`...**".format(
+        caption="**🎵 Ad:** {}\n**🕒 Müddət:** {} min\n**🌿 Sifarişçi:** {}\n\n**🍁 Səslidə yayınlanır `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
