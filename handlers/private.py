@@ -5,7 +5,7 @@ from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
 # EfsaneMusicVaves tarafından düzenlendi. 
 
-@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
+@Client.on_message(command(["start", f"start@{BOT_USERNAME}", "ledy", f"ledy@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
@@ -24,7 +24,7 @@ async def start(_, message: Message):
                         "🔊 Assistant", url="https://t.me/LedyMusicAssistant"
                     ),
                     InlineKeyboardButton(
-                        "🛠️ Support", url="https://t.me/SOQrup"
+                        "🛠️ Dəstək", url="https://t.me/SOQrup"
                     )
                 ],
                 [
