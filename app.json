@@ -25,6 +25,11 @@
       "description": "",
       "required": true,
       "value": "SSmusicLedy_bot"
+    },
+    "PMPERMIT": {
+      "description": "",
+      "required": false,
+      "value": "off"
      
     },
     "API_ID": {
