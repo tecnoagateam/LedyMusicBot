@@ -28,9 +28,8 @@
     },
     "PMPERMIT": {
       "description": "",
-      "required": false,
-      "value": "off"
-     
+      "required": true,
+      "value": "on"
     },
     "API_ID": {
       "description": "",
