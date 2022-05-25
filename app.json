@@ -39,8 +39,13 @@
     },
     "SUDO_USERS": {
       "description": "",
-      "required": false,
+      "required": true,
       "value": "1924693109"
+    },
+    "COMMAND_PREFIXES": {
+    "description": "",
+      "required": true,
+      "value": "/ . ! $ * ,"
     },
     "DURATION_LIMIT": {
       "description": "",
