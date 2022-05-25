@@ -8,12 +8,12 @@
   "env": {
     "SESSION_NAME": {
       "description": "",
-      "required": false,
+      "required": true,
       "value": "AgAOWWIGqnaYhdAhyPxtZwdMSlsq9dbcvCE4ClbmncigNwP2_OaNenwDr0ThnmLmaTl1s6c694fzZgXDoCTUbosfc0T9CorC8l5Po8YgbqfArqiBLrPDADV3uJAGnCcXvrM6ERr5yzJaQg6xz-JKbhYWSGq2RQcLxGeJvt-P05fP5B0h8a5xqdvxnh-Un-D38ryPyUHEDfowKgxatNAzal5HmkFL19deDLHETT9uxWCAoKwoCvygqaDsbjmw1PBqULomyfv_l0tRmUXMaCDiMcAe9Lo2U-wufhndoZAXaCd-gaqM4A2ZNfmsDU9CR2GroXvkdBPVrvb6nXUE9R8GYN_XWp7lFQA"
     },
     "BOT_TOKEN": {
       "description": "",
-      "required": false,
+      "required": true,
       "value": "5146456073:AAFnPscOEytDNNuq8nEvch9moHVs0mFJ368"
     },
     "BOT_NAME": {
@@ -23,18 +23,18 @@
     },
     "BOT_USARNAME": {
       "description": "",
-      "required": false,
+      "required": true,
       "value": "SSmusicLedy_bot"
      
     },
     "API_ID": {
       "description": "",
-      "required": false,
+      "required": true,
       "value": "18052289"
     },
     "API_HASH": {
       "description": "",
-      "required": false,
+      "required": true,
       "value": "552525f45a3066fee54ca7852235c19c"
     },
     "SUDO_USERS": {
