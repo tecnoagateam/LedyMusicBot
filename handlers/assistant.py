@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from helpers.decorators import errors, authorized_users_only
 
-@Client.on_message(filters.group & filters.command(["qatil", "assistantelavet"]))
+@Client.on_message(filters.group & filters.command(["qatil", "assistantelavet", "qoşul", "qos"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -41,7 +41,7 @@ async def addchannel(client, message):
             "<b>🌿 Assistant uğurla Qrupa Qoşuldu 🌿</b>",
         )
     
-@USER.on_message(filters.group & filters.command(["ayril", "assistantleave"]))
+@USER.on_message(filters.group & filters.command(["ayril", "assistantleave", "get", "cix"]))
 async def rem(USER, message):
     try:
         await USER.leave_chat(message.chat.id)
