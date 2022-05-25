@@ -16,7 +16,7 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🍁 ❰ Qrubuna Əlavə et ❱ 🍁", url=f"https://t.me/SSmusicLedy_bot?startgroup=true"
+                        "🍁 ❰ Qrubuna Əlavə et ❱ 🍁", url=f"https://t.me/SSmusicLedy_bot?startgroup=melumat"
                     )
                 ],
                 [
