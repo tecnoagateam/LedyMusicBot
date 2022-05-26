@@ -42,7 +42,7 @@ async def start(_, message: Message):
   
 
 
-@Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}"]))
+@Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
       await message.reply_text(" ❗ Qeyd:\nBotun aktif çalışması üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
