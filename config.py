@@ -12,8 +12,8 @@ API_ID = int(getenv("API_ID", "18052289"))
 API_HASH = getenv("API_HASH", "552525f45a3066fee54ca7852235c19c")
 BOT_USERNAME = getenv("BOT_USERNAME", "SSmusicLedy_bot")
 PMPERMIT = getenv("PMPERMIT", "ENABLE")
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "500"))
+DURATION_LIMIT = int(getenv("DURATION_LIMIT", "999"))
 
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! . $").split())
+COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! . $ a g a # , 1 2 3 4 5 6 7 8 9 0").split())
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
