@@ -29,7 +29,7 @@
     "PMPERMIT": {
       "description": "",
       "required": true,
-      "value": "on"
+      "value": "ENABLE"
     },
     "API_ID": {
       "description": "",
