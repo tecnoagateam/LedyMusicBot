@@ -110,7 +110,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Əmrlər menyusu:\n\n ▶️ /davam - musiqi oynatmağa davam et\n ⏸️ /dayandir - oynayan musiqini dayandırmaq üçün\n 🔄 /atla- Oynadılan müsiqini atladır.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n\n ⚪ /assistantelavet - assistant qrubunuza qatılar.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Əmrlər menyusu:\n\n ▶️ /davam - musiqi oynatmağa davam et\n ⏸️ /dayandir - oynayan musiqini dayandırmaq üçün\n 🔄 /otur- Oynadılan müsiqini atladır.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n\n ⚪ /assistantelavet - assistant qrubunuza qatılar.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
