@@ -1,45 +1,25 @@
 {
-  "name": "Efsane Music",
-  "description": "Telegram'ınızın Grup Sesli Sohbeti'nde şarkı çalmak için Açık Kaynaklı bot. Powered by Mehmetbaba55.",
+  "name": "🍁 Ledy Music 🍁",
+  "description": "Telegram Səsli söhbət yayın Bot'u.",
+  "logo": ""
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Mehmetbaba55/EfsaneMusic",
+  "repository": "https://github.com/AzeMusic/LedyMusicBot",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram oturum dizesi (Replit.com)",
-      "required": true
+      "description": "",
+      "required": true,
+      "value": ""
     },
     "BOT_TOKEN": {
-      "description": "Bir bot belirteci @botfather ile alınız",
-      "required": true
-    },
-    "BOT_NAME": {
-      "description": "Müzik Oynatıcı Bot Adınız.",
-      "required": false,
-      "value": ""
-    },
-    "BOT_USARNAME": {
-      "description": "Müzik Oynatıcı Bot Kullanıcı İsmi @ olmadan yazınız.",
+      "description": "",
       "required": true,
       "value": ""
-     
-    },
-    "API_ID": {
-      "description": "my.telegram'dan uygulama kimliği.org/apps",
-      "required": true
-    },
-    "API_HASH": {
-      "description": "My.telegram'dan uygulama apı-hash.org/apps",
-      "required": true
-    },
-    "SUDO_USERS": {
-      "description": "Her yerde yönetici olarak sayılan kullanıcı kimliklerinin listesi (Müzik hesabınının id'si).",
-      "required": true
     },
     "DURATION_LIMIT": {
-      "description": "İndirmeler için en fazla ses süresi sınırı (minutes).",
+      "description": "",
       "required": true,
-      "value": "55"
+      "value": "999"
     }
   }
 }
