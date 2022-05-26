@@ -58,7 +58,7 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["atla", "skip"]) & other_filters)
+@Client.on_message(command(["otur", "skip"]) & other_filters)
 @errors
 @authorized_users_only
 async def atla(_, message: Message):
@@ -147,5 +147,5 @@ async def update_admin(client, message):
     admins[message.chat.id] = new_admins
     await client.send_message(
         message.chat.id,
-        "✅ **Bot yenidən başladı!**\n✅ **Admin Siyahısı yeniləndi!**"
+        "✅ **Bot yenidən başladıldı!**\n✅ **Admin Siyahısı yeniləndi!**"
     )
