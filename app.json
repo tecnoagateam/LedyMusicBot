@@ -4,5 +4,6 @@
   "logo": "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/AzeMusic/LedyMusicBot",
-  "stack": "container"
+  "stack": "container",
+}
  
