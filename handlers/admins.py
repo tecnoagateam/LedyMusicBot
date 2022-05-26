@@ -67,7 +67,7 @@ async def atla(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        a = await message.reply_text("Atladılacaq birşey yox!")
+        a = await message.reply_text("Növbədə Heç birşey yoxdur!")
         await sleep(3)
         await a.delete()
     else:
@@ -85,7 +85,7 @@ async def atla(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("➡️ **Musiqi 💫 Atladıldı.**")
+        a = await message.reply_text("**Musiqi Növbəyə Ötutruldu.**")
         await sleep(3)
         await a.delete()
 
