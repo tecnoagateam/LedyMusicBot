@@ -5,7 +5,7 @@
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/AzeMusic/LedyMusicBot",
   "stack": "container",
-    "env" {
+  "env": {
     },
     "SESSION_NAME": {
       "description": "",
@@ -56,4 +56,6 @@
       "description": "",
       "required": true,
       "value": "999"
- 
+     }
+  }
+}
