@@ -6,7 +6,6 @@
   "repository": "https://github.com/AzeMusic/LedyMusicBot",
   "stack": "container",
   "env": {
-
     }
   }
 }
