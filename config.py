@@ -14,6 +14,6 @@ BOT_USERNAME = getenv("BOT_USERNAME", "SSmusicLedy_bot")
 PMPERMIT = getenv("PMPERMIT", "ENABLE")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "999"))
 
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! . $ a g a # , 1 2 3 4 5 6 7 8 9 0").split())
+COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ a g a # 1 2 3 4 5 6 7 8 9 0 , aga").split())
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
