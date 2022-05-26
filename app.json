@@ -7,19 +7,14 @@
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "salm",
+      "description": "",
       "required": false,
       "value": "AgAOWWIGqnaYhdAhyPxtZwdMSlsq9dbcvCE4ClbmncigNwP2_OaNenwDr0ThnmLmaTl1s6c694fzZgXDoCTUbosfc0T9CorC8l5Po8YgbqfArqiBLrPDADV3uJAGnCcXvrM6ERr5yzJaQg6xz-JKbhYWSGq2RQcLxGeJvt-P05fP5B0h8a5xqdvxnh-Un-D38ryPyUHEDfowKgxatNAzal5HmkFL19deDLHETT9uxWCAoKwoCvygqaDsbjmw1PBqULomyfv_l0tRmUXMaCDiMcAe9Lo2U-wufhndoZAXaCd-gaqM4A2ZNfmsDU9CR2GroXvkdBPVrvb6nXUE9R8GYN_XWp7lFQA"
     },
     "BOT_TOKEN": {
-      "description": "salm",
+      "description": "",
       "required": false,
       "value": "5146456073:AAFnPscOEytDNNuq8nEvch9moHVs0mFJ368"
-    },
-    "DURATION_LIMIT": {
-      "description": "salm",
-      "required": true,
-      "value": "999"
     }
   }
 }
