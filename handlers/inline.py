@@ -29,7 +29,7 @@ async def search(client, query):
                         v["viewCount"]["short"]
                     ),
                     input_message_content=InputTextMessageContent(
-                        "kopyala:>> /oynat https://www.youtube.com/watch?v={}".format(
+                        "`/oynad` https://www.youtube.com/watch?v={}".format(
                             v["id"]
                         )
                     ),
