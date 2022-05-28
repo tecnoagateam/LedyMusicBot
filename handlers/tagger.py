@@ -7,20 +7,6 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
 
 
-anlik_calisan = []
-elxan_tag = []
-#tektag
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
-  global elxan_tag
-  elxan_tag.remove(event.chat_id)
-
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
-  global anlik_calisan
-  anlik_calisan.remove(event.chat_id)
-
-
 @client.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
