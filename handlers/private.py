@@ -83,6 +83,10 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
+            "😻 Tagger Modulu 😻",callback_data ="tagger")
+        ],
+        [
+          InlineKeyboardButton(
             "🏠 Ana Menyu", callback_data="cbstart")
         ],
         [
