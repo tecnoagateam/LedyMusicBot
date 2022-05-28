@@ -124,7 +124,7 @@ async def tektag(event):
 #########################
 
 
-@Client.on_message(command(["admintag]))
+@Client.on_message(command(["tagadmin"]))
 async def tag_admin(event):
     chat = await event.get_input_chat()
     text = "🧑‍✈️ Adminlər Tag Olundu 🧑‍✈️"
