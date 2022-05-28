@@ -3,7 +3,7 @@ import os, logging, asyncio
 from telethon import TelegramClient, events
 
 
-
+@Client.on_message(command(["all", "ledytag"])
 async def _(event):
     x = await eor(event, "...")
     if event.fwd_from:
@@ -16,7 +16,7 @@ async def _(event):
         else:
             replied_user = previous_message.sender_id
     else:
-        await x.edit("Reply To Somone's Message")
+        await x.edit("mesajı yanıtla")
     user_id = replied_user
     caption = """<a href='tg://user?id={}'>{}</a>""".format(user_id, input_str)
     await x.edit(caption, parse_mode="HTML")
