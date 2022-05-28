@@ -117,6 +117,24 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun userləri Tağ etmək üçün Əmrlər menyusu:\n\n /all - **səbəb** beşli tağ edər\n /tektag - **səbəb** tək-tək tağ edər\n /etag- **səbəb** emoji ilə tağ edər.\n\n</b>""",
+    reply_markup=InlineKeyboardMarkup(
+             [
+                 [
+                     InlineKeyboardButton(
+                         "🛠️ Dəstək", url="https://t.me/SOQrup")                           
+                  ],
+                  [
+                     InlineKeyboardButton(
+                         "⬅️ Geri ⬅️", callback_data="cbmelumat")
+                  ] 
+              ]
+          )
+          )
+
+
+@Client.on_callback_query(filters.regex("tagger"))
+async def admin(_, query: CallbackQuery):
     await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Əmrlər menyusu:\n\n ▶️ /davam - musiqi oynatmağa davam et\n ⏸️ /dayandir - oynayan musiqini dayandırmaq üçün\n 🔄 /otur- Oynadılan müsiqini ötürür.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n ⚪ /assistantqosul - Assistant qrubunuza qatılar.\n ⚫ /assistantcix - Assistant Qrupunuzu tərk edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
