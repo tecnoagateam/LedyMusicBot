@@ -10,7 +10,7 @@ async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/e669d8ec6be16f4b7cc39.jpg",
                 caption=(f"""✧═════════•❀•═════════✧
-**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧
+**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖̈𝒑𝒆𝒓 𝑭𝒂𝒔𝒕 𝑴𝒖𝒔𝒊𝒄\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -128,7 +128,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""✧═════════•❀•═════════✧   **Salam {query.from_user.mention} Xoş gəldin!\nMən {bot}, Super Fast Music\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧""",
+    await query.edit_message_text(f"""✧═════════•❀•═════════✧   **Salam {query.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖̈𝒑𝒆𝒓 𝑭𝒂𝒔𝒕 𝑴𝒖𝒔𝒊𝒄\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═════════•❀•═════════✧""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
