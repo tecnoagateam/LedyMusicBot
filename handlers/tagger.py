@@ -19,7 +19,7 @@ bot_token = os.environ.get("BOT_TOKEN")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 spam_chats = []
 
-@client.on(events.NewMessage(pattern="^/start$"))
+@Client.on_message(filters.command("start"))
 async def start(event):
   await event.reply(
     "__**I'm MentionAll Bot**, I can mention almost all members in group or channel 👻\nClick **/help** for more information__\n\n Follow [@AnjanaMadu](https://github.com/AnjanaMadu) on Github",
