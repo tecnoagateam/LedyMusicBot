@@ -14,7 +14,7 @@ async def search(client, query):
             query.id,
             results=answers,
             switch_pm_text=("YouTube'dən video axtar..."),
-            switch_pm_parameter="help",
+            switch_pm_parameter="melumat",
             cache_time=0
         )
         return
@@ -29,7 +29,7 @@ async def search(client, query):
                         v["viewCount"]["short"]
                     ),
                     input_message_content=InputTextMessageContent(
-                        "`/oynad` https://www.youtube.com/watch?v={}".format(
+                        "`/oynad https://www.youtube.com/watch?v={}`".format(
                             v["id"]
                         )
                     ),
@@ -45,8 +45,8 @@ async def search(client, query):
             await query.answer(
                 results=answers,
                 cache_time=0,
-                switch_pm_text=("Heçnə yoxdur"),
-                switch_pm_parameter="",
+                switch_pm_text=("Heçnə tapmadım"),
+                switch_pm_parameter="start",
             )
 
 
