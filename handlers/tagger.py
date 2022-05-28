@@ -2,7 +2,6 @@ import random
 import os, logging, asyncio
 from telethon import TelegramClient, events
 
-
 @Client.on_message(command(["all", "ledytag"])
 async def _(event):
     x = await eor(event, "...")
