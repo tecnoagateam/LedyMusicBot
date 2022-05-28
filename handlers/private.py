@@ -44,7 +44,7 @@ async def start(_, message: Message):
 
 @Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
-      await message.reply_text(" ❗ Qeyd:\nBotun aktif çalışması üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
+      await message.reply_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -67,7 +67,7 @@ async def bilgi(_, message: Message):
 
 @Client.on_callback_query(filters.regex("cbmelumat"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(" ❗ Qeyd:\nBotun aktif çalışması üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
+    await query.edit_message_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -92,7 +92,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu:\n\n ▶️ /oynad <song name> - istədiyin musiqiyi dinlə\n  \n 🎵 /tap <song name> - istədiyin musiqini sürətli endirə bilərsən \n 🎥 /vtap istədiyin videonu sürətli endirə bilərsən\n 🔍 /axtar <query> - YouTube-dən video linkləri axtar \n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu:\n\n ▶️ /oynad <song name> - istədiyin musiqini dinlə\n  \n 🎵 /tap <song name> - istədiyin musiqini sürətli endir \n 🎥 /vtap istədiyin videonu sürətli endir\n 🔍 /axtar <query> - YouTube-dən video linkləri axtar \n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -110,7 +110,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Əmrlər menyusu:\n\n ▶️ /davam - musiqi oynatmağa davam et\n ⏸️ /dayandir - oynayan musiqini dayandırmaq üçün\n 🔄 /otur- Oynadılan müsiqini atladır.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n\n ⚪ /assistantelavet - assistant qrubunuza qatılar.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün Əmrlər menyusu:\n\n ▶️ /davam - musiqi oynatmağa davam et\n ⏸️ /dayandir - oynayan musiqini dayandırmaq üçün\n 🔄 /otur- Oynadılan müsiqini ötürür.\n ⏹ /son - müsiqi oynatmağı sonladırar\n 🔼 /ver botun sadecə yönətici üçün işlədilə bilən əmrləri işlədə bilməsi üçün kullancıya yetki ver\n 🔽 /al botun yönətici əmrləri işlədilə bilən kullancının yetkisini al\n ⚪ /assistantqosul - Assistant qrubunuza qatılar.\n /assistantcix - ⚫ Assistant Qrupunuzu tərk edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
