@@ -7,7 +7,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
 
 
-@client.on(events.NewMessage(pattern="^/all ?(.*)"))
+@Client.on_message(command(["all"]))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
@@ -67,7 +67,7 @@ async def mentionall(event):
         usrtxt = ""
 
 
-@client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
+@Client.on_message(command(["tektag"]))
 async def tektag(event):
   global elxan_tag
   if event.is_private:
@@ -124,7 +124,7 @@ async def tektag(event):
 #########################
 
 
-@client.on(events.NewMessage(pattern=lambda x: "/tagadmin" in x.lower(), incoming=True))
+@Client.on_message(command(["admintag]))
 async def tag_admin(event):
     chat = await event.get_input_chat()
     text = "🧑‍✈️ Adminlər Tag Olundu 🧑‍✈️"
@@ -147,7 +147,7 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@Client.on_message(command(["cancel"]))
 async def cancel(event):
   global emoji_calisan
   anlik_calisan.remove(event.chat_id)
@@ -159,7 +159,7 @@ emoji = "❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 💝 🙂 🙃 😉 😌
         "😻 😼 😽 🙀 😿 🔥 😾 🌝 🌜 🌛 🌚 🙈 🙉 🙊 ❣️ 💔 🌿 🍁 🍃 🏹 🌼 ✨ 🌺 🌸 👋 🌹 👊 🌟 ⭐ 🎉 🎊 💌 💋 🫂 🌵 🌴 🍂 💐 🌻 🏵️ 💮 ⛰️ 🪨 🪵 🌪️ 🌀 🌁 🌬️ 🌊 ⛄ 🌅".split(" ")
 
 
-@client.on(events.NewMessage(pattern="^/etag ?(.*)"))
+@Client.on_message(command(["etag"]))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
@@ -219,13 +219,13 @@ async def mentionall(event):
         usrtxt = ""
 
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@Client.on_message(command(["cancel"]))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
 
 
-@client.on(events.NewMessage(pattern="^/tag ?(.*)"))
+@Client.on_message(command(["tag""]))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
