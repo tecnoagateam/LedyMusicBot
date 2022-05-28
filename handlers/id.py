@@ -4,7 +4,7 @@ from helpers.get_file_id import get_file_id
 from helpers.filters import command
 
 
-@Client.on_message(command(["id"]))
+@Client.on_message(command(["id", "info"]))
 async def showid(client, message):
     chat_type = message.chat.type
 
@@ -23,7 +23,7 @@ async def showid(client, message):
         )
         if message.reply_to_message:
             _id += (
-                "<b>Kullancı ID</b>: "
+                "<b>İstifadəçi ID</b>: "
                 f"<code>{message.reply_to_message.from_user.id}</code>\n"
             )
             file_info = get_file_id(message.reply_to_message)
@@ -34,7 +34,7 @@ async def showid(client, message):
                 )
         else:
             _id += (
-                "<b>Kullancı ID</b>: "
+                "<b>İstifadəçi ID</b>: "
                 f"<code>{message.from_user.id}</code>\n"
             )
             file_info = get_file_id(message)
