@@ -7,7 +7,7 @@ admins = {}
 
 SESSION_NAME = getenv("SESSION_NAME", "AgAOWWIGqnaYhdAhyPxtZwdMSlsq9dbcvCE4ClbmncigNwP2_OaNenwDr0ThnmLmaTl1s6c694fzZgXDoCTUbosfc0T9CorC8l5Po8YgbqfArqiBLrPDADV3uJAGnCcXvrM6ERr5yzJaQg6xz")
 BOT_TOKEN = getenv("BOT_TOKEN", "5146456073:AAFnPscOEytDNNuq8nEvch9moHVs0mFJ368")
-BOT_NAME = getenv("BOT_NAME", "Ledy Music") 
+BOT_NAME = getenv("BOT_NAME", "𝑳𝒆𝒅𝒚") 
 API_ID = int(getenv("API_ID", "18052289"))
 API_HASH = getenv("API_HASH", "552525f45a3066fee54ca7852235c19c")
 BOT_USERNAME = getenv("BOT_USERNAME", "SSmusicLedy_bot")
