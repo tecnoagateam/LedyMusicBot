@@ -53,6 +53,9 @@ async def bilgi(_, message: Message):
                  ],[                     
                      InlineKeyboardButton(
                          "🧑‍✈️ Adminlər üçün Əmrlər", callback_data="admin")
+                 ],[                     
+                     InlineKeyboardButton(
+                         "😻 Tagger Modulu", callback_data="tagger")
                  ],[
                      InlineKeyboardButton(
                          "🏠 Ana menyu", callback_data="cbstart")
