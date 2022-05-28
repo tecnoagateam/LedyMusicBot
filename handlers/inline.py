@@ -9,7 +9,7 @@ async def search(client, query):
     answers = []
     string = query.query.lower().strip().rstrip()
 
-    if string == "LedyTube":
+    if string == "":
         await client.answer_inline_query(
             query.id,
             results=answers,
