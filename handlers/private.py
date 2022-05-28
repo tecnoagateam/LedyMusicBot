@@ -135,7 +135,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("tagger"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun userləri Tağ etmək üçün Əmrlər menyusu:\n Nəzərinizə çatdırım ki, Bu modül [beta] versiadadır.\n\n /all - <səbəb> beşli tağ edər\n /tektag - <səbəb> tək-tək tağ edər\n /etag- <səbəb> emoji ilə tağ edər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun userləri Tağ etmək üçün Əmrlər menyusu:\n Nəzərinizə çatdırım ki, Bu modül [beta] versiadadır, Hələ Dərc edilmiyib.\n\n /ledytag - userləri beşli tağ edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
