@@ -43,7 +43,7 @@ async def start(_, message: Message):
 
 
 @Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]))
-async def bilgi(_, message: Message):
+async def melumat(_, message: Message):
       await message.reply_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
@@ -69,7 +69,7 @@ async def bilgi(_, message: Message):
 
 
 @Client.on_callback_query(filters.regex("cbmelumat"))
-async def cbbilgi(_, query: CallbackQuery):
+async def cbmelumat(_, query: CallbackQuery):
     await query.edit_message_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
       [
@@ -116,7 +116,7 @@ async def herkes(_, query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("owner"))
-async def admin(_, query: CallbackQuery):
+async def owner(_, query: CallbackQuery):
     await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Adminlər Üçün Əmrlər Menyusu:\n\ ▶️ /davam - Musiqi yayınlamağa davam et\n ⏸️ /dayandir - Oynadılan musiqini dayandır\n 🔄 /otur - Növbəyə alınmış Müsiqiyə ötur\n ⏹ /son - Musiqi yayınlamağı sonlandır\n 🔼 /ver Kullancıya yetki ver\n 🔽 /al yetkini al\n ❤️ /assistantqosul - Assistantı Qrupa qoşular\n 🖤 /assistantcix - ASSİSTANT Qrupu tərk edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
@@ -134,7 +134,7 @@ async def admin(_, query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("tagger"))
-async def admin(_, query: CallbackQuery):
+async def tagger(_, query: CallbackQuery):
     await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun userləri Tağ etmək üçün Əmrlər menyusu:\n Nəzərinizə çatdırım ki, Bu modül [beta] versiadadır, Hələ Dərc edilmiyib.\n\n /ledytag - userləri beşli tağ edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
