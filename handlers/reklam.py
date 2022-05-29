@@ -16,7 +16,7 @@ async def broadcast(_, message: Message):
     else:
         wtf = await message.reply("`Reklam yayını başladı...`")
         if not message.reply_to_message:
-            await wtf.edit("**__mesajı gözləyin...__**")
+            await wtf.edit("**__mesajı yanıtlayın...__**")
             return
         lmao = message.reply_to_message.text
         async for dialog in aditya.iter_dialogs():
