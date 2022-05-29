@@ -267,6 +267,7 @@ async def play(_, message: Message):
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
                 InlineKeyboardButton("🍁 Bağla", callback_data="cls"),
+                InlineKeyboardButton("🎬 YouTube'də izlə", url=f"{url}"),
             ],
         ]
     )
