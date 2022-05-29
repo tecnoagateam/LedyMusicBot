@@ -201,7 +201,7 @@ async def play(_, message: Message):
                 InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup"),
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
-                InlineKeyboardButton("🍁 Bağlat", callback_data="cls"),
+                InlineKeyboardButton("🍁 Bağla", callback_data="cls"),
             ],
         ]
     )
@@ -266,8 +266,10 @@ async def play(_, message: Message):
                 InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup"),
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
-                InlineKeyboardButton("🍁 Bağla", callback_data="cls"),
+                InlineKeyboardButton("📥 Yüklə", url=f"{durl}"),
                 InlineKeyboardButton("🎬 YouTube'də izlə", url=f"{url}"),
+            ],[
+                InlineKeyboardButton("🍁 Bağla", callback_data="cls"),
             ],
         ]
     )
@@ -287,7 +289,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**🎵 Ad:** {}\n**🕒 Müddət:** {} min\n**🌿 Sifarişçi:** {}\n\n**🚧 Növbə:** {}".format(
+        caption="**🎵 Ad:** {}\n**🕒 Müddət:** {} min\n**🌿 Sifariş:** {}\n\n**🚧 Növbə:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -307,7 +309,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 Ad:** {}\n**🕒 Müddət:** {} min\n**🌿 Sifarişçi:** {}\n\n**🍁 Səslidə yayınlanır `{}`...**".format(
+        caption="**🎵 Ad:** {}\n**🕒 Müddət:** {} min\n**🌿 Sifarişç:** {}\n\n**🍁 Səslidə yayınlanır ✬`{}`✬**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
