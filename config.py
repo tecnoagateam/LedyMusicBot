@@ -12,6 +12,8 @@ API_ID = int(getenv("API_ID", "18052289"))
 API_HASH = getenv("API_HASH", "552525f45a3066fee54ca7852235c19c")
 BOT_USERNAME = getenv("BOT_USERNAME", "SSmusicLedy_bot")
 PMPERMIT = getenv("PMPERMIT", "ENABLE")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", "ef098244-4921-434d-bd7a-172f4315fed0")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "9999"))
 
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ # 1 2 3 4 5 6 7 8 9 0 , aga ledy").split())
