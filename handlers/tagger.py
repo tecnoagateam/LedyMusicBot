@@ -1,6 +1,6 @@
 import random
 import os, logging, asyncio
-from telethon import TelegramClient, filters
+from pyrogram import TelegramClient, filters
 
 @Client.on_message(command(["all", "ledytag"]))
 async def mentionall(_, message: Message):
