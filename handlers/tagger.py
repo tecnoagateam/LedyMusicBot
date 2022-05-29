@@ -2,7 +2,7 @@ import random
 import os, logging, asyncio
 from pyrogram import Client, filters
 
-@Client.on_message(command(["all", "ledytag"]))
+@Client.on_message(filters(["all", "ledytag"]))
 async def mentionall(_, message: Message):
     x = await eor(event, "...")
     if event.fwd_from:
