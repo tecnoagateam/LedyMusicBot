@@ -1,9 +1,9 @@
 import random
 import os, logging, asyncio
-from telethon import TelegramClient, events
+from telethon import TelegramClient, filters
 
 @Client.on_message(command(["all", "ledytag"]))
-async def _(event):
+async def mentionall(_, message: Message):
     x = await eor(event, "...")
     if event.fwd_from:
         return
