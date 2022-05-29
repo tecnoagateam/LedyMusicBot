@@ -18,11 +18,11 @@ from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(command("ytp") & other_filters)
+@Client.on_message(command("dinle") & other_filters)
 @errors
-async def ytp(_, message: Message):
+async def dinle(_, message: Message):
 
-    lel = await message.reply("🔎 **Axtarılır...**")
+    lel = await message.reply("🔎 **gözləyin**")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -33,7 +33,7 @@ async def ytp(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **Tapdım aaaaa**")
+    await lel.edit("🎵 **Səsler işənir..**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -52,7 +52,7 @@ async def ytp(_, message: Message):
 
     except Exception as e:
         lel.edit(
-            "❌ Musiqi tapılmadı.\n\nBaşka bir açar söz yoxlayin."
+            "❌ Musiqi tapılmadı.\n\nBaşqa açar söz yoxlayın."
         )
         print(str(e))
         return
@@ -61,7 +61,7 @@ async def ytp(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="YouTube'də izlə  🎬",
+                        text="YouTube 🎬",
                         url=f"{url}")
                    
                 ]
@@ -72,13 +72,12 @@ async def ytp(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="YouTube'də izlə  🎬",
+                        text="YouTube 🎬",
                         url=f"{url}")
                    
                 ]
             ]
         )
-
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
 
     if audio:
@@ -87,13 +86,13 @@ async def ytp(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("❗ Mənə yayınlamağa bir argument vermədin!")
+        return await lel.edit_text("Mənə oynamaq üçün birşey vermədin!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo=thumb_name, 
-        caption=f"#⃣ İstədiyiniz Musiqi **Növbədə** {position}!",
+        caption=f"#⃣ İstədiyiniz Musiqi **sıraya** alındı. 😉 {position}!",
         reply_markup=keyboard2)
         return await lel.delete()
     else:
@@ -101,9 +100,8 @@ async def ytp(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **Yayınlanır** İstədiyin video {} YouTube aracılığıyla 🎸".format(
+        caption="▶️ **Oynadılır** İstədiyiniz Musiqi {} xoş dinləmələr 🎶".format(
         message.from_user.mention()
         ),
     )
         return await lel.delete()
- 
