@@ -14,6 +14,6 @@ BOT_USERNAME = getenv("BOT_USERNAME", "SSmusicLedy_bot")
 PMPERMIT = getenv("PMPERMIT", "ENABLE")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "9999"))
 
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ # 1 2 3 4 5 6 7 8 9 0 , * " ' q y a u i o p z s d f g h e j k l Z x c v b n m @ & _ - : ? ~ ` = % [ ] • | × ÷ { } ( ) ¢ € £ + Ağa ağa aga ledy Ledy").split())
+COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ # 1 2 3 4 5 6 7 8 9 0 , aga ledy").split())
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split())
