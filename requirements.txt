@@ -16,5 +16,6 @@ wget
 ffmpeg-python
 Pillow==9.1.0
 ujson
-telethon
-cryptg
+future
+aiohttp
+heroku3
