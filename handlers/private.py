@@ -52,10 +52,10 @@ async def bilgi(_, message: Message):
                          "🍁 Hərkəs üçün Əmrlər", callback_data="herkes")
                  ],[                     
                      InlineKeyboardButton(
-                         "🧑‍✈️ Adminlər üçün Əmrlər", callback_data="admin")
+                         "🧑‍✈️ Adminlər üçün Əmrlər", callback_data="owner")
                  ],[                     
                      InlineKeyboardButton(
-                         "😻 Tagger Modulu", callback_data="tagger")
+                         "😻 Tagger Modulu [BETA]", callback_data="tagger")
                  ],[
                      InlineKeyboardButton(
                          "🏠 Ana menyu", callback_data="cbstart")
@@ -79,7 +79,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🧑‍✈️ Admin Əmrləri 🧑‍✈️",callback_data ="admin")
+            "🧑‍✈️ Admin Əmrləri 🧑‍✈️",callback_data ="owner")
         ],
         [
           InlineKeyboardButton(
@@ -115,22 +115,22 @@ async def herkes(_, query: CallbackQuery):
          )
 
 
-@Client.on_callback_query(filters.regex("admin"))
+@Client.on_callback_query(filters.regex("owner"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun userləri Tağ etmək üçün Əmrlər menyusu:\n\n /all - **səbəb** beşli tağ edər\n /tektag - **səbəb** tək-tək tağ edər\n /etag- **səbəb** emoji ilə tağ edər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Adminlər Üçün Əmrlər Menyusu:\n\\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
                      InlineKeyboardButton(
                          "🛠️ Dəstək", url="https://t.me/SOQrup")                           
-                  ],
-                  [
+                 ],
+                 [
                      InlineKeyboardButton(
                          "⬅️ Geri ⬅️", callback_data="cbmelumat")
-                  ] 
-              ]
-          )
-          )
+                 ] 
+             ]
+         )
+         )
 
 
 @Client.on_callback_query(filters.regex("tagger"))
