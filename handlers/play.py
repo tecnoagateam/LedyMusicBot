@@ -203,8 +203,6 @@ async def play(_, message: Message):
             ],[
                 InlineKeyboardButton("📥 Yüklə", url=f"{durl}"),
                 InlineKeyboardButton("🎬 YouTube'də izlə", url=f"{url}"),
-            ],[
-                InlineKeyboardButton("🍁 Bağla", callback_data="cls"),
             ],
         ]
     )
