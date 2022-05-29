@@ -21,9 +21,10 @@
 <summary><b>🏹 HEROKU DEPLOY 🏹</b></summary>
 <br>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AzeMusic/LedyMusicBot)
+[
+
 ------
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAzeMusic%2FLedyMusicBot&template=https%3A%2F%2Fgithub.com%2FAzeMusic%2FLedyMusicBot)
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAzeMusic%2FLedyMusicBot&template=https%3A%2F%2Fgithub.com%2FAzeMusic%2FLedyMusicBot)
 
   ------
 <details>
