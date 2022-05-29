@@ -117,7 +117,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("owner"))
 async def owner(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Adminlər Üçün Əmrlər Menyusu:\n\ ▶️ /davam - Musiqi yayınlamağa davam et\n ⏸️ /dayandir - Oynadılan musiqini dayandır\n 🔄 /otur - Növbəyə alınmış Müsiqiyə ötur\n ⏹ /son - Musiqi yayınlamağı sonlandır\n 🔼 /ver Kullancıya yetki ver\n 🔽 /al yetkini al\n ❤️ /assistantqosul - Assistantı Qrupa qoşular\n 🖤 /assistantcix - ASSİSTANT Qrupu tərk edər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Adminlər Üçün Əmrlər Menyusu:\n\n ⏸️ /dayandir - Yayınlanan musiqini dayandır\n ▶️ /davam - Musiqi yayınlamağa davam et\n 🔄 /otur - Növbədê olan musiqiyə ötur\n ⏹ /son - Musiqi yayınlamağı sonlandır\n 🔼 /ver Kullancıya yetki ver\n 🔽 /al Yetki verilmiş Kullancının yetkisini al\n ❤️ /assistantqosul - Assistant Qrupa qoşular\n 🖤 /assistantcix - Assistant Qrupu tərk edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
