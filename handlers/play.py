@@ -163,6 +163,9 @@ async def play(_, message: Message):
                     InlineKeyboardButton(
                         text="🍁 Bağla",
                         callback_data="cls")
+                    InlineKeyboardButton(
+                        text="YouTube 🎬",
+                        url=f"{url}"),
                    
                 ]
             ]
