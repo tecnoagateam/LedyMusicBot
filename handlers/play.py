@@ -155,7 +155,7 @@ async def play(_, message: Message):
         thumb_name = "https://telegra.ph/file/801c43e6695d576f99a52.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
-        views = "Yerli olaraq əlavə edildi"
+        views = "Ledy Music Logo"
 
         keyboard = InlineKeyboardMarkup(
             [
@@ -208,7 +208,7 @@ async def play(_, message: Message):
     )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+            thumb_name = "https://telegra.ph/file/4afbb46f4899c16317607.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
