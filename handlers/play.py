@@ -161,7 +161,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🍁 Bağla",
+                        text="🗑️ Bağla",
                         callback_data="cls")
                    
                 ]
@@ -201,7 +201,7 @@ async def play(_, message: Message):
                 InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup"),
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
-                InlineKeyboardButton("📥 Yüklə", url=f"{durl}"),
+                InlineKeyboardButton("🗑️ Bağla", callback_data="cls"),
                 InlineKeyboardButton("🎬 YouTube'də izlə", url=f"{url}"),
             ],
         ]
@@ -267,7 +267,7 @@ async def play(_, message: Message):
                 InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup"),
                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
             ],[
-                InlineKeyboardButton("📥 Yüklə", url=f"{durl}"),
+                InlineKeyboardButton("🗑️ Bağla", callback_data="cls"),
                 InlineKeyboardButton("🎬 YouTube'də izlə", url=f"{url}"),
             ],
         ]
