@@ -74,7 +74,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((190, 550), f"Ad: {title}", (255, 255, 255), font=font)
     draw.text(
-        (190, 590), f"Müddət: {duration}", (255, 255, 255), font=font
+        (190, 590), f"Müddet: {duration}", (255, 255, 255), font=font
     )
     draw.text((190, 630), f"İzlenme: {views}", (255, 255, 255), font=font)
     draw.text((190, 670),
