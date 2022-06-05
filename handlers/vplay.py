@@ -5,7 +5,6 @@ import asyncio
 from os import path
 from asyncio import sleep
 from config import Config
-from bot.safone.nopm import User
 from youtube_dl import YoutubeDL
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -177,31 +176,3 @@ async def endstream(client, m: Message):
             pass
     except Exception as e:
         await m.reply_text(f"❌ **An Error Occoured!** \n\nError: `{e}`")
-
-
-admincmds=["stream", "mute", "unmute", "endstream", f"stream@{USERNAME}", f"mute@{USERNAME}", f"unmute@{USERNAME}", f"endstream@{USERNAME}"]
-
-@Client.on_message(filters.command(admincmds) & ~filters.user(ADMINS) & (filters.chat(CHAT_ID) | filters.private))
-async def notforu(_, m: Message):
-    k = await m.reply_sticker("CAACAgUAAxkBAAEBpyZhF4R-ZbS5HUrOxI_MSQ10hQt65QACcAMAApOsoVSPUT5eqj5H0h4E")
-    await sleep(5)
-    await k.delete()
-    try:
-        await m.delete()
-    except:
-        pass
-
-allcmd = ["st", "lp", f"st@{USERNAME}", f"lp@{USERNAME}"] + admincmds
-
-@Client.on_message(filters.command(allcmd) & filters.group & ~filters.chat(CHAT_ID))
-async def not_chat(_, m: Message):
-    buttons = [
-            [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/SafoTheBot"),
-            ],
-            [
-                InlineKeyboardButton("🤖 MAKE YOUR OWN BOT 🤖", url="https://heroku.com/deploy?template=https://github.com/AsmSafone/VideoPlayerBot"),
-            ]
-         ]
-    await m.reply_text(text="**Sorry, You Can't Use This Bot In This Group 🤷‍♂️! But You Can Make Your Own Bot Like This From The [Source Code](https://github.com/AsmSafone/VideoPlayerBot) Below 😉!**", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
