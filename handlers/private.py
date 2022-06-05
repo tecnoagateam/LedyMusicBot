@@ -153,7 +153,7 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""✧═══════•❀•═══════✧   **Salam {query.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖𝒑𝒆𝒓 𝑭𝒂𝒔𝒕 𝑴𝒖𝒔𝒊𝒄\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
+    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **Salam {query.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖𝒑𝒆𝒓 𝑭𝒂𝒔𝒕 𝑴𝒖𝒔𝒊𝒄\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
