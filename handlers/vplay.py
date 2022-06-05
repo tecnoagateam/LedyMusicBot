@@ -4,7 +4,7 @@ import ffmpeg
 import asyncio
 from os import path
 from asyncio import sleep
-from config import Config
+from config import CHAT_ID
 from youtube_dl import YoutubeDL
 from pyrogram import Client, filters
 from pyrogram.types import Message
