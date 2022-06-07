@@ -21,10 +21,10 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Assistant", url="https://t.me/LedyMusicAssistant"
+                        "🛠️ Dəstək", url="https://t.me/SOQrup"
                     ),
                     InlineKeyboardButton(
-                        "🛠️ Dəstək", url="https://t.me/SOQrup"
+                        "📱 Rəsmi Kanal", url="https://t.me/ledyplaylist"
                     )
                 ],
                 [
@@ -32,7 +32,7 @@ async def start(_, message: Message):
                         "📚 Əmrlər" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
-                        "📱 Rəsmi Kanal", url=f"https://t.me/ledyplaylist"
+                        "🔊 Assistant", url=f"https://t.me/LedyMusicAssistant"
                     )
                 ]
                 
@@ -163,10 +163,10 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Assistant", url="https://t.me/LedyMusicAssistant"
+                        "🛠️ Dəstək", url="https://t.me/SOQrup"
                     ),
                     InlineKeyboardButton(
-                        "🛠️ Dəstək", url="https://t.me/SOQrup"
+                        "📱 Rəsmi Kanal", url="https://t.me/ledyplaylist"
                     )
                 ],
                 [
@@ -174,7 +174,7 @@ async def cbstart(_, query: CallbackQuery):
                         "📚 Əmrlər" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
-                        "📱 Rəsmi Kanal ", url=f"https://t.me/ledyplaylist"
+                        "🔊 Assistant ", url=f"https://t.me/LedyMusicAssistant"
                     )
                 ]
                 
