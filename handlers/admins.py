@@ -3,13 +3,13 @@ from cache.admins import admins
 from asyncio import sleep
 from pyrogram import Client
 from pyrogram.types import Message
-from callsmusic import callsmusic
+from ledymusic import ledymusic
 from pyrogram import filters
 
 from config import BOT_NAME as BN
 from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
-from callsmusic import callsmusic, queues
+from ledymusic import ledymusic, queues
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
@@ -20,7 +20,7 @@ ACTV_CALLS = []
 @errors
 @authorized_users_only
 async def durdur(_, message: Message):
-    await callsmusic.pytgcalls.pause_stream(message.chat.id)
+    await ledymusic.pytgcalls.pause_stream(message.chat.id)
     a = await message.reply_text("▶️ **Müsiqi dayandırıldı!**\n\n• Müsiqini yayınlamağa davam etmək üçün **Əmr » davam**")
     await sleep(3)
     await a.delete()
@@ -31,7 +31,7 @@ async def durdur(_, message: Message):
 @errors
 @authorized_users_only
 async def devam(_, message: Message):
-    await callsmusic.pytgcalls.resume_stream(message.chat.id)
+    await ledymusic.pytgcalls.resume_stream(message.chat.id)
     a = await message.reply_text("⏸ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr » duyandir**")
     await sleep(3)
     await a.delete()
@@ -43,7 +43,7 @@ async def devam(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     chat_id = message.chat.id 
-    for x in callsmusic.pytgcalls.active_calls:
+    for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
         await message.reply_text("🙄 **İndi müsiqi yayinlanmır**")
@@ -52,7 +52,7 @@ async def stop(_, message: Message):
             queues.clear(chat_id)
         except QueueEmpty:
             pass
-        await callsmusic.pytgcalls.leave_group_call(chat_id)
+        await ledymusic.pytgcalls.leave_group_call(chat_id)
         await _.send_message(
             message.chat.id,
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
@@ -64,7 +64,7 @@ async def stop(_, message: Message):
 async def atla(_, message: Message):
     global que
     chat_id = message.chat.id
-    for x in callsmusic.pytgcalls.active_calls:
+    for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
         a = await message.reply_text("Növbədə Heç birşey yoxdur!")
@@ -74,13 +74,13 @@ async def atla(_, message: Message):
         queues.task_done(chat_id)
         
         if queues.is_empty(chat_id):
-            await callsmusic.pytgcalls.leave_group_call(chat_id)
+            await ledymusic.pytgcalls.leave_group_call(chat_id)
         else:
-            await callsmusic.pytgcalls.change_stream(
+            await ledymusic.pytgcalls.change_stream(
                 chat_id, 
                 InputStream(
                     InputAudioStream(
-                        callsmusic.queues.get(chat_id)["file"],
+                        ledymusic.queues.get(chat_id)["file"],
                     ),
                 ),
             )
@@ -130,7 +130,7 @@ async def change_ses(client, message):
     range = message.command[1]
     chat_id = message.chat.id
     try:
-       callsmusic.pytgcalls.change_volume_call(chat_id, volume=int(range))
+       ledymusic.pytgcalls.change_volume_call(chat_id, volume=int(range))
        await message.reply(f"✅ **ayarlandı:** ```{range}%```")
     except Exception as e:
        await message.reply(f"**xəta:** {e}")
