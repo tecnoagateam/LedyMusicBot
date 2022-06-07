@@ -6,7 +6,7 @@ import youtube_dl
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 from youtube_search import YoutubeSearch
-from callsmusic import callsmusic, queues
+from ledymusic import ledymusic, queues
 
 import converter
 from downloaders import youtube
@@ -88,7 +88,7 @@ async def dinle(_, message: Message):
     else:
         return await lel.edit_text("Mənə oynamaq üçün birşey vermədin!")
 
-    if message.chat.id in callsmusic.pytgcalls.active_calls:
+    if message.chat.id in ledymusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo=thumb_name, 
@@ -96,7 +96,7 @@ async def dinle(_, message: Message):
         reply_markup=keyboard2)
         return await lel.delete()
     else:
-        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
+        ledymusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
