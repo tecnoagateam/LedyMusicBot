@@ -4,7 +4,7 @@ from config import SUDO_USERS
 from config import PMPERMIT
 from pyrogram import filters
 from pyrogram.types import Message
-from callsmusic.callsmusic import client as USER
+from ledymusic.ledymusic import client as USER
 
 PMSET =True
 pchats = []
