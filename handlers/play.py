@@ -4,8 +4,8 @@ from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
-from callsmusic import callsmusic, queues
-from callsmusic.callsmusic import client as USER
+from ledymusic import ledymusic, queues
+from ledymusic.ledymusic import client as USER
 from helpers.admins import get_administrators
 import requests
 import aiohttp
@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Səsliyə Qoşuluram...**")
+    lel = await message.reply("❄️ **Səsliyə Qoşuluram...**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -233,7 +233,7 @@ async def play(_, message: Message):
         await lel.edit("🔎 **Biraz Gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔄 **Səsliyə Qoşuluram...**")
+        await lel.edit("❄️ **Səsliyə Qoşuluram...**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -282,7 +282,7 @@ async def play(_, message: Message):
   
     ACTV_CALLS = []
     chat_id = message.chat.id
-    for x in callsmusic.pytgcalls.active_calls:
+    for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(message.chat.id) in ACTV_CALLS:
         position = await queues.put(message.chat.id, file=file_path)
@@ -295,7 +295,7 @@ async def play(_, message: Message):
         os.remove("final.png")
         return await lel.delete()
     else:
-        await callsmusic.pytgcalls.join_group_call(
+        await ledymusic.pytgcalls.join_group_call(
                 chat_id, 
                 InputStream(
                     InputAudioStream(
