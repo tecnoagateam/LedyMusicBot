@@ -1,4 +1,4 @@
-from callsmusic.callsmusic import client as USER
+from ledymusic.ledymusic import client as USER
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
