@@ -94,7 +94,7 @@ async def cls(_, query: CallbackQuery):
 
 # LedyMusicVaves düzənlənmişdir.
 
-@Client.on_message(command(["play", "oynad"]) 
+@Client.on_message(command(["oynad", f"oynad@{BOT_USERNAME}", "play"]) 
                    & filters.group
                    & ~filters.edited 
                    & ~filters.forwarded
