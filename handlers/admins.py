@@ -92,7 +92,7 @@ async def otur(_, message: Message):
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @Tenha055 Tarafından Eklenmiştir. 
-@Client.on_message(command(["ver", f"ver@{BOT_USERNAME}]))
+@Client.on_message(command(["ver", f"ver@{BOT_USERNAME}"]))
 @authorized_users_only
 async def authenticate(client, message):
     global admins
@@ -108,7 +108,7 @@ async def authenticate(client, message):
         await message.reply("✔ Kullancı Artıq Yetkili!")
 
 
-@Client.on_message(command(["al", f"al@{BOT_USERNAME}]))
+@Client.on_message(command(["al", f"al@{BOT_USERNAME}"]))
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
@@ -125,7 +125,7 @@ async def deautenticate(client, message):
 
 
 # Sesli sohbet için 0-200 arası yeni komut eklenmiş oldu. 
-@Client.on_message(command(["ses" f"ses@{BOT_USERNAME}]))
+@Client.on_message(command(["ses" f"ses@{BOT_USERNAME}"]))
 @authorized_users_only
 async def change_ses(client, message):
     range = message.command[1]
