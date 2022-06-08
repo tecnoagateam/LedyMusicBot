@@ -21,11 +21,11 @@ COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ # 1 2 3 4 5 6 7 8 9 
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
 
------------
+   -----------
 # Yeni güncellemede...
 
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot")
 U_BRANCH = ("ledy")
 HEROKU_URL = ("HEROKU_URL")
 
------------DahasiLedyServic-----------
+  -----------DahasiLedyServic-----------
