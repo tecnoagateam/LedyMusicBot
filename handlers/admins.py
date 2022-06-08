@@ -57,7 +57,7 @@ async def dayandir(_, message: Message):
 
 
 
-@Client.on_message(command(["davam", f"davam@{BOT_USERNAME}", "resume", f"resume#{BOT_USERNAME}"]))
+@Client.on_message(command(["davam", f"davam@{BOT_USERNAME}", "resume", f"resume{BOT_USERNAME}"]))
 @errors
 @authorized_users_only
 async def davam(_, message: Message):
@@ -68,7 +68,7 @@ async def davam(_, message: Message):
     
 
 
-@Client.on_message(command(["son", f"@{BOT_USERNAME}", "end", f"@{BOT_USERNAME"]))
+@Client.on_message(command(["son", f"son@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME"]))
 @errors
 @authorized_users_only
 async def son(_, message: Message):
@@ -88,7 +88,7 @@ async def son(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["otur", f"@{BOT_USERNAME}", "skip", f"{BOT_USERNAME}"]))
+@Client.on_message(command(["otur", f"@otur{BOT_USERNAME}", "skip", f"skip{BOT_USERNAME}"]))
 @errors
 @authorized_users_only
 async def otur(_, message: Message):
