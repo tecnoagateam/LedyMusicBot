@@ -46,7 +46,6 @@ async def controlset(_, message: Message):
 
 
 
-
 @Client.on_message(command(["dayandir", f"dayandir@{BOT_USERNAME}", "pause", f"pause@{BOT_USERNAME}"]))
 @errors
 @authorized_users_only
