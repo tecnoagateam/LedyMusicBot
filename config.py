@@ -28,4 +28,15 @@ UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBo
 U_BRANCH = getenv("ledy")
 HEROKU_URL = getenv("HEROKU_URL")
 
+# DB_URL new mode -------ledyservic------
+
+DATABASE_URL = getenv("DATABASE_URL")
+
+# Log kanalı.... 
+LOG_CHANNEL = getenv("LOG_CHANNEL")
+
+# Support Channel/Group
+SUPPORT_NAME = getenv("SUPPORT_NAME", "SOQrup")
+CHANNEL_NAME = getenv("CHANNEL_NAME", "ledyplaylist")
+
 #  ------------DahasiLedyServic--------------
