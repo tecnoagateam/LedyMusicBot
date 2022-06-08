@@ -137,7 +137,7 @@ async def authenticate(client, message):
         await message.reply("✔ Kullancı Artıq Yetkili!")
 
 
-@Client.on_message(command("al") & other_filters)
+@Client.on_message(command(["al", f"al@{BOT_USERNAME}]))
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
@@ -154,7 +154,7 @@ async def deautenticate(client, message):
 
 
 # Sesli sohbet için 0-200 arası yeni komut eklenmiş oldu. 
-@Client.on_message(command(["ses"]) & other_filters)
+@Client.on_message(command(["ses" f"ses@{BOT_USERNAME}]))
 @authorized_users_only
 async def change_ses(client, message):
     range = message.command[1]
@@ -165,7 +165,7 @@ async def change_ses(client, message):
     except Exception as e:
        await message.reply(f"**xəta:** {e}")
 
-@Client.on_message(command(["yenile", "reload"]) & other_filters)
+@Client.on_message(command(["yenile", f"yenile@{BOT_USERNAME}", "reload" f"reload@{BOT_USERNAME}]))
 @errors
 @authorized_users_only
 async def update_admin(client, message):
