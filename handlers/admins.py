@@ -121,7 +121,7 @@ async def otur(_, message: Message):
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @Tenha055 Tarafından Eklenmiştir. 
-@Client.on_message(command("ver") & other_filters)
+@Client.on_message(command(["ver", f"ver@{BOT_USERNAME}]))
 @authorized_users_only
 async def authenticate(client, message):
     global admins
