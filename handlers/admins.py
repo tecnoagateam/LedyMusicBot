@@ -16,6 +16,37 @@ from pytgcalls.types.input_stream import InputStream
 
 ACTV_CALLS = []
 
+@Client.on_message(command(["kontrol", f"kontrol@{BOT_USERNAME}"]))
+@errors
+@authorized_users_only
+async def controlset(_, message: Message):
+    await message.reply_text(
+        "**Ledy Music-in Kontrol Paneli:**",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⏸ Dayandır ⏸", callback_data="cbdayandir"
+                    ),
+                    InlineKeyboardButton(
+                        "▶️ Davam ▶️", callback_data="cbdavam"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "⏹ Son ⏹", callback_data="cbson"
+                    ),
+                    InlineKeyboardButton(
+                        "⏩ Ötür ⏩", callback_data="cbotur"
+                    )
+                ]
+            ]
+        )
+    )
+
+
+
+
 @Client.on_message(command(["dayandir", "pause"]) & other_filters)
 @errors
 @authorized_users_only
