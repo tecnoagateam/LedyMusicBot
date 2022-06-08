@@ -7,7 +7,7 @@ from ledymusic import ledymusic
 from pyrogram import filters
 
 from config import BOT_NAME as BN
-from helpers.filters import command
+from helpers.filters import command, other filters
 from helpers.decorators import errors, authorized_users_only
 from ledymusic import ledymusic, queues
 from pytgcalls.types.input_stream import InputAudioStream
@@ -71,7 +71,7 @@ async def davam(_, message: Message):
 @Client.on_message(command(["son", f"son@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME"]))
 @errors
 @authorized_users_only
-async def son(_, message: Message):
+async def stop(_, message: Message):
     chat_id = message.chat.id 
     for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
