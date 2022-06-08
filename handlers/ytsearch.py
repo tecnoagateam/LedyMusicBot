@@ -1,6 +1,7 @@
 # Size linkler halinde arar. 
 import logging
 
+from config import BOT_USERNAME
 from pyrogram.types import Message
 from search_engine_parser import GoogleSearch
 from youtube_search import YoutubeSearch
