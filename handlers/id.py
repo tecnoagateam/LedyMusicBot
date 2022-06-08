@@ -4,7 +4,7 @@ from helpers.get_file_id import get_file_id
 from helpers.filters import command
 
 
-@Client.on_message(command(["id", "info"]))
+@Client.on_message(command(["id", f"id@{BOT_USERNAME}", "info", f"info@{BOT_USERNAME}"]))
 async def showid(client, message):
     chat_type = message.chat.type
 
