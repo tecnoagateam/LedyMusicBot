@@ -16,11 +16,11 @@ import pyrogram
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-@app.on_message(pyrogram.filters.command(["axtar"]))
+@app.on_message(pyrogram.filters.command(["axtar" f"axtar@{BOT_USERNAME}"]))
 async def ytsearch(_, message: Message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("Mənə Musiqi adı verin!")
+            await message.reply_text("Axtarmaq üçün mənə Musiqi adı verin!")
             return
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("Axtarıram....")
