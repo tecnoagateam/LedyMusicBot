@@ -7,7 +7,7 @@ from ledymusic import ledymusic
 from pyrogram import filters
 
 from config import BOT_NAME as BN
-from helpers.filters import command, other filters
+from helpers.filters import command
 from helpers.decorators import errors, authorized_users_only
 from ledymusic import ledymusic, queues
 from pytgcalls.types.input_stream import InputAudioStream
@@ -16,37 +16,8 @@ from pytgcalls.types.input_stream import InputStream
 
 ACTV_CALLS = []
 
-@Client.on_message(command(["kontrol", f"kontrol@{BOT_USERNAME}"]))
-@errors
-@authorized_users_only
-async def controlset(_, message: Message):
-    await message.reply_text(
-        "**Ledy Music-in Kontrol Paneli:**",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "⏸ Dayandır ⏸", callback_data="cbdayandir"
-                    ),
-                    InlineKeyboardButton(
-                        "▶️ Davam ▶️", callback_data="cbdavam"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "⏹ Son ⏹", callback_data="cbson"
-                    ),
-                    InlineKeyboardButton(
-                        "⏩ Ötür ⏩", callback_data="cbotur"
-                    )
-                ]
-            ]
-        )
-    )
 
-
-
-@Client.on_message(command(["dayandir", f"dayandir@{BOT_USERNAME}", "pause", f"pause@{BOT_USERNAME}"]))
+@Client.on_message(command(["dayandir", f"dayandir@{BOT_USERNAME}", "pause"]))
 @errors
 @authorized_users_only
 async def dayandir(_, message: Message):
@@ -57,7 +28,7 @@ async def dayandir(_, message: Message):
 
 
 
-@Client.on_message(command(["davam", f"davam@{BOT_USERNAME}", "resume", f"resume{BOT_USERNAME}"]))
+@Client.on_message(command(["davam", f"davam@{BOT_USERNAME}", "resume"]))
 @errors
 @authorized_users_only
 async def davam(_, message: Message):
@@ -68,7 +39,7 @@ async def davam(_, message: Message):
     
 
 
-@Client.on_message(command(["son", f"son@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME"]))
+@Client.on_message(command(["son", f"son@{BOT_USERNAME}", "end"]))
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -88,7 +59,7 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["otur", f"@otur{BOT_USERNAME}", "skip", f"skip{BOT_USERNAME}"]))
+@Client.on_message(command(["otur", f"@otur{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
 async def otur(_, message: Message):
@@ -165,7 +136,7 @@ async def change_ses(client, message):
     except Exception as e:
        await message.reply(f"**xəta:** {e}")
 
-@Client.on_message(command(["yenile", f"yenile@{BOT_USERNAME}", "reload" f"reload@{BOT_USERNAME}]))
+@Client.on_message(command(["yenile", f"yenile@{BOT_USERNAME}", "reload"]))
 @errors
 @authorized_users_only
 async def update_admin(client, message):
