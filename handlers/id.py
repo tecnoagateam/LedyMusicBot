@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from config import BOT_NAME 
+from config import BOT_NAME, BOT_USERNAME
 from helpers.get_file_id import get_file_id
 from helpers.filters import command
 
