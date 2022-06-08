@@ -47,21 +47,21 @@ async def controlset(_, message: Message):
 
 
 
-@Client.on_message(command(["dayandir", "pause"]) & other_filters)
+@Client.on_message(command(["dayandir", f"dayandir@{BOT_USERNAME}", "pause", f"pause@{BOT_USERNAME}"]))
 @errors
 @authorized_users_only
-async def durdur(_, message: Message):
+async def dayandir(_, message: Message):
     await ledymusic.pytgcalls.pause_stream(message.chat.id)
     a = await message.reply_text("▶️ **Müsiqi dayandırıldı!**\n\n• Müsiqini yayınlamağa davam etmək üçün **Əmr » davam**")
     await sleep(3)
     await a.delete()
-    
 
 
-@Client.on_message(command(["davam", "resume"]) & other_filters)
+
+@Client.on_message(command(["davam", f"davam@{BOT_USERNAME}", "resume", f"resume#{BOT_USERNAME}"]))
 @errors
 @authorized_users_only
-async def devam(_, message: Message):
+async def davam(_, message: Message):
     await ledymusic.pytgcalls.resume_stream(message.chat.id)
     a = await message.reply_text("⏸ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr » duyandir**")
     await sleep(3)
@@ -69,10 +69,10 @@ async def devam(_, message: Message):
     
 
 
-@Client.on_message(command(["son", "end"]) & other_filters)
+@Client.on_message(command(["son", f"@{BOT_USERNAME}", "end", f"@{BOT_USERNAME"]))
 @errors
 @authorized_users_only
-async def stop(_, message: Message):
+async def son(_, message: Message):
     chat_id = message.chat.id 
     for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
@@ -89,10 +89,10 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["otur", "skip"]) & other_filters)
+@Client.on_message(command(["otur", f"@{BOT_USERNAME}", "skip", f"{BOT_USERNAME}"]))
 @errors
 @authorized_users_only
-async def atla(_, message: Message):
+async def otur(_, message: Message):
     global que
     chat_id = message.chat.id
     for x in ledymusic.pytgcalls.active_calls:
