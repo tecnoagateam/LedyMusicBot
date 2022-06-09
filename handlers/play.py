@@ -160,11 +160,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        text="🛠️ Dəstək",
-                        callback_data="cls")
-                    InlineKeyboardButton(
-                        text="📱 Rəsmi Kanal",
+
                     InlineKeyboardButton(
                         text="🗑️ Bağla",
                         callback_data="cls")
