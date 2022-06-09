@@ -35,7 +35,7 @@ def bul(client, message):
         # print(results)
         title = results[0]["title"][:40]
         thumbnail = results[0]["thumbnails"][0]
-        thumb_name = f"thumb{title}.jpg"
+        thumb_name = f"https://telegra.ph/file/4afbb46f4899c16317607.jpg"
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
 
@@ -97,7 +97,7 @@ async def vsong(client, message):
         link = f"https://youtube.com{results[0]['url_suffix']}"
         title = results[0]["title"][:40]
         thumbnail = results[0]["thumbnails"][0]
-        thumb_name = f".jpg"
+        thumb_name = f"https://telegra.ph/file/4afbb46f4899c16317607.jpg.jpg"
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
         results[0]["duration"]
