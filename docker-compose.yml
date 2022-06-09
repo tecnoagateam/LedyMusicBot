@@ -1,6 +1,6 @@
 version: "3.10"
 services:
-  talia:
+  ledy:
     build: .
     environment:
       SESSION_NAME: $SESSION_NAME
