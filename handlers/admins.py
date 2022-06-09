@@ -23,7 +23,7 @@ ACTV_CALLS = []
 @authorized_users_only
 async def dayandir(_, message: Message):
     await ledymusic.pytgcalls.pause_stream(message.chat.id)
-    a = await message.reply_text("▶️ **Müsiqi dayandırıldı!**\n\n• Müsiqini yayınlamağa davam etmək üçün **Əmr » davam**")
+    a = await message.reply_text("⏸️ **Müsiqi dayandırıldı!**\n\n• Müsiqini yayınlamağa davam etmək üçün **Əmr** » `/davam`")
     await sleep(3)
     await a.delete()
 
@@ -34,7 +34,7 @@ async def dayandir(_, message: Message):
 @authorized_users_only
 async def davam(_, message: Message):
     await ledymusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr » duyandir**")
+    a = await message.reply_text("⏸ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr** » `/dayandir`")
     await sleep(3)
     await a.delete()
     
@@ -87,7 +87,7 @@ async def otur(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("**Musiqi Növbəyə Ötutruldu.**")
+        a = await message.reply_text("**⏩ Musiqi Növbəyə Ötutruldu...**")
         await sleep(3)
         await a.delete()
 
@@ -125,8 +125,8 @@ async def deautenticate(client, message):
         await message.reply("✅ Kullancının yetkisi alındı!")
 
 
-# Sesli sohbet için 0-200 arası yeni komut eklenmiş oldu. 
-@Client.on_message(command(["ses" f"ses@{BOT_USERNAME}"]))
+# Səsli sohbet üçün 0-200 səs artiram 
+@Client.on_message(command(["ses", f"ses@{BOT_USERNAME}"]))
 @authorized_users_only
 async def change_ses(client, message):
     range = message.command[1]
