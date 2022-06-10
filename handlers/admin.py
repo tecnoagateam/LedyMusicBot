@@ -60,7 +60,7 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["otur", f"@otur{BOT_USERNAME}", "skip"]))
+@Client.on_message(command(["otur", f"otur@{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
 async def otur(_, message: Message):
