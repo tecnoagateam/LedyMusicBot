@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from helpers.decorators import errors, authorized_users_only
-from config import BOT_USERNAME
+from config import BOT_USERNAME, SUDO_USERS
 
 @Client.on_message(filters.group & filters.command(["assistantqosul", f"assistantqosul@{BOT_USERNAME}", "qatil"]))
 @authorized_users_only
