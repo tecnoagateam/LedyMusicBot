@@ -129,7 +129,7 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
 
-@Client.on_message(command(["lyric", f"lyric@{bn}", "lyrics"]))
+@Client.on_message(command(["lyric", f"lyric@{BOT_USERNAME}", "lyrics"]))
 async def get_lyric_genius(_, message: Message):
     if len(message.command) < 2:
         return await message.reply_text("**Sözləri tapmaq üçün musiqi Adı yazın**")
