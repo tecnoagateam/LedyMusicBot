@@ -27,7 +27,7 @@ async def who_is(client, message):
         await status_message.edit(str(error))
         return
     if from_user is None:
-        await status_message.edit("no valid user_id / message specified")
+        await status_message.edit("Etibarlı ID deyil!")
         return
     
     first_name = from_user.first_name or ""
@@ -41,11 +41,11 @@ async def who_is(client, message):
         f"<b>#️⃣Username:</b> @{username}\n"
         f"<b>❗User ID:</b> <code>{from_user.id}</code>\n"
         f"<b>🤝User Link:</b> {from_user.mention}\n" if from_user.username else ""
-        f"<b>👻Is Deleted:</b> True\n" if from_user.is_deleted else ""
-        f"<b>✅Is Verified:</b> True" if from_user.is_verified else ""
-        f"<b>🥸Is Scam:</b> True" if from_user.is_scam else ""
+        f"<b>👻Silindi:</b> True\n" if from_user.is_deleted else ""
+        f"<b>✅Təsdiq edilib:</b> True" if from_user.is_verified else ""
+        f"<b>🥸Saxtadir:</b> True" if from_user.is_scam else ""
         # f"<b>😈Is Fake:</b> True" if from_user.is_fake else ""
-        f"<b>⌚Last Seen:</b> <code>{last_online(from_user)}</code>\n\n"
+        f"<b>⌚Son Görünüş:</b> <code>{last_online(from_user)}</code>\n\n"
     )
 
     if message.chat.type in ["supergroup", "channel"]:
