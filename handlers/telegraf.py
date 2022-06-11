@@ -28,7 +28,7 @@ async def getmedia(bot, update):
         text=f"Xəta :- <code>{error}</code>"
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton('More Help', url=https://t.me/SOQrup')
+            InlineKeyboardButton('Dəstək', url="https://t.me/SOQrup")
             ]]
         )
         await message.edit_text(
