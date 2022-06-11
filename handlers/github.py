@@ -6,7 +6,7 @@ from pyrogram import Client
 @Client.on_message(filters.command('git'))
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("User Haqqında Məlumat almaq üçün.\n\n Nümunə: `/git AzeMusic`")
+        await message.reply_text("**User Haqqında Məlumat almaq:**\n\n Nümunə: `/git AzeMusic`")
         return
     username = message.text.split(None, 1)[1]
     URL = f'https://api.github.com/users/{username}'
@@ -28,17 +28,17 @@ async def github(_, message):
                 repositories = result['public_repos']
                 followers = result['followers']
                 following = result['following']
-                caption = f"""• Məlumat • - {name} •
-𝗚𝗶𝘁𝗵𝘂𝗯 𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲 :`{username}`
-𝗨𝘀𝗲𝗿 𝗕𝗶𝗼 :`{bio}`
-𝗚𝗶𝘁𝗵𝘂𝗯 𝗔𝗰𝗰𝗼𝘂𝗻𝘁 : [{name}]({url})
-𝗖𝗼𝗺𝗽𝗮𝗻𝘆 𝗡𝗮𝗺𝗲 : `{company}`
-𝗨𝘀𝗲𝗿 𝗦𝗶𝗻𝗰𝗲 : `{created_at}`
-𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝗶𝗲𝘀 : `{repositories}`
-𝗕𝗹𝗼𝗴 𝗨𝗿𝗹 : `{blog}`
-𝗨𝘀𝗲𝗿 𝗟𝗼𝗰𝗮𝘁𝗶𝗼𝗻 : `{location}`
-𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 : `{followers}`
-𝗙𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 : `{following}`"""
+                caption = f"""✓ Gitub Məlumat ✓ - {name} 
+**Github Username** :`{username}`
+**Usee Bio** :`{bio}`
+**Github Giriş** : [{name}]({url})
+**Kompanya Ad** : `{company}`
+**Usee Sins** : `{created_at}`
+**Repositories** : `{repositories}`
+**Blog Link** : `{blog}`
+**User Yeri** : `{location}`
+**Followers** : `{followers}`
+**Following** : `{following}`"""
             except Exception as e:
                 print(str(e))
                 pass
