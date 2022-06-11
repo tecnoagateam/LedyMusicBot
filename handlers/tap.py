@@ -130,7 +130,7 @@ async def vsong(client, message):
         print(e)
 
 @Client.on_message(command(["lyric", f"lyric@{BOT_USERNAME}", "lyrics"]))
-async def get_lyric_genius(_, message: Message):
+async def get_lyric_genius(client, message):
     if len(message.command) < 2:
         return await message.reply_text("**Sözləri tapmaq üçün musiqi Adı yazın**")
     m = await message.reply_text("🔍 Musiqi sözləri axtarılır...")
