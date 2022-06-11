@@ -21,3 +21,4 @@ aiohttp
 heroku3
 telegraph
 lyricsgenius
+speedtest-cli
