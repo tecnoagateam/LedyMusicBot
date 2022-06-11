@@ -20,3 +20,4 @@ future
 aiohttp
 heroku3
 telegraph
+lyricsgenius
