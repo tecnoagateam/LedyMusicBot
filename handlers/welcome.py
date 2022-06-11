@@ -15,7 +15,7 @@ async def auto_welcome(bot: Client, msg: Message):
     link_button = "https://t.me/SOQrup"
     button_name = os.environ.get("WELCOME_BUTTON_NAME", name_button)
     button_link = os.environ.get("WELCOME_BUTTON_LINK", link_button)
-    welcome_text = f"Salam, {mention}, {group_name} Xoş gəldin! Səni aramızda görməyimə şadam.❤️\n\nSənin ID-in : {id}"
+    welcome_text = f"Salam, {mention}, {group_name}-a Xoş gəldin! Səni aramızda görməyimizə şadıq.❤️\n\nSənin ID-in : {id}"
     WELCOME_TEXT = os.environ.get("WELCOME_TEXT", welcome_text)
     print("Welcome Message Activate")
     BUTTON = bool(os.environ.get("WELCOME_BUTTON"))
