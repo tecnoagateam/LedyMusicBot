@@ -5,6 +5,8 @@ import aiohttp
 import yt_dlp
 import wget
 
+import lyricsgenius
+
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
@@ -126,3 +128,34 @@ async def vsong(client, message):
         await msg.delete()
     except Exception as e:
         print(e)
+
+@Client.on_message(command(["lyric", f"lyric@{bn}", "lyrics"]))
+async def get_lyric_genius(_, message: Message):
+    if len(message.command) < 2:
+        return await message.reply_text("**Sözləri tapmaq üçün musiqi Adı yazın**")
+    m = await message.reply_text("🔍 Musiqi sözləri axtarılır...")
+    query = message.text.split(None, 1)[1]
+    x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
+    y = lyricsgenius.Genius(x)
+    y.verbose = False
+    S = y.search_song(query, get_full_info=False)
+    if S is None:
+        return await m.edit("❌ Heçnə tapmadım")
+    xxx = f"""
+**Musiqi Adı:** __{query}__
+**Artist Adı:** {S.artist}
+**__Lyrics:__**
+{S.lyrics}"""
+    if len(xxx) > 4096:
+        await m.delete()
+        filename = "lyrics.txt"
+        with open(filename, "w+", encoding="utf8") as out_file:
+            out_file.write(str(xxx.strip()))
+        await message.reply_document(
+            document=filename,
+            caption=f"**OUTPUT:**\n\n`attached lyrics text`",
+            quote=False,
+        )
+        remove_if_exists(filename)
+    else:
+        await m.edit(xxx)
