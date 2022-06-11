@@ -30,15 +30,15 @@ async def github(_, message):
                 following = result['following']
                 caption = f"""✓ Gitub Məlumat ✓ - {name} 
 **Github Username** :`{username}`
-**Usee Bio** :`{bio}`
+**User Bio** :`{bio}`
 **Github Giriş** : [{name}]({url})
 **Kompanya Ad** : `{company}`
 **Usee Sins** : `{created_at}`
 **Repositories** : `{repositories}`
 **Blog Link** : `{blog}`
 **User Yeri** : `{location}`
-**Followers** : `{followers}`
-**Following** : `{following}`"""
+**Takibçi Edən** : `{followers}`
+**Takib Edir** : `{following}`"""
             except Exception as e:
                 print(str(e))
                 pass
