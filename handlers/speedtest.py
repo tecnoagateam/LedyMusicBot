@@ -34,6 +34,6 @@ async def run_speedtest(_, message: Message):
 **Ad:** {result['server']['name']}
 **Ölkə:** {result['server']['country']}, {result['server']['cc']}
 **Sponsor:** {result['server']['sponsor']}
-**𝐋𝐚𝐭𝐞𝐧𝐜𝐲:** {result['server']['latency']}
+**Gecikmə:** {result['server']['latency']}
 
 ⚡️ **Ｐｉｎｇ:** {result['ping']}"""
