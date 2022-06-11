@@ -10,7 +10,7 @@ async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/84121d4d66583f22b508e.jpg",
                 caption=(f"""✧═══════•❀•═══════✧
-**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖𝒑𝒆𝒓 𝑭𝒂𝒔𝒕\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
+**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖𝒑𝒆𝒓 𝑭𝒂𝒔𝒕\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Və təbii ki, başqa özəlliklərimdə var.\n Mənə media (yəni hər hansısa bir foto göndərin mən onu telegrafa yukləyim. Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
