@@ -153,7 +153,7 @@ async def get_lyric_genius(_, message: Message):
             out_file.write(str(xxx.strip()))
         await message.reply_document(
             document=filename,
-            caption=f"`əlavə edilmiş söz mətni`"",
+            caption=f"*OUTPUT:**\n\n`attached lyrics text`"",
             quote=False,
         )
         remove_if_exists(filename)
