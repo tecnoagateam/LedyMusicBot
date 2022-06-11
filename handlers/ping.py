@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 
 
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]))
-async def ping_pong(client: Client, message: Message):
+async def ping_pong(Client, Message):
     start = time()
     m_reply = await message.reply_text("__pinging...__")
     delta_ping = time() - start
