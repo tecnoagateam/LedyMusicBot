@@ -10,7 +10,7 @@ async def getmedia(bot, update):
     medianame = DOWNLOAD_LOCATION + str(update.from_user.id)
     try:
         message = await update.reply(
-            text="`Processing Media you Send...`",
+            text="`Göndərdiyiniz Media Telegrafa Yüklənir...`",
             quote=True,
             disable_web_page_preview=True
         )
