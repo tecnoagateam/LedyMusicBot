@@ -35,7 +35,7 @@ async def who_is(client, message):
     username = from_user.username or ""
     
     message_out_str = (
-        "<b>✪ᘳᗒ𝑼𝒔𝒆𝒓 𝑴𝒆𝒍𝒖𝒎𝒂𝒕ᗕᘰ✪</b> "
+        "<b>▪‿✪ᗒ𝐔𝐒𝐄𝐑 𝐌𝐄𝐋𝐔𝐌𝐀𝐓ᗕ✪‿▪</b> "
 
             "<b>◇ Ad:</b> "
         f"<a href='tg://user?id={from_user.id}'>{first_name}</a>\n"
