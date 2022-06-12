@@ -34,7 +34,7 @@ async def dayandir(_, message: Message):
 @authorized_users_only
 async def davam(_, message: Message):
     await ledymusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr** » `/dayandir`")
+    a = await message.reply_text("▶️ **Müsiqi yayınlamağa davam edir!**\n\n• Müsiqi yayınlamağı dayandırmaq üçün **əmr** » `/dayandir`")
     await sleep(3)
     await a.delete()
     
@@ -63,10 +63,10 @@ async def stop(_, message: Message):
 @Client.on_message(command(["otur", f"otur@{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
-async def atla(_, message: Message):
+async def otur(_, message: Message):
     global que
     chat_id = message.chat.id
-    for x in callsmusic.pytgcalls.active_calls:
+    for x in ledysmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
         a = await message.reply_text("**Növbədə Heç birşey yoxdur!**")
@@ -76,13 +76,13 @@ async def atla(_, message: Message):
         queues.task_done(chat_id)
         
         if queues.is_empty(chat_id):
-            await callsmusic.pytgcalls.leave_group_call(chat_id)
+            await ledysmusic.pytgcalls.leave_group_call(chat_id)
         else:
-            await callsmusic.pytgcalls.change_stream(
+            await ledysmusic.pytgcalls.change_stream(
                 chat_id, 
                 InputStream(
                     InputAudioStream(
-                        callsmusic.queues.get(chat_id)["file"],
+                        ledysmusic.queues.get(chat_id)["file"],
                     ),
                 ),
             )
