@@ -5,12 +5,12 @@ from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
 # EfsaneMusicVaves tarafından düzenlendi. 
 
-@Client.on_message(command(["start", f"start@{BOT_USERNAME}", "ledy", f"ledy@{BOT_USERNAME}"]))
+@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/84121d4d66583f22b508e.jpg",
                 caption=(f"""✧═══════•❀•═══════✧
-**Salam {message.from_user.mention} Xoş gəldin!\nMən Super Fast {bot}\nSəsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n 🧸 Mənim bir çox telegram özəlliklərimdə var.\nMənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n ❄️ Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n ✔️Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
+**Salam {message.from_user.mention} Xoş gəldin!\n🍁 Mən Super Fast {bot}\nSəsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\nMənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n\n❄️ Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -108,7 +108,7 @@ async def herkes(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri", callback_data="cbmelumat")
+                         "⬅️ Geri", callback_data="cbledy")
                  ] 
              ]
          )
@@ -126,7 +126,7 @@ async def owner(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri", callback_data="cbmelumat")
+                         "⬅️ Geri", callback_data="cbledy")
                  ] 
              ]
          )
@@ -144,7 +144,7 @@ async def tagger(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri", callback_data="cbmelumat")
+                         "⬅️ Geri", callback_data="cbledy")
                  ] 
              ]
          )
@@ -153,7 +153,7 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **👋 Salam, {query.from_user.mention} Xoş gəldin!\n🍁 Mən Super Fast {bot}\nSəsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n 🧸 Mənim bir çox telegram özəlliklərimdə var.\nMənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n ❄️ Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n ✔️Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
+    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **👋 Salam, {query.from_user.mention} Xoş gəldin!\n🍁 Mən Super Fast {bot}\nSəsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\nMənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n\n❄️ Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -171,7 +171,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Əmrlər" , callback_data= "cbmelumat"
+                        "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
                         "🔊 Assistant ", url=f"https://t.me/LedyMusicAssistant"
