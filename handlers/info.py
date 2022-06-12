@@ -37,10 +37,10 @@ async def who_is(client, message):
     message_out_str = (
         "<b>✪ᘳᗒ𝑼𝒔𝒆𝒓 𝑴𝒆𝒍𝒖𝒎𝒂𝒕ᗕᘰ✪</b> "
 
-          "<b>◇ Ad:</b> "
+            "<b>◇ Ad:</b> "
         f"<a href='tg://user?id={from_user.id}'>{first_name}</a>\n"
-        f"<b>◇ Tam Ad:</b> {last_name}\n"
-        f"<b>◇ Username:</b> @{username}\n"
+        f"<b>◇ Soyad:</b> {last_name}\n"
+        f"<b>◇ Tağ Ad:</b> @{username}\n"
         f"<b>◇ User ID:</b> <code>{from_user.id}</code>\n"
         f"<b>◇ User Link:</b> {from_user.mention}\n" if from_user.username else ""
         f"<b>◇ Silindi:</b> True\n" if from_user.is_deleted else ""
