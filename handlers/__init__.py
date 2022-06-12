@@ -12,12 +12,12 @@ def check_heroku(func):
         heroku_app = None
         if not heroku_client:
             await message.reply_text(
-                "`Bunun Çalışması için Lütfen HEROKU_API_KEY Anahtarı Ekleyin!`",
+                "`Bunun işləməsi üçün HEROKU_API_KEY Açarını əlavə edin!`",
                 parse_mode="markdown",
             )
         elif not HEROKU_APP_NAME:
             await message.reply_text(
-                "`Bunun Çalışması için Lütfen HEROKU_APP_NAME Ekleyin!`",
+                "`Bunun işləməsi üçün lütfən HEROKU_APP_NAME Açarını əlavə edin!`",
                 parse_mode="markdown",
             )
         if HEROKU_APP_NAME and heroku_client:
@@ -26,7 +26,7 @@ def check_heroku(func):
             except:
                 await message.reply_text(
                     message,
-                    "`Heroku Api Anahtarı ve Uygulama Adı Eşleşmiyor!`",
+                    "`Heroku Api Açarı və Proqram Adı Uyğun deyil!`",
                     parse_mode="markdown",
                 )
             if heroku_app:
