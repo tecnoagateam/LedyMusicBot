@@ -1,7 +1,7 @@
 from time import time
 from datetime import datetime
 from pyrogram import Client, filters
-from config import USERNAME_BOT
+from config import BOT_USERNAME
 from helpers.decorators import sudo_users_only
 from helpers.filters import command
 
@@ -28,7 +28,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(filters.command(["uptime", f"uptime@{USERNAME_BOT}"]))
+@Client.on_message(filters.command(["uptime", f"uptime@{BOT_USERNAME}"]))
 @sudo_users_only
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
