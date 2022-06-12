@@ -21,7 +21,7 @@ async def run_speedtest(_, message: Message):
     except Exception as e:
         await m.edit(e)
         return
-    m = await m.edit("🔄 Ｓｅｒｖｅｒ - Sürət Testi Nəticələri")
+    m = await m.edit("💡 **Sürət Testi Nəticələri**\n\n**ISP:** {result['client']['isp']}\n**Ölkə:** {result['client']['country']}")
     path = wget.download(result["share"])
 
     output = f"""💡 **Sürət Testi Nəticələri**
