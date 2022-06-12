@@ -16,6 +16,5 @@ async def ping_pong(client, message):
     await m_reply.edit("**60% ██████▒▒▒▒**")
     await m_reply.edit("**80% ████████▒▒**")
     await m_reply.edit("**100% ██████████**")
-    await asyncio.sleep(1)
     await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
