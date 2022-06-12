@@ -10,7 +10,7 @@ async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/84121d4d66583f22b508e.jpg",
                 caption=(f"""✧═══════•❀•═══════✧
-**Salam {message.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖𝒑𝒆𝒓 𝑭𝒂𝒔𝒕\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Və təbii ki, başqa özəlliklərimdə var.\n Mənə media (yəni hər hansısa bir foto göndərin mən onu telegrafa yukləyim. Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
+**Salam {message.from_user.mention} Xoş gəldin!\nMən Super Fast {bot}\nSəsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n 🧸 Mənim bir çox telegram özəlliklərimdə var.\nMənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n ❄️ Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n ✔️Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -29,7 +29,7 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Əmrlər" , callback_data= "cbmelumat"
+                        "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
                         "🔊 Assistant", url=f"https://t.me/LedyMusicAssistant"
@@ -42,8 +42,8 @@ async def start(_, message: Message):
   
 
 
-@Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]))
-async def melumat(_, message: Message):
+@Client.on_message(command(["ledy", f"ledy@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]))
+async def ledy(_, message: Message):
       await message.reply_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
@@ -68,7 +68,7 @@ async def melumat(_, message: Message):
     )
 
 
-@Client.on_callback_query(filters.regex("cbmelumat"))
+@Client.on_callback_query(filters.regex("cbledy"))
 async def cbmelumat(_, query: CallbackQuery):
     await query.edit_message_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
@@ -135,7 +135,7 @@ async def owner(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("tagger"))
 async def tagger(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun userləri Tağ etmək üçün Əmrlər menyusu:\n Nəzərinizə çatdırım ki, Bu modül [beta] versiadadır, Hələ Dərc edilmiyib.\n\n /ledytag - userləri beşli tağ edər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu özəllik hələ bot kodlarına yazılmayıb. Yaxın Zamanlarda Bu özəllik gerçəkləşəcək.\n\n /ledytag - Userləri Normal Şəkildə tağ edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -153,7 +153,7 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **Salam {query.from_user.mention} Xoş gəldin!\nMən {bot}, 𝑺𝒖𝒑𝒆𝒓 𝑭𝒂𝒔𝒕\nSəsli söhbətlərdə müsiqi yayınlaya bilən botam. Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
+    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **👋 Salam, {query.from_user.mention} Xoş gəldin!\n🍁 Mən Super Fast {bot}\nSəsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n 🧸 Mənim bir çox telegram özəlliklərimdə var.\nMənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n ❄️ Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n ✔️Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
