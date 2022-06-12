@@ -37,7 +37,7 @@ async def who_is(client, message):
     message_out_str = (
         "<b>✪ᘳᗒ𝑼𝒔𝒆𝒓 𝑴𝒆𝒍𝒖𝒎𝒂𝒕ᗕᘰ✪</b> "
 
-        "<b>◇ Ad:</b> "
+          "<b>◇ Ad:</b> "
         f"<a href='tg://user?id={from_user.id}'>{first_name}</a>\n"
         f"<b>◇ Tam Ad:</b> {last_name}\n"
         f"<b>◇ Username:</b> @{username}\n"
@@ -57,7 +57,7 @@ async def who_is(client, message):
                 chat_member_p.joined_date or time.time()
             ).strftime("%Y.%m.%d %H:%M:%S")
             message_out_str += (
-                "<b>Joined on:</b> <code>"
+                "<b>◇ Qoşulma Tarixi:</b> <code>"
                 f"{joined_date}"
                 "</code>\n"
             )
