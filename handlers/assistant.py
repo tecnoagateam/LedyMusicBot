@@ -42,7 +42,7 @@ async def addchannel(client, message):
             "<b>🌿 Assistant Artıq Çatdadır 🌿</b>",
         )
     
-@USER.on_message(filters.group & filters.command(["assistantcix", f"assistantcix@{BOT_USERNAME}", "ayril"]))
+@USER.on_message(filters.group & filters.command(["assistantcix", f"assistantcix@{BOT_USERNAME}", "leave"]))
 async def rem(USER, message):
     try:
         await USER.leave_chat(message.chat.id)
