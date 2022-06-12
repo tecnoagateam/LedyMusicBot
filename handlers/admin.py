@@ -60,7 +60,7 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["atla", "skip"]) & other_filters)
+@Client.on_message(command(["otur", f"otur@{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
 async def atla(_, message: Message):
