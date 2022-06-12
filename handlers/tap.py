@@ -133,7 +133,7 @@ async def vsong(client, message):
 async def get_lyric_genius(client, message):
     if len(message.command) < 2:
         return await message.reply_text("**Sözləri tapmaq üçün musiqi Adı yazın**")
-    m = await message.reply_text("🔍 Musiqi sözləri axtarılır...")
+    m = await message.reply_text("🔍 Mahnı sözləri axtarılır...")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
@@ -142,7 +142,7 @@ async def get_lyric_genius(client, message):
     if S is None:
         return await m.edit("❌ Heçnə tapmadım")
     xxx = f"""
-**Musiqi Adı:** __{query}__
+**Mahnı Adı:** __{query}__
 **Artist Adı:** {S.artist}
 **__Lyrics:__**
 {S.lyrics}"""
