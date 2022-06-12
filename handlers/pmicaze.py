@@ -18,7 +18,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "**Salam**, **Bu Bir Assistant Hesabıdır.** Mən [LEDY MUSİC](https://t.me/SSmusicLedy_bot) Bot'un Assistantıyım",
+                "**Salam**, {mention} Xoş Gəldin!\n\n**Mən** [🍁 LEDY MUSİC 🍁](https://t.me/SSmusicLedy_bot) **Bot'un Assistantıyam**\n\nTelegramda [🍁 LEDY MUSİC 🍁](https://t.me/SSmusicLedy_bot) Botla yaxşı vaxt keçirə bilərsən.",
             )
             return
  
@@ -44,7 +44,7 @@ async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("**Hey Assistant Yazışması başladı.**")
+        await message.reply_text("**Assistant Yazışması başladı...**")
         return
     message.continue_propagation()    
     
