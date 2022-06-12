@@ -60,36 +60,30 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["otur", f"otur@{BOT_USERNAME}", "skip"]))
+@Client.on_message(command(["otur" f"otur@{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
-async def otur(_, message: Message):
+async def skip(_, message: Message):
     global que
-    chat_id = message.chat.id
-    for x in ledymusic.pytgcalls.active_calls:
-        ACTV_CALLS.append(int(x.chat_id))
-    if int(chat_id) not in ACTV_CALLS:
-        a = await message.reply_text("Növbədə Heç birşey yoxdur!")
-        await sleep(3)
-        await a.delete()
+    chat_id = get_chat_id(message.chat)
+    if chat_id not in ledymusic.pytgcalls.active_calls:
+        await message.reply_text("❗ Növbədə Heç birşey yoxdur!")
     else:
-        queues.task_done(chat_id)
-        
-        if queues.is_empty(chat_id):
-            await ledymusic.pytgcalls.leave_group_call(chat_id)
+        ledymusic.queues.task_done(chat_id)
+
+        if ledymusic.queues.is_empty(chat_id):
+            ledymusic.pytgcalls.leave_group_call(chat_id)
         else:
-            await ledymusic.pytgcalls.change_stream(
-                chat_id, 
-                InputStream(
-                    InputAudioStream(
-                        ledymusic.queues.get(chat_id)["file"],
-                    ),
-                ),
+            ledymusic.pytgcalls.change_stream(
+                chat_id, ledymusic.queues.get(chat_id)["file"]
             )
-            
-        a = await message.reply_text("**⏩ Musiqi Növbəyə Ötutruldu...**")
-        await sleep(3)
-        await a.delete()
+
+    qeue = que.get(chat_id)
+    if qeue:
+        skip = qeue.pop(0)
+    if not qeue:
+        return
+    await message.reply_text(f"- Öturuldu **{skip[0]}**\n- İndi Yayınlanır **{qeue[0][0]}**")
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @Tenha055 Tarafından Eklenmiştir. 
