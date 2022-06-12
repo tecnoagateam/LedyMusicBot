@@ -18,7 +18,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "**Salam**, {mention} Xoş Gəldin!\n\n**Mən** [🍁 LEDY MUSİC 🍁](https://t.me/SSmusicLedy_bot) **Bot'un Assistantıyam**\n\nTelegramda [🍁 LEDY MUSİC 🍁](https://t.me/SSmusicLedy_bot) Botla yaxşı vaxt keçirə bilərsən.",
+                "**Salam**, {message.from_user.mention} Xoş Gəldin!\n\n**Mən** [🍁 LEDY MUSİC 🍁](https://t.me/SSmusicLedy_bot) **Bot'un Assistantıyam**\n\nTelegramda [🍁 LEDY MUSİC 🍁](https://t.me/SSmusicLedy_bot) Botla yaxşı vaxt keçirə bilərsən.",
             )
             return
  
