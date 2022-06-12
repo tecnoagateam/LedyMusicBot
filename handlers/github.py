@@ -37,7 +37,7 @@ async def github(_, message):
 **Repositories** : `{repositories}`
 **Blog Link** : `{blog}`
 **User Yeri** : `{location}`
-**Takibçi Edən** : `{followers}`
+**Takib Edən** : `{followers}`
 **Takib Edir** : `{following}`"""
             except Exception as e:
                 print(str(e))
