@@ -1,4 +1,4 @@
-# Telegramda yani ben boş işler müdürü :) <> @Mahoaga Tarafından düzenlenen ufak çaplı proje. 
+# Telegramda yani ben boş işler müdürü :) <> @Tenha055 Tarafından düzenlenen ufak çaplı proje. 
 import os
 import requests
 import aiohttp
@@ -132,7 +132,7 @@ async def vsong(client, message):
 @Client.on_message(command(["lyric", f"lyric@{BOT_USERNAME}", "lyrics"]))
 async def get_lyric_genius(client, message):
     if len(message.command) < 2:
-        return await message.reply_text("**Sözləri tapmaq üçün musiqi Adı yazın**")
+        return await message.reply_text("**Sözləri tapmaq üçün mənə mahnı adı verin**")
     m = await message.reply_text("🔍 Mahnı sözləri axtarılır...")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
