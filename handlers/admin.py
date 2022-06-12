@@ -66,7 +66,7 @@ async def stop(_, message: Message):
 async def otur(_, message: Message):
     global que
     chat_id = message.chat.id
-    for x in ledysmusic.pytgcalls.active_calls:
+    for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
         a = await message.reply_text("**Növbədə Heç birşey yoxdur!**")
@@ -76,13 +76,13 @@ async def otur(_, message: Message):
         queues.task_done(chat_id)
         
         if queues.is_empty(chat_id):
-            await ledysmusic.pytgcalls.leave_group_call(chat_id)
+            await ledymusic.pytgcalls.leave_group_call(chat_id)
         else:
-            await ledysmusic.pytgcalls.change_stream(
+            await ledymusic.pytgcalls.change_stream(
                 chat_id, 
                 InputStream(
                     InputAudioStream(
-                        ledysmusic.queues.get(chat_id)["file"],
+                        ledymusic.queues.get(chat_id)["file"],
                     ),
                 ),
             )
