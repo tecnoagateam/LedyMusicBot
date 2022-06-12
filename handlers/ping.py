@@ -33,7 +33,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]))
-async def ping(client, m: Message):
+async def ping(client, message):
    start = time()
    current_time = datetime.utcnow()
    m_reply = await m.edit("`Pinging...`")
