@@ -60,12 +60,12 @@ async def stop(_, message: Message):
             "✅ **Müsiqi sonlandırıldı !**\n\n• **Assistant səsli söhbətdən ayrıldı.**"
         )
     
-@Client.on_message(command(["otur" f"otur@{BOT_USERNAME}", "skip"]))
+@Client.on_message(command(["otur", f"otur@{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
     global que
-    chat_id = get_chat_id(message.chat)
+    chat_id = message.chat.id
     if chat_id not in ledymusic.pytgcalls.active_calls:
         await message.reply_text("❗ Növbədə Heç birşey yoxdur!")
     else:
