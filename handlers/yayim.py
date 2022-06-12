@@ -27,4 +27,4 @@ async def broadcast(_, message: Message):
                 await asyncio.sleep(3)
             except:
                 failed=failed+1
-        await message.reply_text(f"`Reklam uğurla göndərildi' \n\n**Gönderildi:** `{sent}` Söhbət \n**Uğursuz:** {failed} Söhbət")
+        await message.reply_text(f"`Reklam uğurla göndərildi` \n\n**Gönderildi:** `{sent}` Söhbət \n**Uğursuz:** {failed} Söhbət")
