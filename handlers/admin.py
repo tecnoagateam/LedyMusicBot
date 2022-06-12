@@ -85,6 +85,41 @@ async def skip(_, message: Message):
         return
     await message.reply_text(f"- Öturuldu **{skip[0]}**\n- İndi Yayınlanır **{qeue[0][0]}**")
 
+
+@Client.on_message(command(["auth", f"auth@{BOT_USERNAME}"]))
+@authorized_users_only
+async def authenticate(client, message):
+    global admins
+    if not message.reply_to_message:
+        return await message.reply("💡 reply to message to authorize user !")
+    if message.reply_to_message.from_user.id not in admins[message.chat.id]:
+        new_admins = admins[message.chat.id]
+        new_admins.append(message.reply_to_message.from_user.id)
+        admins[message.chat.id] = new_admins
+        await message.reply(
+            "🟢 user authorized.\n\nfrom now on, that's user can use the admin commands."
+        )
+    else:
+        await message.reply("✅ user already authorized!")
+
+
+@Client.on_message(command(["unauth", f"unauth@{BOT_USERNAME}"]))
+@authorized_users_only
+async def deautenticate(client, message):
+    global admins
+    if not message.reply_to_message:
+        return await message.reply("💡 reply to message to deauthorize user !")
+    if message.reply_to_message.from_user.id in admins[message.chat.id]:
+        new_admins = admins[message.chat.id]
+        new_admins.remove(message.reply_to_message.from_user.id)
+        admins[message.chat.id] = new_admins
+        await message.reply(
+            "🔴 user deauthorized.\n\nfrom now that's user can't use the admin commands."
+        )
+    else:
+        await message.reply("✅ user already deauthorized!")
+
+
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @Tenha055 Tarafından Eklenmiştir. 
 @Client.on_message(command(["ver", f"ver@{BOT_USERNAME}"]))
