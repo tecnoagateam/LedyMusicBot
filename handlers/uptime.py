@@ -2,7 +2,7 @@ from time import time
 from datetime import datetime
 from pyrogram import Client, filters
 from config import BOT_USERNAME
-from helpers.decorators import Client authorized_users_only
+from helpers.decorators import authorized_users_only
 from helpers.filters import command 
 
 
