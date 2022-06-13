@@ -2,7 +2,8 @@ from time import time
 from datetime import datetime
 from pyrogram import Client, filters
 from config import BOT_USERNAME
-from helpers.filters import command 
+from helpers.filters import command
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 START_TIME = datetime.utcnow()
@@ -37,3 +38,27 @@ async def get_uptime(client, message):
         f"• **iş vaxtı:** `{uptime}`\n"
         f"• **başlama vaxtı:** `{START_TIME_ISO}`"
     )
+
+
+
+@Client.on_message(command(["alive", f"alive@{BOT_USERNAME}"]) & filters.group)
+async def alive(client, message):
+    current_time = datetime.utcnow()
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
+    await m.reply_text(
+        f"""****\n\n<b>⏰ **uptime:**</b> `{uptime}`""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🦅 Dəstək", url=f"https://t.me/SOQrup"
+                    ),
+                    InlineKeyboardButton(
+                        "🧸 Kanal", url=f"https://t.me/ledyplaylist"
+                    )
+                ]
+            ]
+        )
+    )
+
