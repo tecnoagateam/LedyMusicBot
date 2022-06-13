@@ -3,7 +3,6 @@ from config import BOT_USERNAME
 
 from helpers.filters import command
 from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 
@@ -16,19 +15,3 @@ async def ping_pong(client, message):
 
 
 
-@Client.on_message(command(["alive", f"alive@{BOT_USERNAME}"]) & filters.group)
-async def alive(client, message):
-    await message.reply_text("💠**Mən Çox Gözəl İşləyirəm**💠")
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🦅 Dəstək", url=f"https://t.me/SOQrup"
-                    ),
-                    InlineKeyboardButton(
-                        "🧸 Kanal", url=f"https://t.me/ledyplaylist"
-                    )
-                ]
-            ]
-        )
-    )
