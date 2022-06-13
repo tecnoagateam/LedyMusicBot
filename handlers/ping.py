@@ -3,6 +3,7 @@ from config import BOT_USERNAME
 
 from helpers.filters import command
 from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 
