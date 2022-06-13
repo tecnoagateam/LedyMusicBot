@@ -11,10 +11,6 @@ async def new_chat(client, message):
     if await is_served_chat(chat_id):
         pass
     else:
-        await add_served_chat(chat_id)
-    for member in m.new_chat_members:
-                    )
-                    return await bot.leave_chat(chat_id)
             if member.id == me_bot.id:
                 return await m.reply(
                     "❤️ Thanks for adding me to the **Group** !\n\n"
