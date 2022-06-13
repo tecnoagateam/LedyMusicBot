@@ -3,7 +3,38 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
-# EfsaneMusicVaves tarafından düzenlendi. 
+# MusicVaves tarafından düzenlendi. 
+
+@Client.on_message(filters.new_chat_members)
+async def new_chat(client, message):
+    chat_id = m.chat.id
+    if await is_served_chat(chat_id):
+        pass
+    else:
+        await add_served_chat(chat_id)
+    for member in m.new_chat_members:
+                    )
+                    return await bot.leave_chat(chat_id)
+            if member.id == me_bot.id:
+                return await m.reply(
+                    "❤️ Thanks for adding me to the **Group** !\n\n"
+                    "Appoint me as administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/assistantqosul` for invite the assistant.\n\n"
+                    "Once done, then type `/reload`",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
+                                InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup")
+                            ],[
+                                InlineKeyboardButton("👤 Assistant", url=f"https://t.me/LedyMusicAssistant")
+                            ]
+                        ]
+                    )
+                )
+            return
+        except Exception:
+            return
+
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
