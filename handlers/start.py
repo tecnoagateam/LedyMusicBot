@@ -7,7 +7,6 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(filters.new_chat_members)
 async def new_chat(client, message):
-    if await is_served_chat(chat_id):
                 return await message.reply(
                     "❤️ Thanks for adding me to the **Group** !\n\n"
                     "Appoint me as administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/assistantqosul` for invite the assistant.\n\n"
