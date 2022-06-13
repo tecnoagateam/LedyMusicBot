@@ -9,7 +9,6 @@ from helpers.filters import command, other_filters2
 async def new_chat(client, message):
     chat_id = m.chat.id
     if await is_served_chat(chat_id):
-            if member.id == me_bot.id:
                 return await m.reply(
                     "❤️ Thanks for adding me to the **Group** !\n\n"
                     "Appoint me as administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/assistantqosul` for invite the assistant.\n\n"
@@ -72,13 +71,12 @@ async def ledy(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 Hərkəs üçün Əmrlər", callback_data="herkes")
+                         "🍁 User Özəlliyi", callback_data="herkes")                   
+                     InlineKeyboardButton(
+                         "🧑‍✈️ Admin Özəlliyi ", callback_data="owner")
                  ],[                     
                      InlineKeyboardButton(
-                         "🧑‍✈️ Adminlər üçün Əmrlər", callback_data="owner")
-                 ],[                     
-                     InlineKeyboardButton(
-                         "😻 Tagger Modulu [BETA]", callback_data="tagger")
+                         "😻 Tagger Özəlliyi", callback_data="tagger")
                  ],[
                      InlineKeyboardButton(
                          "🏠 Ana menyu", callback_data="cbstart")
@@ -98,15 +96,15 @@ async def cbmelumat(_, query: CallbackQuery):
       [
         [
           InlineKeyboardButton(
-            "🍁 Hərkəs üçün əmrlər 🍁", callback_data ="herkes")
+            "🍁 User Özəlliyi 🍁", callback_data ="herkes")
         ],
         [
           InlineKeyboardButton(
-            "🧑‍✈️ Admin Əmrləri 🧑‍✈️",callback_data ="owner")
+            "🧑‍✈️ Admin Özəlliyi 🧑‍✈️",callback_data ="owner")
         ],
         [
           InlineKeyboardButton(
-            "😻 Tagger Modulu 😻",callback_data ="tagger")
+            "😻 Tagger Özəlliyi 😻",callback_data ="tagger")
         ],
         [
           InlineKeyboardButton(
