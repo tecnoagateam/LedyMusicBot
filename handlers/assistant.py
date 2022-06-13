@@ -5,7 +5,7 @@ from pyrogram.errors import UserAlreadyParticipant
 from helpers.decorators import errors, authorized_users_only
 from config import BOT_USERNAME, SUDO_USERS
 
-@Client.on_message(filters.group & filters.command(["assistantqosul", f"assistantqosul@{BOT_USERNAME}", "qatil"]))
+@Client.on_message(filters.group & filters.command(["assistantqosul", f"assistantqosul@{BOT_USERNAME}", "qatil", "join"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -14,7 +14,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>İlk Öncə Məni  Yönətici Etməlisən</b>",
+            "<b>İlk Öncə Məni Admin Etməlisən</b>",
         )
         return
 
@@ -34,7 +34,7 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🍁 Zaman Aşımı Xətası 🍁\n User {user.first_name} Assistant üçün çoxlu qatılma istəkləri nədəni ilə qrubunuza qatılmadı! Assistanın qrupta yasaqlanmadığından əmin olun."
+            f"<b>🍁 Zaman Aşımı Xətası 🍁\n User {user.first_name} Assistant üçün çoxlu qatılma istəkləri nədəni ilə qrubunuza qatılmadı! Assistanın qrupda bağlanmadığın-dan əmin olun."
             "\n\nYada Assistan Hesabını Qruba Özun Əlavə et</b>",
         )
         return
@@ -42,7 +42,7 @@ async def addchannel(client, message):
             "<b>🌿 Assistant Artıq Çatdadır 🌿</b>",
         )
     
-@USER.on_message(filters.group & filters.command(["assistantcix", f"assistantcix@{BOT_USERNAME}", "leave"]))
+@USER.on_message(filters.group & filters.command(["assistantcix", f"assistantcix@{BOT_USERNAME}", "cix", "leave"]))
 async def rem(USER, message):
     try:
         await USER.leave_chat(message.chat.id)
