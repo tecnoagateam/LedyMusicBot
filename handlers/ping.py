@@ -7,6 +7,15 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 
+@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]))
+async def ping_pong(client, message):
+    start = time()
+    m_reply = await message.reply_text("__pinging...__")
+    delta_ping = time() - start
+    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+
+
+
 @Client.on_message(command(["alive", f"alive@{BOT_USERNAME}"]) & filters.group)
 async def alive(client, message):
     await message.reply_text("💠**Mən Çox Gözəl İşləyirəm**💠")
@@ -23,12 +32,3 @@ async def alive(client, message):
             ]
         )
     )
-
-
-
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]))
-async def ping_pong(client, message):
-    start = time()
-    m_reply = await message.reply_text("__pinging...__")
-    delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
