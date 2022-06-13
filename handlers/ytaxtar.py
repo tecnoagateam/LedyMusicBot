@@ -1,7 +1,7 @@
 import logging
 
 from config import BOT_USERNAME as bn
-from helpers.filters import command
+from helpers.filters import command, other_filters2
 from pyrogram import Client
 from pyrogram.types import (
     CallbackQuery,
