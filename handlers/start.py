@@ -8,16 +8,16 @@ from helpers.filters import command, other_filters2
 @Client.on_message(filters.new_chat_members)
 async def new_chat(client, message):
                 return await message.reply(
-                    "❤️** Məni Qrupa əlavə etdiyiniz üçün təşəkkürlər !**\n\n"
+                    "❤️**Məni Qrupa əlavə etdiyiniz üçün təşəkkürlər !**\n\n"
                     "**Məni Qrupda administrator təyin edin, əks halda düzgün işləyə bilməyəcəm və Assistantı dəvət etmək üçün /assistantqosul yazmağı unutmayın.**\n\n"
-                    "Bitirdikdən sonra `/yenile` yükləyin",
+                    "Bitirdikdən sonra Qrupa `/yenile` yazın.",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
                                 InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup")
                             ],[
-                                InlineKeyboardButton("👤 Assistant", url=f"https://t.me/LedyMusicAssistant")
+                                InlineKeyboardButton("🔊 Assistant", url=f"https://t.me/LedyMusicAssistant")
                             ]
                         ]
                     )
@@ -30,13 +30,13 @@ async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/84121d4d66583f22b508e.jpg",
                 caption=(f"""✧═══════•❀•═══════✧
-**Salam {message.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot} Bot\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
+**Salam {message.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot} Bot\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto) göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🍁 ❰ Qrubuna Əlavə et ❱ 🍁", url=f"https://t.me/SSmusicLedy_bot?startgroup=melumat"
+                        "🦅 ❰ Qrubuna Əlavə et ❱ 🦅", url=f"https://t.me/SSmusicLedy_bot?startgroup=melumat"
                     )
                 ],
                 [
@@ -75,7 +75,7 @@ async def ledy(_, message: Message):
                          "🧑‍✈️ Admin Özəlliyi ", callback_data="owner")
                  ],[                     
                      InlineKeyboardButton(
-                         "😻 Tagger Özəlliyi", callback_data="tagger")
+                         "❄️ Tagger Özəlliyi", callback_data="tagger")
                  ],[
                      InlineKeyboardButton(
                          "🏠 Ana menyu", callback_data="cbstart")
@@ -103,7 +103,7 @@ async def cbmelumat(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "😻 Tagger Özəlliyi 😻",callback_data ="tagger")
+            "❄️ Tagger Özəlliyi ❄️",callback_data ="tagger")
         ],
         [
           InlineKeyboardButton(
@@ -173,12 +173,12 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **Salam, {query.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot}\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto) göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
+    await query.edit_message_text(f"""✧═══════•❀•═══════✧     **Salam, {query.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot} Bot\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto) göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🍁 ❰ Qrubuna Əlavə et ❱ 🍁", url=f"https://t.me/SSmusicLedy_bot?startgroup=true"
+                        "🦅 ❰ Qrubuna Əlavə et ❱ 🦅", url=f"https://t.me/SSmusicLedy_bot?startgroup=true"
                     )
                 ],
                 [
