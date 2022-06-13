@@ -25,7 +25,7 @@ async def ytsearch(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    "🗑 Bağla", callback_data="close",
+                    "🗑 Bağla", callback_data="cls",
                 )
             ]
         ]
