@@ -34,6 +34,6 @@ async def get_uptime(client, message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
         "**Ledy Music Bot Status:\n\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        f"• **iş vaxtı:** `{uptime}`\n"
+        f"• **başlama vaxtı:** `{START_TIME_ISO}`"
     )
