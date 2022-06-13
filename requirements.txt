@@ -22,3 +22,4 @@ heroku3
 telegraph
 lyricsgenius
 speedtest-cli
+psutil
