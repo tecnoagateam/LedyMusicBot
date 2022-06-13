@@ -5,14 +5,12 @@ from PIL import Image
 from config import BOT_USERNAME as bname
 
 from helpers.filters import command
-from helpers.decorators import sudo_users_only
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
 
 
 @Client.on_message(command(["surettest", f"surettest@{bname}"]))
-@sudo_users_only
 async def run_speedtest(_, message: Message):
     m = await message.reply_text("⚡️ running server speedtest")
     try:
