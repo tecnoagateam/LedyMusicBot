@@ -35,8 +35,8 @@ async def get_uptime(client, message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
         "**Ledy Music Bot Status:\n\n"
-        f"• **iş vaxtı:** `{uptime}`\n"
-        f"• **başlama vaxtı:** `{START_TIME_ISO}`"
+        f"• **İş vaxtı:** `{uptime}`\n"
+        f"• **Start vaxtı:** `{START_TIME_ISO}`"
     )
 
 
@@ -47,7 +47,7 @@ async def alive(client, message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""****\n\n<b>⏰ **uptime:**</b> `{uptime}`""",
+        f"""**💠 Mən Çox Gözəl İşləyirəm 💠**\n\n<b>⏰ **uptime:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
