@@ -140,7 +140,7 @@ async def change_ses(client, message):
     except Exception as e:
        await message.reply(f"**xəta:** {e}")
 
-@Client.on_message(command(["volume", f"volume@{BOT_USERNAME}", "vol"]) & other_filters)
+@Client.on_message(command(["volume", f"volume@{BOT_USERNAME}", "vol"]))
 @authorized_users_only
 async def change_volume(client, message):
     if len(m.command) < 2:
