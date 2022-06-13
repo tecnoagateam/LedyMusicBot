@@ -97,8 +97,6 @@ async def cbmelumat(_, query: CallbackQuery):
         [
           InlineKeyboardButton(
             "🍁 User Özəlliyi 🍁", callback_data ="herkes")
-        ],
-        [
           InlineKeyboardButton(
             "🧑‍✈️ Admin Özəlliyi 🧑‍✈️",callback_data ="owner")
         ],
