@@ -7,7 +7,6 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(filters.new_chat_members)
 async def new_chat(client, message):
-    chat_id = message.chat.id
     if await is_served_chat(chat_id):
                 return await message.reply(
                     "❤️ Thanks for adding me to the **Group** !\n\n"
