@@ -1,6 +1,13 @@
+import wget
+import speedtest
 
+from PIL import Image
+from config import BOT_USERNAME as bname
 
-
+from helpers.filters import command
+from helpers.decorators import sudo_users_only
+from pyrogram import Client, filters
+from pyrogram.types import Message
 
 
 
