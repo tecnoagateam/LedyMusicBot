@@ -25,9 +25,7 @@ async def new_chat(client, message):
                         ]
                     )
                 )
-            return
-        except Exception:
-            return
+      
 
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
