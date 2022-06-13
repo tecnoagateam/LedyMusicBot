@@ -10,7 +10,7 @@ from pyrogram.types import Message
 
 def convert(text):
     audio = BytesIO()
-    i = Translator().translate(text, dest="en")
+    i = Translator().translate(text, dest="az")
     lang = i.src
     tts = gTTS(text, lang=lang)
     audio.name = lang + ".mp3"
@@ -18,7 +18,7 @@ def convert(text):
     return audio
 
 
-@Client.on_message(command(["tts", f"tts@{BOT_USERNAME}]))
+@Client.on_message(command(["tts", f"tts@{BOT_USERNAME}"]))
 async def text_to_speech(_, message: Message):
     if not message.reply_to_message:
         return await message.reply_text("💡 Mətni səsə çevirmək üçün mesajı yanıtlayın...")
