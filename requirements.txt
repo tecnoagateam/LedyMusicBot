@@ -6,6 +6,7 @@ python-dotenv
 youtube_dl
 youtube_search_python 
 requests
+googletrans==4.0.0rc1
 aiohttp
 aiofiles
 asyncio
@@ -23,3 +24,4 @@ telegraph
 lyricsgenius
 speedtest-cli
 psutil
+gTTS
