@@ -6,6 +6,7 @@ from googletrans import Translator
 from gtts import gTTS
 from pyrogram import filters, Client
 from pyrogram.types import Message
+from helpers.filters import command
 
 
 def convert(text):
