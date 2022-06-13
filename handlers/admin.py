@@ -1,3 +1,5 @@
+import traceback
+
 from asyncio.queues import QueueEmpty
 from cache.admins import admins
 from asyncio import sleep
@@ -5,7 +7,7 @@ from pyrogram import Client
 from pyrogram.types import Message
 from ledymusic import ledymusic
 from pyrogram import filters
-
+from driver.queues import QUEUE
 from config import BOT_NAME as BN
 from helpers.filters import command
 from helpers.decorators import errors, authorized_users_only
@@ -137,6 +139,27 @@ async def change_ses(client, message):
        await message.reply(f"✅ **ayarlandı:** ```{range}%```")
     except Exception as e:
        await message.reply(f"**xəta:** {e}")
+
+@Client.on_message(command(["volume", f"volume@{BOT_USERNAME}", "vol"]) & other_filters)
+@authorized_users_only
+async def change_volume(client, message):
+    if len(m.command) < 2:
+        await m.reply_text("`/volume` (`0-200`)")
+        return
+    range = m.command[1]
+    chat_id = m.chat.id
+    if chat_id in QUEUE:
+        try:
+            await calls.change_volume_call(chat_id, volume=int(range))
+            await m.reply(
+                f"✅ **volume** `{range}`%"
+            )
+        except Exception as e:
+            traceback.print_exc()
+            await m.reply(f"🚫 **error:**\n\n`{e}`")
+    else:
+        await m.reply("❌ **Assistant səslidə yoxdur**")
+
 
 @Client.on_message(command(["yenile", f"yenile@{BOT_USERNAME}", "reload"]))
 @errors
