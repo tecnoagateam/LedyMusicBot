@@ -1,7 +1,7 @@
 import logging
 
 from config import BOT_USERNAME as bn
-from helpers.filters import command, other_filters, other_filters2
+from helpers.filters import command
 from pyrogram import Client
 from pyrogram.types import (
     CallbackQuery,
@@ -16,10 +16,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-@Client.on_callback_query(filter.regex("cls"))
-async def cls(_, query: CallbackQuery):
-    await query.message.delete()
 
 
 @Client.on_message(command(["axtar", f"axtar@{bn}"]))
