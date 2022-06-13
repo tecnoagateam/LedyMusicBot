@@ -31,6 +31,14 @@ def authorized_users_only(func: Callable) -> Callable:
     return decorator
 
 
+def sudo_users_only(func: Callable) -> Callable:
+    async def decorator(client: Client, message: Message):
+        if message.from_user.id in SUDO_USERS:
+            return await func(client, message)
+
+    return decorator
+
+
 # Utils Helper
 def humanbytes(size):
     """İnsanların oxuya bilməsi üçün baytları bayta çevirin"""
