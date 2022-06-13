@@ -9,8 +9,6 @@ from helpers.filters import command, other_filters2
 async def new_chat(client, message):
     chat_id = m.chat.id
     if await is_served_chat(chat_id):
-        pass
-    else:
             if member.id == me_bot.id:
                 return await m.reply(
                     "❤️ Thanks for adding me to the **Group** !\n\n"
