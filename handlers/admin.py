@@ -62,38 +62,36 @@ async def stop(_, message: Message):
     
 
 
-@Client.on_message(command(["skip", f"@skip{BOT_USERNAME}"]))
+@Client.on_message(command(["otur", f"otur@{BOT_USERNAME}", "skip"]))
 @errors
 @authorized_users_only
-async def skip(_, message: Message):
+async def otur(_, message: Message):
     global que
     chat_id = message.chat.id
     for x in ledymusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("❗ **Növbədə Heç birşey yoxdur!**")
+        a = await message.reply_text("**Növbədə Heç birşey yoxdur!**")
+        await sleep(3)
+        await a.delete()
     else:
         queues.task_done(chat_id)
-
+        
         if queues.is_empty(chat_id):
             await ledymusic.pytgcalls.leave_group_call(chat_id)
         else:
             await ledymusic.pytgcalls.change_stream(
-                chat_id,
+                chat_id, 
                 InputStream(
                     InputAudioStream(
-                        queues.get(chat_id)["file"],
+                        ledymusic.queues.get(chat_id)["file"],
                     ),
                 ),
             )
-                
-
-    qeue = que.get(chat_id)
-    if qeue:
-        skip = qeue.pop(0)
-    if not qeue:
-        return
-    await message.reply_text(f'- Musiqi Növbəyə Ötutruldu  **{skip[0]}**\n- İndi Yayınlanır **{qeue[0][0]}**')
+            
+        a = await message.reply_text("⏩ **Musiqi Növbəyə Ötutruldu**")
+        await sleep(3)
+        await a.delete()
 
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
