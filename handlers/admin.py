@@ -9,7 +9,7 @@ from config import BOT_NAME as BN
 from helpers.filters import command
 from helpers.decorators import errors, authorized_users_only
 from ledymusic import ledymusic, queues
-from config import BOT_USERNAME
+from config import BOT_USERNAME, que
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
