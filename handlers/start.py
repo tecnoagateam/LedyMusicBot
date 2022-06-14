@@ -3,28 +3,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
-# MusicVaves tarafından düzenlendi. 
+# aga tarafından düzenlendi. 
 
-@Client.on_message(filters.new_chat_members)
-async def new_chat(client, message):
-                return await message.reply(
-                    "❤️**Məni Qrupa əlavə etdiyiniz üçün təşəkkürlər !**\n\n"
-                    "**Məni Qrupda administrator təyin edin, əks halda düzgün işləyə bilməyəcəm və Assistantı dəvət etmək üçün  /assistantqosul yazmağı unutmayın.**\n\n"
-                    "Bitirdikdən sonra Qrupa /yenile yazın.",
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist"),
-                                InlineKeyboardButton("🛠️ Dəstək", url=f"https://t.me/SOQrup")
-                            ],[
-                                InlineKeyboardButton("🔊 Assistant", url=f"https://t.me/LedyMusicAssistant")
-                            ]
-                        ]
-                    )
-                )
+
       
-
-
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
