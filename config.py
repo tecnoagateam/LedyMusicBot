@@ -1,6 +1,10 @@
+import os
 from os import getenv
 from dotenv import load_dotenv
-from helpers.uptool import 
+from helpers.uptools import fetch_heroku_git_url
+
+if os.path.exists("local.env"):
+    load_dotenv("local.env")
 
 load_dotenv()
 que = {}
@@ -25,9 +29,13 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
 #  ------------------------------------------------------------------------------------------------------------ 
 #    Yeni güncellemede...
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot")
-U_BRANCH = getenv("U_BRANCH", "ledy")
-HEROKU_URL = getenv("HEROKU_URL", "")
+U_BRANCH = "ledy" 
+ HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", none) 
+ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", none) 
+ UPSTREAM_REPO = os.environ.get( 
+     "UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot" 
+ ) 
+ HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
 
 # DB_URL new mode -------ledyservic------
 
