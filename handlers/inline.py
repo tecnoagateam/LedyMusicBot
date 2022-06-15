@@ -22,7 +22,7 @@ async def inline(client: Client, query: InlineQuery):
             cache_time=0,
         )
     else:
-        results = YoutubeSearch(search_query, limit=10).to_dict()
+        results = YoutubeSearch(search_query, limit=50).to_dict()
         
         answers.append(
             InlineQueryResultArticle(
@@ -31,7 +31,7 @@ async def inline(client: Client, query: InlineQuery):
                     result["duration"], result["viewCount"]["short"]
                 ),
                 input_message_content=InputTextMessageContent(
-                    "`/oynad https://www.youtube.com/watch?v={}`".format(result["id"])
+                    "/oynad https://www.youtube.com/watch?v={}".format(result["id"])
                 ),
                 thumb_url=result["thumbnails"][0]["url"],
             )
