@@ -89,7 +89,7 @@ async def otur(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("⏩ **Musiqi Növbəyə Ötutruldu** {} 🦅")
+        a = await message.reply_text("⏩ **Musiqi Növbəyə Ötutruldu**")
         await sleep(3)
         await a.delete()
 
