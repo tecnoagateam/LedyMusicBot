@@ -1,1 +1,1 @@
-bot: python3 LedyTagger.py
+bot: python3 tagger.py
