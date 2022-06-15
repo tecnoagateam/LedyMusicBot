@@ -12,8 +12,7 @@ from config import (
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
     HEROKU_URL,
-    OWNER_ID,
-    BRANCH,
+    UPSTREAM_BRANCH,
     UPSTREAM_REPO,
 )
 from git import Repo
@@ -46,7 +45,7 @@ async def botstats(_, message: Message):
 # ====== UPDATER ======
 
 REPO_ = UPSTREAM_REPO
-BRANCH_ = BRANCH
+BRANCH_ = UPSTREAM_BRANCH
 
 
 @Client.on_message(command(["update"]))
@@ -64,27 +63,27 @@ async def updatebot(_, message: Message):
         else:
             origin = repo.create_remote("upstream", REPO_)
         origin.fetch()
-        repo.create_head(BRANCH, origin.refs.main)
+        repo.create_head(UPSTREAM_BRANCH, origin.refs.main)
         repo.heads.main.set_tracking_branch(origin.refs.main)
         repo.heads.main.checkout(True)
-    if repo.active_branch.name != BRANCH:
+    if repo.active_branch.name != UPSTREAM_BRANCH:
         return await msg.edit(
-            f"**sorry, you are using costum branch named:** `{repo.active_branch.name}`!\n\nchange to `{BRANCH}` branch to continue update!"
+            f"**sorry, you are using costum branch named:** `{repo.active_branch.name}`!\n\nchange to `{UPSTREAM_BRANCH}` branch to continue update!"
         )
     try:
         repo.create_remote("upstream", REPO_)
     except BaseException:
         pass
     ups_rem = repo.remote("upstream")
-    ups_rem.fetch(BRANCH)
+    ups_rem.fetch(UPSTREAM_BRANCH)
     if not HEROKU_URL:
         try:
-            ups_rem.pull(BRANCH)
+            ups_rem.pull(UPSTREAM_BRANCH)
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         await run_cmd("pip3 install --no-cache-dir -r requirements.txt")
         await msg.edit("**update finished, restarting now...**")
-        args = [sys.executable, "ledy.py"]
+        args = [sys.executable, "main.py"]
         execle(sys.executable, *args, environ)
         sys.exit()
         return
@@ -93,7 +92,7 @@ async def updatebot(_, message: Message):
         await msg.edit(
             "`updating and restarting is started, please wait for 5-10 minutes!`"
         )
-        ups_rem.fetch(U_BRANCH)
+        ups_rem.fetch(UPSTREAM_BRANCH)
         repo.git.reset("--hard", "FETCH_HEAD")
         if "heroku" in repo.remotes:
             remote = repo.remote("heroku")
@@ -103,7 +102,7 @@ async def updatebot(_, message: Message):
         try:
             remote.push(refspec="HEAD:refs/heads/main", force=True)
         except BaseException as error:
-            await msg.edit(f"🚫 **updater error** \n\nTraceBack : `{error}`")
+            await msg.edit(f"🚫 **updater error**")
             return repo.__del__()
 
 
