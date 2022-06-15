@@ -14,7 +14,7 @@ async def inline(client: Client, query: InlineQuery):
             query.id,
             results=answers,
             switch_pm_text="YouTube'dən video axtar...",
-            switch_pm_parameter="help",
+            switch_pm_parameter="start",
             cache_time=0
         )
     else:
