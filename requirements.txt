@@ -26,4 +26,6 @@ lyricsgenius
 speedtest-cli
 psutil
 gTTS
+telethon
+cryptg
 
