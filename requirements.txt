@@ -28,4 +28,5 @@ psutil
 gTTS
 telethon
 cryptg
-
+dnspython
+gitpython
