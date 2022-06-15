@@ -34,7 +34,7 @@ async def botstats(_, message: Message):
 
 @Client.on_message(command(["logs"]))
 @sudo_users_only
-@_check_heroku
+@check_heroku
 async def logswen(client: Client, message: Message, happ):
     msg = await message.reply_text("`please wait for a moment!`")
     logs = happ.get_log()
@@ -45,7 +45,7 @@ async def logswen(client: Client, message: Message, happ):
 # Set Heroku Var
 @Client.on_message(command(["setvar"]))
 @sudo_users_only
-@_check_heroku
+@check_heroku
 async def setvar(client: Client, message: Message, app_):
     msg = await message.reply_text(message, "`zəhmət olamasa gozleyin...`")
     heroku_var = app_.config()
@@ -68,7 +68,7 @@ async def setvar(client: Client, message: Message, app_):
 # Delete Heroku Var
 @Client.on_message(command(["delvar"]))
 @sudo_users_only
-@_check_heroku
+@check_heroku
 async def delvar(client: Client, message: Message, app_):
     msg = await message.reply_text(message, "`zəhmət olamasa gozleyin...!`")
     heroku_var = app_.config()
