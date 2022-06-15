@@ -7,6 +7,7 @@ from os import environ, execle
 
 import heroku3
 import psutil
+from handlers import check_heroku
 from config import BOT_USERNAME, HEROKU_API_KEY, HEROKU_APP_NAME
 from helpers.decorators import sudo_users_only, humanbytes
 from helpers.filters import command
