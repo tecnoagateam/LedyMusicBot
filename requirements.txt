@@ -6,7 +6,6 @@ git+https://github.com/Sorrybabe/downloader
 python-dotenv
 youtube_dl
 youtube_search_python 
-youtubesearchpython
 requests
 googletrans==4.0.0rc1
 aiohttp
