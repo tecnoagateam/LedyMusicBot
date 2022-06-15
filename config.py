@@ -1,5 +1,6 @@
 from os import getenv
 from dotenv import load_dotenv
+from helpers.uptool import 
 
 load_dotenv()
 que = {}
