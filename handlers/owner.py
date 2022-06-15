@@ -25,7 +25,7 @@ from pyrogram.types import Message
 
 
 # Stats Of Your Bot
-@Client.on_message(command("stats"))
+@Client.on_message(command(["stats"]))
 @sudo_users_only
 async def botstats(_, message: Message):
     total, used, free = shutil.disk_usage(".")
@@ -49,7 +49,8 @@ REPO_ = UPSTREAM_REPO
 BRANCH_ = U_BRANCH
 
 
-@Client.on_message(command("update") & filters.user(OWNER_ID))
+@Client.on_message(command(["update"]))
+@sudo_users_only
 async def updatebot(_, message: Message):
     msg = await message.reply_text("**updating bot, please wait for a while...**")
     try:
@@ -161,7 +162,7 @@ def _check_heroku(func):
     return heroku_cli
 
 
-@Client.on_message(command("logs"))
+@Client.on_message(command(["logs"]))
 @sudo_users_only
 @_check_heroku
 async def logswen(client: Client, message: Message, happ):
@@ -172,7 +173,8 @@ async def logswen(client: Client, message: Message, happ):
 
 
 # Set Heroku Var
-@Client.on_message(command("setvar") & filters.user(OWNER_ID))
+@Client.on_message(command(["setvar"]))
+@sudo_users_only
 @_check_heroku
 async def setvar(client: Client, message: Message, app_):
     msg = await message.reply_text(message, "`please wait...`")
@@ -194,7 +196,8 @@ async def setvar(client: Client, message: Message, app_):
 
 
 # Delete Heroku Var
-@Client.on_message(command("delvar") & filters.user(OWNER_ID))
+@Client.on_message(command(["delvar"]))
+@sudo_users_only
 @_check_heroku
 async def delvar(client: Client, message: Message, app_):
     msg = await message.reply_text(message, "`please wait...!`")
