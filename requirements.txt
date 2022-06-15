@@ -1,5 +1,5 @@
 pyrogram==1.3.6
-telethon
+telethon==1.24.0
 py-tgcalls==0.8.6 
 TgCrypto
 git+https://github.com/Sorrybabe/downloader
