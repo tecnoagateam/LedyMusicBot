@@ -14,7 +14,7 @@ downloads = os.path.realpath("downloads")
 raw = os.path.realpath("raw_files") # the code is not created for removing raw_files but if you want to create it, use this
 
 
-@Client.on_message(command(["rmd", "clean", f"rmd@{BOT_USERNAME}", f"clean@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["rmd", "clean", f"rmd@{BOT_USERNAME}", f"clean@{BOT_USERNAME}"]))
 @errors
 @sudo_users_only
 async def clear_downloads(_, message: Message):
@@ -27,7 +27,7 @@ async def clear_downloads(_, message: Message):
         await message.reply_text("❌ **no files is downloaded**")
 
 
-@Client.on_message(command(["clear", f"clear@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["clear", f"clear@{BOT_USERNAME}"]))
 @errors
 @sudo_users_only
 async def clear_jpg_image(_, message: Message):
