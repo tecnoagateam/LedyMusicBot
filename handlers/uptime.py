@@ -47,7 +47,7 @@ async def alive(client, message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
-        photo=f"",
+        photo=f"https://telegra.ph/file/84121d4d66583f22b508e.jpg",
         caption=f"""**💠 Mən Çox Gözəl İşləyirəm**\n\n<b>⏰ **uptime:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
