@@ -25,8 +25,8 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
 #    Yeni güncellemede...
 
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot")
-U_BRANCH = getenv("ledy")
-HEROKU_URL = getenv("HEROKU_URL")
+U_BRANCH = getenv("U_BRANCH", "ledy")
+HEROKU_URL = getenv("HEROKU_URL", "")
 
 # DB_URL new mode -------ledyservic------
 
