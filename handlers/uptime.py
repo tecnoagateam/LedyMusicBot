@@ -46,8 +46,9 @@ async def alive(client, message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    await message.reply_text(
-        f"""**💠 Mən Çox Gözəl İşləyirəm**\n\n<b>⏰ **uptime:**</b> `{uptime}`""",
+    await message.reply_photo(
+        photo=f"",
+        caption=f"""**💠 Mən Çox Gözəl İşləyirəm**\n\n<b>⏰ **uptime:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
