@@ -29,10 +29,10 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
 #  ------------------------------------------------------------------------------------------------------------ 
 #    Yeni güncellemede...
 
-U_BRANCH = os.environ.get("U_BRANCH", "ledy")
-HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", none) 
-HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", none) 
-UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot") 
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "ledy")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", none) 
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", none) 
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot") 
 HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
 
 # DB_URL new mode -------ledyservic------
