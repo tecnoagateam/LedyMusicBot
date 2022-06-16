@@ -1,7 +1,7 @@
 from handlers.database.users_sql import Users, num_users
 from handlers.database.chats_sql import Chats, num_chats
 from handlers.database import SESSION
-from 
+from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
