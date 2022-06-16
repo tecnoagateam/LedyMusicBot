@@ -32,7 +32,7 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1924693109").split()))
 
 # DB_URL new mode -------ledyservic------
 
-DATABASE_URL = getenv("DATABASE_URL")
+DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
 
 # Log kanalı.... 
 LOG_CHANNEL = getenv("LOG_CHANNEL")
