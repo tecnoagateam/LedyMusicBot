@@ -36,7 +36,7 @@ async def who_is(client, message):
     
     message_out_str = (
         "<b>\n  ✦ ᴜsᴇʀ ɪɴғᴏ ✦</b>\n"
-        "<b>•❅─────✧❅✦❅✧─────❅•</b>\n\n
+        "<b>•❅─────✧❅✦❅✧─────❅•</b>\n\n"
         f"<b>➻ Ad:</b> {first_name}\n"
         f"<b>➻ Soyad:</b> {last_name}\n"
         f"<b>➻ Tağ Ad:</b> @{username}\n"
