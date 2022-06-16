@@ -51,7 +51,8 @@ async def ledy(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "🍁 User Özəlliyi", callback_data="herkes")                  
+                         "🍁 User Özəlliyi", callback_data="herkes")  
+                 ],[                
                      InlineKeyboardButton(
                          "🧑‍✈️ Admin Özəlliyi ", callback_data="owner")
                  ],[                     
