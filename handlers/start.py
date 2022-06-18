@@ -122,7 +122,7 @@ async def herkes(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri", callback_data="cbledy")
+                         "« Geri", callback_data="cbledy")
                  ] 
              ]
          )
@@ -140,7 +140,7 @@ async def owner(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri", callback_data="cbledy")
+                         "« Geri", callback_data="cbledy")
                  ] 
              ]
          )
@@ -158,7 +158,7 @@ async def tagger(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "⬅️ Geri", callback_data="cbledy")
+                         "« Geri", callback_data="cbledy")
                  ] 
              ]
          )
