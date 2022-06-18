@@ -9,11 +9,11 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
-    ("hefte", 60 * 60 * 24 * 7),
+    ("həft", 60 * 60 * 24 * 7),
     ("gun", 60 * 60 * 24),
     ("saat", 60 * 60),
-    ("deq", 60),
-    ("san", 1)
+    ("dəqiq", 60),
+    ("saniy", 1)
 )
 
 async def _human_time_duration(seconds):
@@ -24,7 +24,7 @@ async def _human_time_duration(seconds):
         amount, seconds = divmod(int(seconds), div)
         if amount > 0:
             parts.append('{} {}{}'
-                         .format(amount, unit, "" if amount == 1 else "i"))
+                         .format(amount, unit, "" if amount == 1 else "ə"))
     return ', '.join(parts)
 
 
