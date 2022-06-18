@@ -39,7 +39,7 @@ async def start(_, message: Message):
                         "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
-                        "🍁 Ledy Bots" , callback_data= "cbledybots"
+                        "🍁 Ledy Bots" , callback_data= "ledybots"
                     )
                 ]
                 
