@@ -52,7 +52,7 @@ async def start(_, message: Message):
 @Client.on_message(command(["ledybots", f"ledybots@{BOT_USERNAME}"]))
 async def bots(_, message: Message):
                 await message.reply_photo(
-                "",
+                "https://telegra.ph/file/0daa006627da7af88b8fe.jpg",
                 caption=(f"""✧═══════•❀•═══════✧
 **Salam, 🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\nBu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.**      ✧═══════•❀•═══════✧
 """),
