@@ -29,11 +29,5 @@ async def run_speedtest(_, message: Message):
 <u>**Ledy Bot:**</u>
 **ISP:** {result['client']['isp']}
 **Ölkə:** {result['client']['country']}
-  
-<u>**Ｓｅｒｖｅｒ:**</u>
-**Ad:** {result['server']['name']}
-**Ölkə:** {result['server']['country']}, {result['server']['cc']}
-**Sponsor:** {result['server']['sponsor']}
-**Gecikmə:** {result['server']['latency']}
 
-⚡️ **Ｐｉｎｇ:** {result['ping']}"""
+⚡️ **Ｐｉｎｇ:**"""
