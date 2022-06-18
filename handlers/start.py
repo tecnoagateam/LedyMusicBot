@@ -74,7 +74,7 @@ async def ledy(_, message: Message):
 
 
 @Client.on_callback_query(filters.regex("cbledy"))
-async def cbmelumat(_, query: CallbackQuery):
+async def cbledy(_, query: CallbackQuery):
     await query.edit_message_text("\nBotun Aktiv işləməsi üçün aşağıdakı 3 yetkisi olmalıdır:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli söhbəti yönətmə yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
       [
@@ -163,7 +163,7 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("ledybots"))
 async def tagger(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}, Ledy Botlar Aşağıdakılardır:\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam, 🦅 Ledy Botlar Aşağıdakılardır 🦅\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
       [
         [
