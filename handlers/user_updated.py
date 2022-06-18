@@ -12,7 +12,7 @@ async def chat_member_updated(_, chat_member_updated: ChatMemberUpdated):
         )
     ) if (
         (
-            chat_member_updated.new_chat_member.can_manage_voice_chats
+            chat_member_updated.new_chat_member.chat_manage_voice_chats
         ) and (
             (
                 chat_member_updated.new_chat_member.user.id
