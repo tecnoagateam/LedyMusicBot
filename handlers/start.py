@@ -189,11 +189,11 @@ async def ledybots(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🏠 Ana Menyu", callback_data="cbstart")
+            "🦅 Rəsmi Ledy Bots Kanalı", url="https://t.me/ledyplaylist")
         ],
         [
           InlineKeyboardButton(
-            "🦅 Rəsmi Ledy Bots Kanalı", url="https://t.me/ledyplaylist")
+            "🏠 Ana Menyu", callback_data="cbstart")
         ]
       ]
      ))
@@ -228,7 +228,7 @@ async def cbstart(_, query: CallbackQuery):
                         "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
-                        "🍁 Ledy Bots" , callback_data= "cbledybots"
+                        "🍁 Ledy Bots" , callback_data= "ledybots"
                     )
                 ]
                 
