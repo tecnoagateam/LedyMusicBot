@@ -9,11 +9,11 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
-    ("week", 60 * 60 * 24 * 7),
-    ("days", 60 * 60 * 24),
-    ("h", 60 * 60),
-    ("m", 60),
-    ("s", 1)
+    ("hefte", 60 * 60 * 24 * 7),
+    ("gun", 60 * 60 * 24),
+    ("saat", 60 * 60),
+    ("deqiqe", 60),
+    ("saniye", 1)
 )
 
 async def _human_time_duration(seconds):
@@ -35,7 +35,7 @@ async def get_uptime(client, message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
         "**Ledy Music Bot Status:\n\n"
-        f"•**iş vaxtı:** `{uptime}`\n"
+        f"•**uptime:** `{uptime}`\n"
         f"•**start time:** `{START_TIME_ISO}`"
     )
 
