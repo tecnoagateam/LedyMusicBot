@@ -60,22 +60,22 @@ async def bots(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Ledy Music Bot", url="https://t.me/SSmusicLedy_bot")
+                        "Ledy Music Bot", url="https://t.me/SSmusicLedy_bot"
                     )
                 ],
                 [
                     InlineKeyboardButton( 
-                       "Ledy Tagger Bot", url="https://t.me/LedyTaggerRobot")
+                       "Ledy Tagger Bot", url="https://t.me/LedyTaggerRobot"
                     )
                 ],
                 [     
                     InlineKeyboardButton(
-                        "Ledy Robot", url="https://t.me/LedyRobot")
+                        "Ledy Robot", url="https://t.me/LedyRobot"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Ledy App Scrapper Bot", url="https://t.me/ledyapiscrapperbot")
+                        "Ledy App Scrapper Bot", url="https://t.me/ledyapiscrapperbot"
                     )
                 ],
                 [
