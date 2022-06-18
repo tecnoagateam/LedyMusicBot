@@ -1,5 +1,3 @@
-import youtube_search
-import youtube_search_python
 import json
 from pyrogram import Client, errors
 from pyrogram.types import (
