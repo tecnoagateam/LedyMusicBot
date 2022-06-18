@@ -24,7 +24,7 @@ async def start(_, message: Message):
                 [
                     InlineKeyboardButton( 
                        "🔊 Assistant", url=https://t.me/LedyMusicAssistant"
-                    )
+                    ),
                 ],
                 [     
                     InlineKeyboardButton(
@@ -213,7 +213,7 @@ async def cbstart(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton( 
                        "🔊 Assistant", url=https://t.me/LedyMusicAssistant"
-                    )
+                    ),
                 ],
                 [     
                     InlineKeyboardButton(
