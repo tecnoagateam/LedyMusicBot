@@ -18,7 +18,7 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🦅 ❰ Qrubuna Əlavə et ❱ 🦅", url=f"https://t.me/SSmusicLedy_bot?startgroup=melumat"
+                        "🦅 ❰ Qrubuna Əlavə et ❱ 🦅", url=f"https://t.me/SSmusicLedy_bot?startgroup=start"
                     )
                 ],
                 [
@@ -34,7 +34,7 @@ async def start(_, message: Message):
                         "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Assistant", url=f"https://t.me/LedyMusicAssistant"
+                        "🍁 Ledy Bots", callback_data= "cbledybots"
                     )
                 ]
                 
@@ -163,12 +163,12 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("ledybots"))
 async def tagger(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam, 🦅 Ledy Botlar Aşağıdakılardır 🦅\n\n</b>""",
+    await query.edit_message_text(f"""<b>🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\n Bu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
       [
         [
           InlineKeyboardButton(
-            "Ledy Music Bot", url="https:://t.me/SSmusicLedy_bot")
+            "Ledy Music Bot", url="https://t.me/SSmusicLedy_bot")
         ],
         [
           InlineKeyboardButton(
@@ -180,15 +180,15 @@ async def tagger(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "Ledy App Scrapper Bor", url="https://t.me/ledyapiscrapperbot")
+            "Ledy App Scrapper Bot", url="https://t.me/ledyapiscrapperbot")
         ],
         [
           InlineKeyboardButton(
-            "⬅️ Geri", callback_data="cbledy")
+            "🏠 Ana Menyu", callback_data="cbstart")
         ],
         [
           InlineKeyboardButton(
-            "🦅 Rəsmi Ledy Bots Kanalı ", url="https://t.me/ledyplaylist")
+            "🦅 Rəsmi Ledy Bots Kanalı", url="https://t.me/ledyplaylist")
         ]
       ]
      ))
@@ -218,7 +218,7 @@ async def cbstart(_, query: CallbackQuery):
                         "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Assistant ", url=f"https://t.me/LedyMusicAssistant"
+                        "🍁 Ledy Bots", callback_data= "cbledybots"
                     )
                 ]
                 
