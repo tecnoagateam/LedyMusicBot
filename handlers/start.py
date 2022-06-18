@@ -184,11 +184,11 @@ async def tagger(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🏠 Ana Menyu", callback_data="cbledy")
+            "⬅️ Geri", callback_data="cbledy")
         ],
         [
           InlineKeyboardButton(
-            "🛠️ Dəstək ", url="https://t.me/SOQrup")
+            "🦅 Rəsmi Ledy Bots Kanalı ", url="https://t.me/ledyplaylist")
         ]
       ]
      ))
