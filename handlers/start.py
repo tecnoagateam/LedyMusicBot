@@ -60,6 +60,9 @@ async def ledy(_, message: Message):
                          "❄️ Tagger Özəlliyi", callback_data="tagger")
                  ],[
                      InlineKeyboardButton(
+                         "🦅 LEDY BOTS", callback_data="ledybots")
+                 ],[
+                     InlineKeyboardButton(
                          "🏠 Ana menyu", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
@@ -86,6 +89,10 @@ async def cbmelumat(_, query: CallbackQuery):
         [
           InlineKeyboardButton(
             "❄️ Tagger Özəlliyi ❄️",callback_data ="tagger")
+        ],
+        [
+          InlineKeyboardButton(
+            "🦅 LEDY BOTS 🦅", callback_data="ledybots")
         ],
         [
           InlineKeyboardButton(
@@ -151,6 +158,41 @@ async def tagger(_, query: CallbackQuery):
              ]
          )
          )
+
+
+
+@Client.on_callback_query(filters.regex("ledybots"))
+async def tagger(_, query: CallbackQuery):
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}, Ledy Botlar Aşağıdakılardır:\n\n</b>""",
+    reply_markup=InlineKeyboardMarkup(
+      [
+        [
+          InlineKeyboardButton(
+            "Ledy Music Bot", url="https:://t.me/SSmusicLedy_bot")
+        ],
+        [
+          InlineKeyboardButton(
+            "Ledy Tagger Bot", url="https://t.me/LedyTaggerRobot")
+        ],
+        [
+          InlineKeyboardButton(
+            "Ledy Robot", url="https://t.me/LedyRobot")
+        ],
+        [
+          InlineKeyboardButton(
+            "Ledy App Scrapper Bor", url="https://t.me/ledyapiscrapperbot")
+        ],
+        [
+          InlineKeyboardButton(
+            "🏠 Ana Menyu", callback_data="cbledy")
+        ],
+        [
+          InlineKeyboardButton(
+            "🛠️ Dəstək ", url="https://t.me/SOQrup")
+        ]
+      ]
+     ))
+
 
 
 @Client.on_callback_query(filters.regex("cbstart"))
