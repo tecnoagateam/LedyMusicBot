@@ -12,7 +12,7 @@ async def start(_, message: Message):
                 await message.reply_photo(
                 "https://telegra.ph/file/84121d4d66583f22b508e.jpg",
                 caption=(f"""✧═══════•❀•═══════✧
-**Salam {message.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot} Bot\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto) göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**    ✧═══════•❀•═══════✧
+**Salam, {query.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot} Bot\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto) göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**     ✧═══════•❀•═══════✧
 """),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -47,6 +47,47 @@ async def start(_, message: Message):
         ),
     )
   
+
+
+@Client.on_message(command(["ledybots", f"ledybots@{BOT_USERNAME}"]))
+async def bots(_, message: Message):
+                await message.reply_photo(
+                "",
+                caption=(f"""✧═══════•❀•═══════✧
+**Salam, 🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\nBu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.**      ✧═══════•❀•═══════✧
+"""),
+         reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Ledy Music Bot", url="https://t.me/SSmusicLedy_bot")
+                    )
+                ],
+                [
+                    InlineKeyboardButton( 
+                       "Ledy Tagger Bot", url="https://t.me/LedyTaggerRobot")
+                    )
+                ],
+                [     
+                    InlineKeyboardButton(
+                        "Ledy Robot", url="https://t.me/LedyRobot")
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Ledy App Scrapper Bot", url="https://t.me/ledyapiscrapperbot")
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🗑️ Bağla", callback_data="cls"
+                    )
+                ]
+                
+           ]
+        ),
+    )
+
 
 
 @Client.on_message(command(["ledy", f"ledy@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]))
@@ -168,7 +209,7 @@ async def tagger(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("ledybots"))
 async def ledybots(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\n Bu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.\n\n</b>""",
+    await query.edit_message_text(f"""<b>🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\nBu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -177,7 +218,7 @@ async def ledybots(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "Ledy Tagger Bot", url="https://t.me/LedyTaggerRobot")
+            "Ledy Tagger Bot", url="https://t.me/LedyTagRobot")
         ],
         [
           InlineKeyboardButton(
