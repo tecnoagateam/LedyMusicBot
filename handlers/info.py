@@ -35,7 +35,7 @@ async def who_is(client, message):
     username = from_user.username or ""
     
     message_out_str = (
-        "<b>\n  ✦ ᴜsᴇʀ ɪɴғᴏ ✦</b>\n"
+        "<b>\n  🦅 ✦ ᴜsᴇʀ ɪɴғᴏ ✦  🦅</b>\n"
         "<b>•❅─────✧❅✦❅✧─────❅•</b>\n\n"
         f"<b>➻ Ad:</b> {first_name}\n"
         f"<b>➻ Soyad:</b> {last_name}\n"
@@ -56,7 +56,7 @@ async def who_is(client, message):
                 chat_member_p.joined_date or time.time()
             ).strftime("%Y.%m.%d %H:%M:%S")
             message_out_str += (
-                "<b>◇ Qoşuldu:</b> <code>"
+                "<b>➻ Qoşuldu:</b> <code>"
                 f"{joined_date}"
                 "</code>\n"
             )
