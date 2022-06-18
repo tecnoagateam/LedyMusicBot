@@ -39,7 +39,7 @@ async def start(_, message: Message):
                         "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
-                        "🍁 Ledy Bots", callback_data= "cbledybots"
+                        "🍁 Ledy Bots" , callback_data= "cbledybots"
                     )
                 ]
                 
@@ -167,7 +167,7 @@ async def tagger(_, query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("ledybots"))
-async def tagger(_, query: CallbackQuery):
+async def ledybots(_, query: CallbackQuery):
     await query.edit_message_text(f"""<b>🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\n Bu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
       [
@@ -228,7 +228,7 @@ async def cbstart(_, query: CallbackQuery):
                         "📚 Əmrlər" , callback_data= "cbledy"
                     ),
                     InlineKeyboardButton(
-                        "🍁 Ledy Bots", callback_data= "cbledybots"
+                        "🍁 Ledy Bots" , callback_data= "cbledybots"
                     )
                 ]
                 
