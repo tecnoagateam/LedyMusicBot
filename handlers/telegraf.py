@@ -50,9 +50,3 @@ async def getmedia(bot, update):
         reply_markup=reply_markup
     )
 
-
-
-
-@Client.on_message(filters.private & filters.sticker)
-async def stickers(_, message):
-       await message.reply(f"**Göndərdiyin Stickerin ID-si:**  `{message.sticker.file_id}`", quote=True)
