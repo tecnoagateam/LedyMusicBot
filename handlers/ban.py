@@ -33,4 +33,4 @@ async def ban(bot, message):
                 except Exception as error:
                     await message.reply_text(f"`Xəta:` {error}")
         else:
-            await message.reply_text("Nice try, But wrong move..")
+            await message.reply_text("Gözəl cəhd, lakin səhv hərəkət...")
