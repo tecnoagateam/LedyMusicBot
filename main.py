@@ -13,9 +13,6 @@ bot = Bot(
 )
 
 
-call_py = PyTgCalls(user, overload_quiet_mode=True)
-
-
 bot.start()
 run()
 idle()
