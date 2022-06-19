@@ -1,3 +1,4 @@
+import random
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
@@ -6,11 +7,15 @@ from helpers.filters import command, other_filters2
 # aga tarafından düzenlendi. 
 
 
+START_IMG = ["https://telegra.ph/file/84121d4d66583f22b508e.jpg",
+             "https://telegra.ph/file/eb6f76fbd5c3228d7babe.jpg",
+             "https://telegra.ph/file/5b7a670096a54e3183b51.jpg"]
+
       
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
-                "https://telegra.ph/file/84121d4d66583f22b508e.jpg",
+                "photo=random.choice(START_IMG)",
                 caption=(f"""✧═══════•❀•═══════✧
 **Salam, {message.from_user.mention} Xoş gəldin!\n\n🍁 Mən {bot} Bot\n\n🎧 Səsli söhbətlərdə müsiqi yayınlamağı bacarıram.\n\n🧸 Mənim bir çox telegram özəlliklərimdə var.\n\n🖼️ Mənə media (yəni hər hansısa bir foto) göndərin mən onu telegraf sonuncusuna yukləyim.\n\n📚 Ayrı özəlliklər əmrlər bölməsində yerləşdirilib.\n\n✔️ Qrupda mənə admin hüquqları verməyi unutmayın.**     ✧═══════•❀•═══════✧
 """),
