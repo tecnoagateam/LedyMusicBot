@@ -8,8 +8,8 @@ downloads = './downloads/{}/'
 
 DL_BUTTONS=[
     [
-        InlineKeyboardButton('No Watermark', callback_data='nowm'),
-        InlineKeyboardButton('Watermark', callback_data='wm'),
+        InlineKeyboardButton('Logo olmadan', callback_data='nowm'),
+        InlineKeyboardButton('Logo ilə', callback_data='wm'),
     ],
     [InlineKeyboardButton('Audio', callback_data='audio')],
 ]
@@ -35,14 +35,14 @@ async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
 
 
 # Downloader for tiktok
-@xbot.on_message(filters.regex(pattern='.*http.*') & filters.private)
+@Client.on_message(filters.regex(pattern='.*http.*') & filters.private)
 async def _tiktok(bot, update):
   url = update.text
   session = requests.Session()
   resp = session.head(url, allow_redirects=True)
   if not 'tiktok.com' in resp.url:
     return
-  await update.reply('Select the options below', True, reply_markup=InlineKeyboardMarkup(DL_BUTTONS))
+  await update.reply('Aşağıdakı variantlardan birini seçin', True, reply_markup=InlineKeyboardMarkup(DL_BUTTONS))
 
 # Callbacks
 @Client.on_callback_query()
