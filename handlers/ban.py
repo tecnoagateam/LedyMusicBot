@@ -2,12 +2,13 @@
 
 import os
 from config import BOT_USERNAME
-from helpers.decorators import authorized_users_only
+from helpers.decorators import authorized_users_only, sudo_users_only
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
 
 
 @Client.on_message(filters.command(["ban", f"ban@{BOT_USERNAME}"]))
+@sudo_users_only
 @authorized_users_only
 async def ban(bot, message):
     chatid = message.chat.id
