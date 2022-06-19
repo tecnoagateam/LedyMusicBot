@@ -3,5 +3,3 @@ build:
     worker: Dockerfile
 run:
   worker: python3 main.py
-run:
-  bot: python3 Tagger.py
