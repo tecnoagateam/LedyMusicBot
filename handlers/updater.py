@@ -19,13 +19,13 @@ def gen_chlog(repo, diff):
     upstream_repo_url = Repo().remotes[0].config_reader.get("url").replace(".git", "")
     ac_br = repo.active_branch.name
     ch_log = tldr_log = ""
-    ch = f"<b>updates for <a href={upstream_repo_url}/tree/{ac_br}>[{ac_br}]</a>:</b>"
+    ch = f"<b>updates for <a href={UPSTREAM_REPO}/tree/{ac_br}>[{ac_br}]</a>:</b>"
     ch_tl = f"updates for {ac_br}:"
     d_form = "%d/%m/%y || %H:%M"
     for c in repo.iter_commits(diff):
         ch_log += (
             f"\n\n💬 <b>{c.count()}</b> 🗓 <b>[{c.committed_datetime.strftime(d_form)}]</b>\n<b>"
-            f"<a href={upstream_repo_url.rstrip('/')}/commit/{c}>[{c.summary}]</a></b> 👨‍💻 <code>{c.author}</code>"
+            f"<a href={UPSTREAM_REPO.rstrip('/')}/commit/{c}>[{c.summary}]</a></b> 👨‍💻 <code>{c.author}</code>"
         )
         tldr_log += f"\n\n💬 {c.count()} 🗓 [{c.committed_datetime.strftime(d_form)}]\n[{c.summary}] 👨‍💻 {c.author}"
     if ch_log:
