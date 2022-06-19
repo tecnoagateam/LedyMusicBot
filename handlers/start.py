@@ -4,6 +4,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
+from pyrogram.errors import FloodWait, MessageNotModified
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatJoinRequest
 # aga tarafından düzenlendi. 
 
 
@@ -277,3 +279,45 @@ async def cbstart(_, query: CallbackQuery):
            ]
         ),
     )
+
+
+
+
+@Client.on_chat_join_request()
+async def approve_join_chat(c: Client, m: ChatJoinRequest):
+    if not m.from_user:
+        return
+    try:
+        await c.approve_chat_join_request(m.chat.id, m.from_user.id)
+    except FloodWait as e:
+        await asyncio.sleep(e.x + 2)
+        await c.approve_chat_join_request(m.chat.id, m.from_user.id)
+
+
+@Client.on_message(filters.new_chat_members)
+async def new_chat(c: Client, m: Message):
+    chat_id = m.chat.id
+    if await is_served_chat(chat_id):
+        pass
+    else:
+        await add_served_chat(chat_id)
+    ass_uname = (await user.get_me()).username
+    bot_id = (await c.get_me()).id
+    for member in m.new_chat_members:
+        if member.id == bot_id:
+            return await m.reply(
+                "**❤️ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇᴅɪɢɪɴɪᴢ ɪᴄɪɴ ᴛᴇsᴇᴋᴋᴜʀʟᴇʀ . . ! !**\n\n"
+                "**Bᴇɴɪ ɢʀᴜʙᴛᴀ ʏᴏɴᴇᴛɪᴄɪ ʏᴀᴘɪɴ ᴠᴇ ᴀʀᴅɪɴᴅᴀɴ /assistantqosul ᴋᴏᴍᴜᴛᴜʏʟᴀ ᴀsɪsᴛᴀɴɪ ɢʀᴜʙᴀ ᴅᴀᴠᴇᴛ ᴇᴅɪɴ . . !\n\n**"
+                "**Tᴜᴍ ʙᴜɴʟᴀʀɪ ʏᴀᴘᴛɪᴋᴛᴀɴ sᴏɴʀᴀ /yenile ᴋᴏᴍᴜᴛᴜɴᴜ ᴋᴜʟʟᴀɴɪɴ ᴠᴇ ʜᴇʀsᴇʏ ʜᴀᴢɪʀ ! ʙᴏᴛᴜ ᴋᴜʟʟᴀɴᴍᴀʏᴀ ʙᴀsʟɪʏᴀʙɪʟɪʀsɪɴɪᴢ . . .**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("⚒️ Support", url=f"https://t.me/SOQrup"),
+                            InlineKeyboardButton("📱 Kanal", url=f"https://t.me/ledyplaylist")
+                        ],
+                        [
+                            InlineKeyboardButton("🎙 Assistant", url=f"https://t.me/LedyMusicAssistant")
+                        ]
+                    ]
+                )
+            )
