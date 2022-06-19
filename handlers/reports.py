@@ -1,10 +1,11 @@
 import os
+from config import BOT_USERNAME 
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
 
 
 
-@Client.on_message((filters.command(["report"]) | filters.regex("@admins") | filters.regex("@admin")) & filters.group)
+@Client.on_message(command(["report", f"report@{BOT_USERNAME}"]) & filters.group)
 async def report(bot, message):
     if message.reply_to_message:
         chat_id = message.chat.id
