@@ -19,8 +19,8 @@ async def report(bot, message):
         mention = message.from_user.mention
         admins = await bot.get_chat_members(chat_id=chat_id, filter="administrators")
         success = False
-        report = f"Reporter : {mention} ({reporter})" + "\n"
-        report += f"Message : {message.reply_to_message.link}"
+        report = f"Report verən : {mention} ({reporter})" + "\n"
+        report += f"Mesaj : {message.reply_to_message.link}"
         for admin in admins:
             try:
                 reported_post = await message.reply_to_message.forward(admin.user.id)
@@ -33,4 +33,4 @@ async def report(bot, message):
             except:
                 pass
         if success:
-            await message.reply_text("**Reported to Admins!**")
+            await message.reply_text("**Adminlərə bildirildi!**")
