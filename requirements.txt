@@ -32,3 +32,4 @@ telethon
 cryptg
 dnspython
 gitpython
+motor
