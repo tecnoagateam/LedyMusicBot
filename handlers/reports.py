@@ -6,7 +6,7 @@ from helpers.filters import command
 
 
 
-@Client.on_message(command(["report", f"report@{BOT_USERNAME}"]) & filters.group)
+@Client.on_message(filters.command(["report", f"report@{BOT_USERNAME}"]) & filters.group)
 async def report(client, message):
     if message.reply_to_message:
         chat_id = message.chat.id
