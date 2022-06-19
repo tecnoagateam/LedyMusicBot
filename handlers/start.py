@@ -68,7 +68,7 @@ async def bots(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton( 
-                       "Ledy Tagger Bot", url="https://t.me/LedyTaggerRobot"
+                       "Ledy Tagger Bot", url="https://t.me/LedyTagRobot"
                     )
                 ],
                 [     
