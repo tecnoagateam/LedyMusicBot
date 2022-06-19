@@ -8,8 +8,7 @@ from helpers.filters import command, other_filters2
 
 
 START_IMG = ["https://telegra.ph/file/84121d4d66583f22b508e.jpg",
-             "https://telegra.ph/file/eb6f76fbd5c3228d7babe.jpg",
-             "https://telegra.ph/file/5b7a670096a54e3183b51.jpg"]
+             "https://telegra.ph/file/8a00e1ac6f23335effb76.jpg"]
 
       
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
