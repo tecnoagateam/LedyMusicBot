@@ -49,3 +49,10 @@ async def getmedia(bot, update):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
+
+
+
+
+@Client.on_message(filters.private & filters.sticker)
+async def stickers(_, message):
+       await message.reply(f"**Göndərdiyin Stickerin ID-si:**  `{message.sticker.file_id}`", quote=True)
