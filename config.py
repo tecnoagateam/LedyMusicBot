@@ -21,6 +21,7 @@ PMPERMIT = getenv("PMPERMIT", "ENABLE")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "9999"))
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot")
 
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ # 1 2 3 4 5 6 7 8 9 0 , aga ledy").split())
 
