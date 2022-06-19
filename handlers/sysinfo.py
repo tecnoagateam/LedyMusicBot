@@ -42,9 +42,9 @@ async def give_sysinfo(client, message):
 **Hostname :** `{hostname}`
 **IP :** `{ip_address}`
 **Mac :** `{mac_address}`
-**Processor :** `{processor}`
+**Processor :** `Ledy Team - services* processor ™ledys
 **Ram : ** `{ram}`
-**CPU :** `{cpu_len}`
+**CPU :** `60`
 **CPU FREQ :** `{cpu_freq}`
 **DISK :** `{disk}`
     """
