@@ -24,12 +24,12 @@ async def ban(bot, message):
         if userid in admins:
             user_to_ban = message.reply_to_message.from_user.id
             if user_to_ban in admins:
-                await message.reply(text="Adminlərə ban edə bilmərəm")
+                await message.reply(text="Adminləri ban edə bilmərəm")
             else:
                 try:
                     await bot.ban_chat_member(chat_id=chatid, user_id=user_to_ban)
                     await message.reply_text(
-                        f"**Aha Biri Daha Getdi**\n {message.reply_to_message.from_user.mention} xoş getdin! 👋"
+                        f"**Aha Biri Daha Getdi**\n{message.reply_to_message.from_user.mention} xoş getdin! 👋"
                     )
                 except Exception as error:
                     await message.reply_text(f"`Xəta:` {error}")
