@@ -9,7 +9,7 @@ from config import BOT_USERNAME
 
 @Client.on_message(command(["tagall", f"tagall@{BOT_USERNAME}"]))
 @authorized_users_only
-async def tagall(client: Client, message: Message):
+async def tagall(client, message):
     await message.delete()
     chat_id = message.chat.id
     string = ""
@@ -17,7 +17,7 @@ async def tagall(client: Client, message: Message):
     icm = client.iter_chat_members(chat_id)
     async for member in icm:
         tag = member.user.username
-        if limit <= 90:
+        if limit <= 10:
             string += f"@{tag}\n" if tag != None else f"{member.user.mention}\n"
             limit += 1
         else:
