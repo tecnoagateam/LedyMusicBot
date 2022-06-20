@@ -17,29 +17,28 @@ async def github(_, message):
 
             result = await request.json()
             try:
-                url = result['html_url']
-                name = result['name']
-                company = result['company']
-                bio = result['bio']
-                created_at = result['created_at']
-                avatar_url = result['avatar_url']
-                blog = result['blog']
-                location = result['location']
-                repositories = result['public_repos']
-                followers = result['followers']
-                following = result['following']
-                caption = f"""✓ Gitub Məlumat ✓ - {name} 
-**Github Username** :`{username}`
-**User Bio** :`{bio}`
-**Github Giriş** : [{name}]({url})
-**Kompanya Ad** : `{company}`
-**Usee Sins** : `{created_at}`
-**Repositories** : `{repositories}`
-**Blog Link** : `{blog}`
-**User Yeri** : `{location}`
-**Takib Edən** : `{followers}`
-**Takib Edir** : `{following}`"""
+                url = result["html_url"]
+                name = result["name"]
+                company = result["company"]
+                bio = result["bio"]
+                created_at = result["created_at"]
+                avatar_url = result["avatar_url"]
+                blog = result["blog"]
+                location = result["location"]
+                repositories = result["public_repos"]
+                followers = result["followers"]
+                following = result["following"]
+                caption = f"""**Github Məlumat:** __{name}__
+**🧸 Ad:** `{username}`
+**💌 Bio:** `{bio}`
+**🔗 Profil Link:** [Here]({url})
+**⛱ Company:** `{company}`
+**🗓 Created On:** `{created_at}`
+**🧰 Repositories:** `{repositories}`
+**🎓 Blog:** `{blog}`
+**📍 Location:** `{location}`
+**💡 Followers:** `{followers}`
+**📡 Following:** `{following}`"""
             except Exception as e:
                 print(str(e))
-                pass
     await message.reply_photo(photo=avatar_url, caption=caption)
