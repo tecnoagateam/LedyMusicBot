@@ -14,5 +14,5 @@ bot = Bot(
 
 
 bot.start()
-LOGGER.info("Bot Çox Gözəl İşləyir 🇦🇿🇦🇿")
+run()
 idle()
