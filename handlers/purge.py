@@ -20,7 +20,7 @@ async def purge(client, message):
     if not is_admin:
         return
 
-    status_message = await message.reply_text("Silindi...", quote=True)
+    status_message = await message.reply_text("Silinir...", quote=True)
     await message.delete()
     message_ids = []
     count_del_etion_s = 0
@@ -48,7 +48,7 @@ async def purge(client, message):
             count_del_etion_s += len(message_ids)
 
     await status_message.edit_text(
-        f"deleted {count_del_etion_s} messages"
+        f"{count_del_etion_s} mesaj silindi"
     )
     await asyncio.sleep(5)
     await status_message.delete()
