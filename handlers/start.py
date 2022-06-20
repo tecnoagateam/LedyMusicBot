@@ -55,7 +55,7 @@ async def start(_, message: Message):
 @Client.on_message(command(["ledybots", f"ledybots@{BOT_USERNAME}"]))
 async def bots(_, message: Message):
                 await message.reply_photo(
-                "https://telegra.ph/file/0daa006627da7af88b8fe.jpg",
+                "https://telegra.ph/file/573a0310fdf90e55dfb6b.mp4",
                 caption=(f"""✧═══════•❀•═══════✧
 **Salam, 🦅 Ledy Botlar Aşağıdakılardır:\n\nLedy Botlar ən sürətli və güclü telegram botlarıdır.\n\nBu botlardan Rahat və təhlükəsiz istifadə edə bilərsiniz.**      ✧═══════•❀•═══════✧
 """),
@@ -113,9 +113,6 @@ async def ledy(_, message: Message):
                  ],[
                      InlineKeyboardButton(
                          "🏠 Ana menyu", callback_data="cbstart")
-                 ],[
-                     InlineKeyboardButton(
-                         "🛠️ Dəstək", url="https://t.me/SOQrup")
                  ]
              ]
          )
@@ -146,10 +143,6 @@ async def cbledy(_, query: CallbackQuery):
         [
           InlineKeyboardButton(
             "🏠 Ana Menyu", callback_data="cbstart")
-        ],
-        [
-          InlineKeyboardButton(
-            "🛠️ Dəstək ", url="https://t.me/SOQrup")
         ]
       ]
      ))
@@ -230,10 +223,6 @@ async def ledybots(_, query: CallbackQuery):
         [
           InlineKeyboardButton(
             "Ledy App Scrapper Bot", url="https://t.me/ledyapiscrapperbot")
-        ],
-        [
-          InlineKeyboardButton(
-            "🦅 Rəsmi Ledy Bots Kanalı", url="https://t.me/ledyplaylist")
         ],
         [
           InlineKeyboardButton(
