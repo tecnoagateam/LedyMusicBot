@@ -7,7 +7,7 @@ from helpers.decorators import authorized_users_only
 from config import BOT_USERNAME
 
 
-@Client.on_message(command(["tagall", f"tagall@{BOT_USERNAME}"))
+@Client.on_message(command(["tagall", f"tagall@{BOT_USERNAME}"]))
 @authorized_users_only
 async def tagall(client: Client, message: Message):
     await message.delete()
