@@ -6,7 +6,7 @@ from helpers.filters import command
 
 TG_MAX_SELECT_LEN = 100
 
-@Client.on_message(command(["purge", f"purge@{}"]))
+@Client.on_message(command(["purge", f"purge@{BOT_USERNAME}"]))
 @sudo_users_only
 @authorized_users_only
 async def purge(client, message):
