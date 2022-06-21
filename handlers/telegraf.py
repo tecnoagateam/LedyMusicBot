@@ -50,3 +50,25 @@ async def getmedia(bot, update):
         reply_markup=reply_markup
     )
 
+
+
+
+@Client.on_message(filters.command("telegraph", "telegraph@SSmusicledy_bot"))
+@capture_err
+async def paste(_, message: Message):
+    reply = message.reply_to_message
+
+    if not reply or not reply.text:
+        return await message.reply("**Mesajı Yanıtla...")
+
+    if len(message.command) < 2:
+        return await message.reply("**Nümunə:**\n\n /telegraph [Mesaj]")
+
+    page_name = message.text.split(None, 1)[1]
+    page = telegraph.create_page(
+        page_name, html_content=reply.text.html.replace("\n", "<br>")
+    )
+    return await message.reply(
+        f"**Link:** {page['url']}",
+        disable_web_page_preview=True,
+    )
