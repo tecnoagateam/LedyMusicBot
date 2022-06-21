@@ -186,7 +186,7 @@ async def owner(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("tagger"))
 async def tagger(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu özəllik hələ bot kodlarına yazılmayıb. Yaxın Zamanlarda Bu özəllik gerçəkləşəcək.\n\n /ledytag - Userləri Normal Şəkildə tağ edər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu özəllik [BETA] Versiadadır.\n\n /ledytag - Userləri Normal Şəkildə tağ edər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
