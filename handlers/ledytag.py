@@ -97,25 +97,3 @@ async def stop(client, message):
       await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")
   except FloodWait as e:
     await asyncio.sleep(e.value)
-
-
-@teletips.on_message(filters.command(["admins","staff", "admins@SSmusicledy_bot", "staff@SSmusicledy_bot"]))
-asy
-@teletips.on_message(filters.command("bots", "bots@SSmusicledy_bot"))
-async def bots(client, message):  
-  try:    
-    botList = []
-    async for bot in teletips.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
-      botList.append(bot.user)
-    lenBotList = len(botList) 
-    text3  = f"**BOT LIST - {message.chat.title}**\n\n🤖 Bots\n"
-    while len(botList) > 1:
-      bot = botList.pop(0)
-      text3 += f"├ @{bot.username}\n"    
-    else:    
-      bot = botList.pop(0)
-      text3 += f"└ @{bot.username}\n\n"
-      text3 += f"✅ | **Total number of bots**: {lenBotList}"  
-      await teletips.send_message(message.chat.id, text3)
-  except FloodWait as e:
-    await asyncio.sleep(e.value)
