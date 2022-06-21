@@ -2,6 +2,9 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from telegraph import upload_file
+from config import BOT_USERNAME
+from helpers.filters import command
+from helpers.decorators import errors
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
@@ -53,8 +56,8 @@ async def getmedia(bot, update):
 
 
 
-@Client.on_message(filters.command("telegraph", "telegraph@SSmusicledy_bot"))
-@capture_err
+@Client.on_message(command(["telegraph", f"telegraph@{BOT_USERNAME}"]))
+@errors
 async def paste(_, message: Message):
     reply = message.reply_to_message
 
