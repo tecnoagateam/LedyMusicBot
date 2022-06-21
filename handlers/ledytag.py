@@ -18,7 +18,7 @@ async def ledytag(client, message):
     async for member in icm:
         tag = member.user.username
         if limit <= 5:
-            string += f"@{tag}\n" if tag != None else f"🦅 {member.user.mention}\n"
+            string += f"🦅 @{tag}\n" if tag != None else f"🦅 {member.user.mention}\n"
             limit += 1
         else:
             await client.send_message(chat_id, text=string)
