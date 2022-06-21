@@ -4,6 +4,14 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 
+BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🧸 Ledy Channel 🧸', url='https://t.me/ledyplaylist')
+        ]]
+    )
+
+
+
 @Client.on_message((filters.private | filters.group) & filters.command(["ledyinfo", "ledyinfo@SSmusicledy_bot"]))
 async def ledyinfo(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
