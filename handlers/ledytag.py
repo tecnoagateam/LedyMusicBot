@@ -15,7 +15,7 @@ async def everyone(client, message):
   global stopProcess
   try: 
     try:
-      sender = await Client.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await get_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
@@ -32,7 +32,7 @@ async def everyone(client, message):
           elif len(message.command) == 1:
             inputText = ""    
           membersList = []
-          async for member in Client.get_chat_members(message.chat.id):
+          async for member in get_chat_members(message.chat.id):
             if member.user.is_bot == True:
               pass
             elif member.user.is_deleted == True:
@@ -55,14 +55,14 @@ async def everyone(client, message):
                   text1 += f"@{user.username} "
                   j+=1
               try:     
-                await Client.send_message(message.chat.id, text1)
+                await send_message(message.chat.id, text1)
               except Exception:
                 pass  
               await asyncio.sleep(10) 
               i+=10
             except IndexError:
               try:
-                await teletips.send_message(message.chat.id, text1)  
+                await send_message(message.chat.id, text1)  
               except Exception:
                 pass  
               i = i+j
@@ -83,7 +83,7 @@ async def stop(client, message):
   global stopProcess
   try:
     try:
-      sender = await Client.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await get_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
