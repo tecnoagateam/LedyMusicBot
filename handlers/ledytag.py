@@ -10,12 +10,12 @@ chatQueue = []
 
 stopProcess = False
 
-@teletips.on_message(filters.command(["ledytag","ledytag@SSmusicledy_bot"]))
+@Client.on_message(filters.command(["ledytag","ledytag@SSmusicledy_bot"]))
 async def everyone(client, message):
   global stopProcess
   try: 
     try:
-      sender = await teletips.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await Client.get_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
@@ -32,7 +32,7 @@ async def everyone(client, message):
           elif len(message.command) == 1:
             inputText = ""    
           membersList = []
-          async for member in teletips.get_chat_members(message.chat.id):
+          async for member in Client.get_chat_members(message.chat.id):
             if member.user.is_bot == True:
               pass
             elif member.user.is_deleted == True:
@@ -55,7 +55,7 @@ async def everyone(client, message):
                   text1 += f"@{user.username} "
                   j+=1
               try:     
-                await teletips.send_message(message.chat.id, text1)
+                await Client.send_message(message.chat.id, text1)
               except Exception:
                 pass  
               await asyncio.sleep(10) 
@@ -78,12 +78,12 @@ async def everyone(client, message):
 
                                
         
-@teletips.on_message(filters.command(["stop","cancel", "stop@SSmusicledy_bot", "cancel@SSmusicledy_bot"]))
+@Client.on_message(filters.command(["stop","cancel", "stop@SSmusicledy_bot", "cancel@SSmusicledy_bot"]))
 async def stop(client, message):
   global stopProcess
   try:
     try:
-      sender = await teletips.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await Client.get_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
