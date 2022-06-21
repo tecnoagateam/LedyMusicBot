@@ -186,7 +186,7 @@ async def owner(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("tagger"))
 async def tagger(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Userləri tağ etmək üçün Əmrlər Menyusu:\n\n 🦅 /ledytag - Userləri Normal Şəkildə tağ edər\nBot Və silinmiş hesablardan başqa!\n ❌ /stop - tağ prosesini dayandırar\n 🎖️ /staff - Qrup staffı adminləri tağ edər/n 🗑️ /sil - Silinmiş hesabları Qrupdan çixarar/n 🤖 /bots - Qrup Bot siyahısını göstərər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Userləri tağ etmək üçün Əmrlər Menyusu:\n\n 🦅 /ledytag - Userləri Normal Şəkildə tağ edər\nBot Və silinmiş hesablardan başqa!\n ❌ /stop - tağ prosesini dayandırar\n🎖️ /staff - Qrup staffı adminləri tağ edər/n🗑️ /sil - Silinmiş hesabları Qrupdan çixarar/n🤖 /bots - Qrup Bot siyahısını göstərər.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
