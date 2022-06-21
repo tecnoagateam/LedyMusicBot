@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 
-@Client.on_message(filters.command("calc") & filters.me)
+@Client.on_message(filters.command("calc"))
 async def calc(client, message):
     if len(message.command) <= 1:
         return
