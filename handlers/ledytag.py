@@ -3,6 +3,7 @@ from pyrogram.types import Message
 import os
 import asyncio
 from pyrogram.errors import FloodWait
+from helpers.decorators import authorized_users_only
 
 
 
@@ -11,6 +12,7 @@ chatQueue = []
 stopProcess = False
 
 @Client.on_message(filters.command(["ledytag","ledytag@SSmusicledy_bot"]))
+@authorized_users_only
 async def everyone(client, message):
   global stopProcess
   try: 
@@ -78,7 +80,8 @@ async def everyone(client, message):
 
                                
         
-@Client.on_message(filters.command(["stop","cancel", "stop@SSmusicledy_bot", "cancel@SSmusicledy_bot"]))
+@Client.on_message(filters.command(["stop", "cancel", "stop@SSmusicledy_bot", "cancel@SSmusicledy_bot"]))
+@authorized_users_only
 async def stop(client, message):
   global stopProcess
   try:
