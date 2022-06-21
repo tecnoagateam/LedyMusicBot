@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from telegraph import upload_file
 from config import BOT_USERNAME
 from helpers.filters import command
-from helpers.decorators import errors
+
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
@@ -59,22 +59,22 @@ async def getmedia(bot, update):
 
 
 
-@Client.on_message(command(["telegraph", f"telegraph@{BOT_USERNAME}"]))
-@errors
-async def paste(_, message: Message):
-    reply = message.reply_to_message
-
-    if not reply or not reply.text:
-        return await message.reply("**Mesajı Yanıtla...")
-
-    if len(message.command) < 2:
-        return await message.reply("**Nümunə:**\n\n /telegraph [Mesaj]")
-
-    page_name = message.text.split(None, 1)[1]
-    page = telegraph.create_page(
-        page_name, html_content=reply.text.html.replace("\n", "<br>")
-    )
-    return await message.reply(
-        f"**Link:** {page['url']}",
-        disable_web_page_preview=True,
-    )
+@Client.on_message(filters.command("tl"))
+async def get_link_group(client, message):
+    try:
+        text = await message.reply("Emal edilir...")
+        async def progress(current, total):
+            await text.edit_text(f"📥 Media yüklənir... {current * 100 / total:.1f}%")
+        try:
+            location = f"./media/group/"
+            local_path = await message.reply_to_message.download(location, progress=progress)
+            await text.edit_text("📤 Media yerləşdirilir...")
+            upload_path = upload_file(local_path) 
+            await text.edit_text(f"**🌐 | Telegraph Link**:\n\n<code>https://telegra.ph{upload_path[0]}</code>")     
+            os.remove(local_path) 
+        except Exception as e:
+            await text.edit_text(f"**❌ | Media yerləşdirilmədə xəta baş verdi**\n\n<i>**Səbəb**: {e}</i>")
+            os.remove(local_path) 
+            return         
+    except Exception:
+        pass
