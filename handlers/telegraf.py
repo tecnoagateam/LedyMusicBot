@@ -1,5 +1,8 @@
 import os
 from pyrogram import Client, filters
+from pyrogram import filters
+from pyrogram import Client
+from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from telegraph import upload_file
 from config import BOT_USERNAME
