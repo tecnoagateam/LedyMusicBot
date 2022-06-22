@@ -49,3 +49,11 @@ async def auto_welcome(bot: Client, msg: Message):
                ]
            )
        )  
+
+
+
+
+@Client.on_message(filters.left_chat_member)
+async def goodbye(bot,message):
+	chatid= message.chat.id
+	n=await bot.send_message(text=f"Getməyinə üzüldüm,  {message.from_user.mention}, iyi günlər 😔",chat_id=chatid)
