@@ -41,6 +41,7 @@ async def who_is(client, message):
         f"<b>➻ Soyad:</b> {last_name}\n"
         f"<b>➻ Tağ Ad:</b> @{username}\n"
         f"<b>➻ User ID:</b> <code>{from_user.id}</code>\n"
+        f"<b>➻ DC:</b> {user.dc_id}\n" if user.dc_id else ""
         f"<b>➻ User Link:</b> {from_user.mention}\n" if from_user.username else ""
         f"<b>➻ Silindi:</b> True\n" if from_user.is_deleted else ""
         f"<b>➻ Təsdiq edilib:</b> True" if from_user.is_verified else ""
