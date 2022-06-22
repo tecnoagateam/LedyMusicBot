@@ -24,15 +24,4 @@ async def unpin(_, message: Message):
     await message.reply_to_message.unpin()
 
 
-@Client.on_message(command("del"))
-@authorized_users_only
-async def del_msg(client, message):
-    if message.chat.type != "supergroup":
-        return
-
-    if message.reply_to_message:
-        await message.delete()
-        await c.delete_messages(
-            chat_id=m.chat.id,
-            message_ids=m.reply_to_message.message_id)
         
