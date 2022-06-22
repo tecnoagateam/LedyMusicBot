@@ -10,6 +10,7 @@ from helpers.extract_user import extract_user, last_online
 from typing import Callable, Coroutine, Dict, List, Tuple, Union
 from json import JSONDecodeError
 from pyrogram import Client, filters
+from helpers.filters import command
 
             
 # ====== Telegram 🐣 @Tenah055 ======
