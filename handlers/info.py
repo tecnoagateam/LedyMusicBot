@@ -82,3 +82,29 @@ async def who_is(client, message):
             disable_notification=True
         )
     await status_message.delete()
+
+
+
+
+
+@Client.on_message(command("ginfo"))
+async def group_info(client, message):
+    if len(m.text.split()) != 2:
+        await m.reply_text(
+            f"...",
+        )
+        return
+
+    chat_id = m.text.split(None, 1)[1]
+
+    replymsg = await m.reply_text("Qrup Haqqında məlumat alınır...!")
+    grp_data = await c.get_chat(chat_id)
+    msg = (
+        f"Group Info : {chat_id}\n\n"
+        f"Group Ad: {grp_data['title']}\n"
+        f"Members Count: {grp_data['members_count']}\n"
+        f"Type: {grp_data['type']}\n"
+        f"Group ID: {grp_data['id']}"
+    )
+    await replymsg.edit_text(msg)
+    return
