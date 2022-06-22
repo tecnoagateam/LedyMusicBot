@@ -28,9 +28,9 @@ async def unpin(_, message: Message):
     group=9,
 )
 async def del_msg(client, message):
-    if m.chat.type != "supergroup":
+    if message.chat.type != "supergroup":
         return
 
-    if m.reply_to_message:
-        await m.delete()
-        await c.delete_messages
+    if message.reply_to_message:
+        await message.delete()
+        
