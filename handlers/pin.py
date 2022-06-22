@@ -21,3 +21,16 @@ async def unpin(_, message: Message):
     if not message.reply_to_message:
         return
     await message.reply_to_message.unpin()
+
+
+@Client.on_message(
+    command("del") & admin_filter,
+    group=9,
+)
+async def del_msg(client, message):
+    if m.chat.type != "supergroup":
+        return
+
+    if m.reply_to_message:
+        await m.delete()
+        await c.delete_messages
