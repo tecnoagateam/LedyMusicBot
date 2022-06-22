@@ -1,10 +1,13 @@
 from date import datetime
+from helpers.decorators import authorized_users_only, sudo_users_only
 from pyrogram import Client as app, filters
 from pyrogram.types import (
 	Message
 	)
 
 @app.on_message(filters.command("ban") & filters.group)
+@sudo_users_only
+@authorized_users_only
 async def ban_member(app, message: Message):
 	if message.chat.type == "private":
 		return await app.send_message("Bu əmr ancaq Qrup üçün geçərlidir!")
