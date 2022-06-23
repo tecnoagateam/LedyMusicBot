@@ -32,13 +32,13 @@ async def left(client,message):
 						fromt = i
 					if list[i] == translation.dest:
 						to = i 
-				await message.reply_text(f"translated from {fromt.capitalize()} to {to.capitalize()}\n\n```{translation.text}```", reply_markup=hehek, quote=True)
+				await message.reply_text(f"translated from {fromt.capitalize()} -dən {to.capitalize()}\n\n```{translation.text}```", reply_markup=hehek, quote=True)
 			except:
-			   	await message.reply_text(f"Translated from **{translation.src}** To **{translation.dest}**\n\n```{translation.text}```", reply_markup=hehek, quote=True)
+			   	await message.reply_text(f"Translated from **{translation.src}** -dən **{translation.dest}**\n\n```{translation.text}```", reply_markup=hehek, quote=True)
 			
 
 		except :
 			print("error")
 	else:
-			 ms = await message.reply_text("You can Use This Command by using reply to message")
+			 ms = await message.reply_text("Siz mesaja cavab verməklə bu əmrdən istifadə edə bilərsiniz")
 			 await ms.delete()
