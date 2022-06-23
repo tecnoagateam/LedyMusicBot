@@ -20,14 +20,14 @@ async def del_msg(app, message: Message):
 			if user.status not in admin:
 				await app.send_message(
 					chat_id,
-					text="Who the hell are you",
+					text="Sən kimsən",
 					reply_to_message=reply)
 					
 			else:
 				try:
 					await app.reply.delete()
 					await app.send_message(
-						"I've deleted the message"
+						"Mesajı sildim"
 						)
 					await asyncio.sleep(5)
 				except Exception as e:
