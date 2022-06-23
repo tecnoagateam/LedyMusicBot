@@ -41,4 +41,4 @@ async def left(client,message):
 			print("error")
 	else:
 			 ms = await message.reply_text("Siz mesaja cavab verməklə bu əmrdən istifadə edə bilərsiniz")
-			 await ms.delete()
+			 
