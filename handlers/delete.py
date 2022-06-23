@@ -32,17 +32,17 @@ async def del_msg(app, message: Message):
 					await asyncio.sleep(5)
 				except Exception as e:
 					print(e)
-					await message.reply(f"Failed to delete the message {e}")
+					await message.reply(f"Mesajı silmək alınmadı {e}")
 		
 		
 		else:
 			await message.reply(
-				"Please reply a to a message"
+				"Zəhmət olmasa mesaja cavab verin"
 				)
 				
 				
 	else: 
-		await message.reply("This command is not for you")
+		await message.reply("Bu əmr sizin üçün deyil")
       
 
       	
