@@ -2,7 +2,7 @@ import re
 import time
 from typing import List
 from pyrogram.types import Message, InlineKeyboardButton
-from confog import COMMAND_PREFIXES
+from config import COMMAND_PREFIXES
 
 
 # NOTE: the url \ escape may cause double escapes
