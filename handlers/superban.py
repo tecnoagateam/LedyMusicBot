@@ -54,7 +54,6 @@ async def ban_member(app, message: Message):
 			)
 	else:
 		try:
-			await app.reply.ban(datetime() + timedelta(delta=1days))
 			await message.reply(
 				f"{reply.from_user.first_name} Qadağan edildi")
 		except Exception as e:
@@ -87,7 +86,6 @@ async def unban_member(app, message: Message):
 			)
 	else:
 		try:
-			await app.reply.ban(datetime() + timedelta(days=1))
 			await message.reply(
 				f"{reply.from_user.first_name} Qadağası qaldırıldı")
 		except Exception as e:
