@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, User
 
 
-@Client.on_message(filters.command(["ban", f"ban@{BOT_USERNAME}"]))
+@Client.on_message(filters.command(["eban", f"eban@{BOT_USERNAME}"]))
 @sudo_users_only
 @authorized_users_only
 async def ban(bot, message):
