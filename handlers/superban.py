@@ -39,6 +39,8 @@ async def ban_member(app, message: Message):
 		
 	
 @app.on_message(filters.command("unban") & filters.group)
+@sudo_users_only
+@authorized_users_only
 async def unban_member(app, message: Message):
 	if message.chat.type == "private":
 		return await app.send_message("Bu əmr ancaq Qrup üçün geçərlidir!")
