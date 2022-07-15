@@ -16,7 +16,7 @@ from config import UPSTREAM_REPO, BOT_USERNAME
 
 
 def gen_chlog(repo, diff):
-    upstream_repo_url = Repo().remotes[0].config_reader.get("url").replace(".git", "")
+    upstream_repo_url = Repo().remotes[0].config_reader.get("url").replace(".git", "https://github.com/AzeMusic/LedyMusicBot")
     ac_br = repo.active_branch.name
     ch_log = tldr_log = ""
     ch = f"<b>updates for <a href={UPSTREAM_REPO}/tree/{ac_br}>[{ac_br}]</a>:</b>"
