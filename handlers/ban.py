@@ -2,13 +2,12 @@
 
 import os
 from config import BOT_USERNAME
-from helpers.decorators import authorized_users_only, sudo_users_only
+from helpers.decorators import authorized_users_only
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
 
 
-@Client.on_message(filters.command(["eban", f"eban@{BOT_USERNAME}"]))
-@sudo_users_only
+@Client.on_message(filters.command(["ban", f"ban@{BOT_USERNAME}"]))
 @authorized_users_only
 async def ban(bot, message):
     chatid = message.chat.id
@@ -29,7 +28,7 @@ async def ban(bot, message):
                 try:
                     await bot.ban_chat_member(chat_id=chatid, user_id=user_to_ban)
                     await message.reply_text(
-                        f"**Aha Biri Daha Getdi**\n{message.reply_to_message.from_user.mention} xoş getdin! 👋"
+                        f"**❗ Biri Daha Getdi**\n{message.reply_to_message.from_user.mention} xoş getdin! 👋"
                     )
                 except Exception as error:
                     await message.reply_text(f"`Xəta:` {error}")
