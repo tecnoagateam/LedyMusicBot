@@ -13,7 +13,7 @@ async def auto_welcome(bot: Client, msg: Message):
     group_username = msg.chat.username
     name_button = "🍁 Qoşul 🍁"
     link_button = "https://t.me/ledyplaylist"
-    welcome_text = f"**Salam, {mention}, {group_name}-a Xoş gəldin!\n\nSəni aramızda görməyimə Şadam.\n\nİnanırıq ki, Söhbət Çatında Xoşa gəlməz şeylər baş verməz!\n\nXaiş Edirik Qrup Qaydalarına əməl edin!\n\nSənin ID-in:** `{id}`"
+    welcome_text = f"**Salam, {mention}, {group_name}-a Xoş gəldin!\n\nSəni aramızda görməyimə Şadam.\n\nQrupa Gəlmisənsə Qrup Qaydalarına əməl et!\n\nSənin ID-in:** `{id}`"
     WELCOME_TEXT = os.environ.get("WELCOME_TEXT", welcome_text)
     print("Welcome Message Activate")
     BUTTON = bool(os.environ.get("WELCOME_BUTTON"))
