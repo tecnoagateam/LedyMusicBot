@@ -150,16 +150,16 @@ async def cbledy(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu:\n\n ▶️ /oynad <song name> - istədiyin musiqini dinlə\n  \n 🎵 /tap <song name> - istədiyin musiqini sürətli endir \n 🎥 /vtap istədiyin videonu sürətli endir\n 🔍 /axtar <query> - YouTube-dən video linkləri axtar\n 🎶 /lyric - Mahnı sözləri axtarar\n 📍 /report - Qrupda Problem varsa bu əmr köməyinizə çatacaq\n 🆔 /id - Sənin ID-in, Group ID-sı, Şəkil ID-si, Stickers ID-si, Media ID-si, File ID-si\n 📜 /info - Telegram User haqqında məlumat verər\n 💾 /git - <github_username> Github User Haqqında məlumat al\n ⚡ /ping - Bot pingi-ni göstərər\n ⏳ /speedtest - Bot'un Sürət Serverini göstərər\n ⏰ /uptime - Bot'un və Assistant'ın işləmə vaxtını göstərər\n 📼 /tts - Mətni səsə çevirər\n 💠 /alive - Bot'un canlı olub olmadığını göstərər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmrlər menyusu:\n\n ▶️ /oynad <song name> - istədiyin musiqini dinlə\n  \n 🎵 /tap <song name> - istədiyin musiqini sürətli endir \n 🎥 /vtap istədiyin videonu sürətli endir\n 🔍 /axtar <query> - YouTube-dən video linkləri axtar\n 🎶 /lyric - Mahnı sözləri axtarar\n 📍 /report - Qrupda Problem varsa bu əmr köməyinizə çatacaq\n 🆔 /id - Sənin ID-in, Group ID-sı, Şəkil ID-si, Stickers ID-si, Media ID-si, File ID-si\n 📜 /info - Telegram User haqqında məlumat verər\n 💾 /git - <github_username> Github User Haqqında məlumat al\n ⚡ /ping - Bot pingi-ni göstərər\n ⏳ /speedtest - Bot'un Sürət Serverini göstərər\n ⏰ /uptime - Bot'un və Assistant'ın işləmə vaxtını göstərər\n 📼 /tts - Mətni səsə çevirər\n 💠 /alive - Bot'un canlı olub olmadığını göstərər [Sadəcə Qruplarda işləyir].\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
                      InlineKeyboardButton(
-                         "🛠️ Dəstək", url="https://t.me/SOQrup")
+                         "« Geri", callback_data="cbledy")
                  ],
                  [
                      InlineKeyboardButton(
-                         "« Geri", callback_data="cbledy")
+                         "🏠 Ana Menyu", callback_data="cbstart")
                  ] 
              ]
          )
@@ -168,16 +168,16 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("owner"))
 async def owner(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Adminlər Üçün Əmrlər Menyusu:\n\n ⏸️ /dayandir - Yayınlanan musiqini dayandır\n ▶️ /davam - Musiqi yayınlamağa davam et\n 🔄 /otur - Musiqiyi növbəyə ötur\n ⏹ /son - Musiqi yayınlamağı sonlandır\n 🔼 /ver Kullancıya yetki ver\n 🔽 /al Yetki verilmiş Kullancının yetkisini al\n ❤️ /assistantqosul - Assistant Qrupa qoşular\n 🖤 /assistantcix - Assistant Qrupu tərk edər\n ⚔️ /ban - <yanıtla> Useri ban edər\n 📌 /pin - mesajı sabitlə\n 🚫 /unpin - sabitləməyi qaldır\n 🗑️ /del - [yanıtla] yantıtladığınız mesajı silər.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu Botun Adminlər Üçün Əmrlər Menyusu:\n\n ⏸️ /dayandir - Yayınlanan musiqini dayandır\n ▶️ /davam - Musiqi yayınlamağa davam et\n 🔄 /otur - Musiqiyi növbəyə ötur\n ⏹ /son - Musiqi yayınlamağı sonlandır\n 🔼 /ver Kullancıya yetki ver\n 🔽 /al Yetki verilmiş Kullancının yetkisini al\n ❤️ /assistantqosul - Assistant Qrupa qoşular\n 🖤 /assistantcix - Assistant Qrupu tərk edər\n ⚔️ /ban - <yanıtla> Useri ban edər\n 📌 /pin - mesajı sabitlə\n 🚫 /unpin - sabitləməyi qaldır.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
                      InlineKeyboardButton(
-                         "🛠️ Dəstək", url="https://t.me/SOQrup")                           
+                         "« Geri", callback_data="cbledy")                           
                  ],
                  [
                      InlineKeyboardButton(
-                         "« Geri", callback_data="cbledy")
+                         "🏠 Ana Menyu", callback_data="cbstart")
                  ] 
              ]
          )
@@ -191,11 +191,11 @@ async def tagger(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🛠️ Dəstək", url="https://t.me/SOQrup")
+                         "« Geri", callback_data="cbledy")
                  ],
                  [
                      InlineKeyboardButton(
-                         "« Geri", callback_data="cbledy")
+                         "🏠 Ana Menyu", callback_data="cbstart")
                  ] 
              ]
          )
