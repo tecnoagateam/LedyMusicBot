@@ -49,3 +49,10 @@
   
 
       ✧═════════•❀•══════════✧
+
+
+
+
+
+
+<script async src="https://telegram.org/js/telegram-widget.js?21"data-telegram-post="ggvyygf/9395"data-width="100%"></script>
