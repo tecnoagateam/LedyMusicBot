@@ -24,7 +24,7 @@ aiohttp
 heroku3
 telegraph
 lyricsgenius
-speedtest-cli
+git+https://github.com/tecnoagateam/speedaga
 psutil
 gTTS
 telethon
@@ -32,3 +32,4 @@ cryptg
 dnspython
 gitpython
 motor
+railway
