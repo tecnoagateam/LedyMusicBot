@@ -1,4 +1,4 @@
-![Logo](https://www.tamilblasters.lol/uploads/monthly_2020_02/torrborder.gif.76a54db1a11406f9ba80146699b99b74.gif)
+![Ledy](https://www.tamilblasters.lol/uploads/monthly_2020_02/torrborder.gif.76a54db1a11406f9ba80146699b99b74.gif)
 
      ✧═════════•❀•══════════✧
 
@@ -18,7 +18,7 @@
 
      ✧═════════•❀•══════════✧
 
-![Logo](https://www.tamilblasters.lol/uploads/monthly_2020_02/torrborder.gif.76a54db1a11406f9ba80146699b99b74.gif)
+![Ledy](https://www.tamilblasters.lol/uploads/monthly_2020_02/torrborder.gif.76a54db1a11406f9ba80146699b99b74.gif)
 <details>
 <summary><b>🏹 HEROKU DEPLOY 🏹</b></summary>
 <br>
