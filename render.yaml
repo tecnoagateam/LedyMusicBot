@@ -16,4 +16,6 @@ services:
         sync: false
       - key: SESSION_NAME 
         sync: false    
+      - key: PYTHON_VERSION
+        sync: false    
     autoDeploy: false
