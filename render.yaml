@@ -9,8 +9,7 @@ services:
     branch: web
     envVars:
       - key: BOT_TOKEN 
-        sync: false
-      - value: BOT_USERNAME
+        sync: false      
       - key: API_ID 
         sync: false
       - key: API_HASH 
@@ -32,7 +31,5 @@ services:
       - key: BOT_NAME  
         sync: false
       - key: BOT_USERNAME
-        sync: false
-      
- 
+        sync: false       
     autoDeploy: false
