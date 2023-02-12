@@ -4,7 +4,7 @@ services:
     name: LedyMusicBot
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn App & python3 bot.py
+    startCommand: python3 bot.py
     repo: https://github.com/tecnoagateam/LedyMusicBot.git      
     branch: web
     envVars:
