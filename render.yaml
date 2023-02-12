@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    plan: free
+    name: LedyMusicBot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    repo: https://github.com/tecnoagateam/LedyMusicBot.git      
+    branch: main
+    envVars:
+      - key: BOT_TOKEN 
+        sync: false
+      - key: API_ID 
+        sync: false
+      - key: API_HASH 
+        sync: false
+      - key: SESSİON_NAME 
+        sync: false    
+    autoDeploy: false
