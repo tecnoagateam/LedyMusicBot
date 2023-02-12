@@ -1,8 +1,9 @@
 services:
-  - type: web
+  - type: worker
     plan: free
     name: LedyMusicBot
     env: python
+    buildCommand: Dockerfile
     startCommand: python3 main.py
     repo: https://github.com/tecnoagateam/LedyMusicBot.git      
     branch: main
