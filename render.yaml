@@ -6,7 +6,7 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: pyhon3 Tagger.py
     repo: https://github.com/tecnoagateam/LedyMusicBot.git      
-    branch: main
+    branch: web
     envVars:
       - key: BOT_TOKEN 
         sync: false
@@ -27,6 +27,10 @@ services:
       - key: PMPERMIT  
         sync: false
       - key: COMMAND_PREFIXES
+        sync: false
+      - key: BOT_NAME  
+        sync: false
+      - key: BOT_USERNAME
         sync: false
       
  
