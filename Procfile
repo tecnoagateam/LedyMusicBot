@@ -1,2 +1,2 @@
 worker: /bin/sh -c python3\ main.py
-bot: pyhon3 Tagger.py
+web: pyhon3 Tagger.py
