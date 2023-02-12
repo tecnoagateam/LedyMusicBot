@@ -17,5 +17,17 @@ services:
       - key: SESSION_NAME 
         sync: false    
       - key: PYTHON_VERSION
-        sync: false    
+        sync: false 
+      - key: SUDO_USERS
+        sync: false
+      - key: BOT_OWNER  
+        sync: false
+      - key: DURATION_LIMIT
+        sync: false
+      - key: PMPERMIT  
+        sync: false
+      - key: COMMAND_PREFIXES
+        sync: false
+      
+ 
     autoDeploy: false
