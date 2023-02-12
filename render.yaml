@@ -4,7 +4,7 @@ services:
     name: LedyMusicBot
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python3 main.py
+    startCommand: pyhon3 Tagger.py
     repo: https://github.com/tecnoagateam/LedyMusicBot.git      
     branch: main
     envVars:
