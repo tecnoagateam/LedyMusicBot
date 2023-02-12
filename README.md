@@ -27,6 +27,7 @@
 
 ------
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot&template=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot)
+  [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/tecnoagateam/LedyMusicBot)
 
   ------
 <details>
