@@ -3,7 +3,7 @@ services:
     plan: free
     name: LedyMusicBot
     env: python
-    startCommand: /bin/sh -c python3\ main.py
+    startCommand: python3 main.py
     repo: https://github.com/tecnoagateam/LedyMusicBot.git      
     branch: main
     envVars:
