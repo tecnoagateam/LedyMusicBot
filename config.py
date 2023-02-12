@@ -10,8 +10,8 @@ load_dotenv()
 que = {}
 admins = {}
 
-SESSION_NAME = getenv("SESSION_NAME", "AgAOWWIGqnaYhdAhyPxtZwdMSlsq9dbcvCE4ClbmncigNwP2_OaNenwDr0ThnmLmaTl1s6c694fzZgXDoCTUbosfc0T9CorC8l5Po8YgbqfArqiBLrPDADV3uJAGnCcXvrM6ERr5yzJaQg6xz")
-BOT_TOKEN = getenv("BOT_TOKEN", "5146456073:AAFnPscOEytDNNuq8nEvch9moHVs0mFJ368")
+SESSION_NAME = getenv("SESSION_NAME", "AgDFWMtDaomN7svrvH93ureWs-hC9lBFruqJw15lxWamW5E7mQIK7SPafp5Us9fTBZKO-Z5fx-khL-62MqarssxuaiKURM7tgammGSxOBCrdJ3aABmiwBaepIJ3oeFcUOjqvu3leAOXuL20-HcdpsCYSeOjozAxLtwWSd26GA4ftLlbS-DhwMz6i-O52wnOfPpqaaJSkGJGhdfZ9GZ8oMLUVCZ2dG4ZWQSPESWtBnV4TziNLhd-8A8W9t2sLHFYcRpH3Kf7P7lMsRLFVbDt2FN-1Ho8Kk1Ca3zZFHZHchmi3TqRAwd8rxiQYWppDZz4S8NuH4jk6Q4bmOtVZTCHRPbZPWp7lFQA")
+BOT_TOKEN = getenv("BOT_TOKEN", "5146456073:AAFfxTtTjkRoHEYjRYaz12dICfQoCibX9cY")
 BOT_NAME = getenv("BOT_NAME", "𝐋𝐄𝐃𝐘 𝐌𝐔𝐒𝐈𝐂") 
 API_ID = int(getenv("API_ID", "18052289"))
 API_HASH = getenv("API_HASH", "552525f45a3066fee54ca7852235c19c")
@@ -21,7 +21,7 @@ PMPERMIT = getenv("PMPERMIT", "ENABLE")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "9999"))
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AzeMusic/LedyMusicBot")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/tecnoagateam/LedyMusicBot")
 
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ . ! $ # 1 2 3 4 5 6 7 8 9 0 , aga ledy").split())
 
