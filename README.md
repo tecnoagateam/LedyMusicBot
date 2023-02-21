@@ -24,7 +24,7 @@
     <img src="http://ForTheBadge.com/images/badges/made-with-python.svg" width ="250">
   </a>
   <a href="https://t.me/agatecno">
-    <img src="https://github.com/CodeXBotz/PyrogramGenStr/blob/main/resources/madebycodex-badge.svg" width="250">
+    <img src="https://github.com/tecnoagateam/LedyMusicBot/blob/main/logo.svg" width="250">
   </a><br>
   <a href="https://t.me/SOQrup">
     &nbsp;<img src="https://img.shields.io/badge/TECNO%20%F0%9D%95%8F%20-Group-blue?style=flat-square&logo=telegram" width="130" height="18">&nbsp;
