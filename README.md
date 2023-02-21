@@ -19,6 +19,27 @@
      ✧═════════•❀•══════════✧
 
 ![Ledy](https://www.tamilblasters.lol/uploads/monthly_2020_02/torrborder.gif.76a54db1a11406f9ba80146699b99b74.gif)
+<p align="center">
+  <a href="https://www.python.org">
+    <img src="http://ForTheBadge.com/images/badges/made-with-python.svg" width ="250">
+  </a>
+  <a href="https://t.me/agatecno">
+    <img src="https://github.com/CodeXBotz/PyrogramGenStr/blob/main/resources/madebycodex-badge.svg" width="250">
+  </a><br>
+  <a href="https://t.me/SOQrup">
+    &nbsp;<img src="https://img.shields.io/badge/TECNO%20%F0%9D%95%8F%20-Group-blue?style=flat-square&logo=telegram" width="130" height="18">&nbsp;
+  </a>
+  <a href="https://t.me/ledyplaylist">
+    &nbsp;<img src="https://img.shields.io/badge/TECNO%20%F0%9D%95%8F%20-Chanel-blue?style=flat-square&logo=telegram" width="130" height="18">&nbsp;
+  </a>
+  <br>
+  <a href="https://github.com/CodeXBotz/File-Sharing-Bot/stargazers">
+    <img src="https://img.shields.io/github/stars/CodeXBotz/File-Sharing-Bot?style=social">
+  </a>
+  <a href="https://github.com/CodeXBotz/File-Sharing-Bot/fork">
+    <img src="https://img.shields.io/github/forks/CodeXBotz/File-Sharing-Bot?label=Fork&style=social">
+  </a>  
+</p>
 
 [![Stars](https://img.shields.io/github/stars/tecnoagateam/LedyMusicBot?style=flat-square&color=yellow)](https://github.com/tecnoagateam/LedyMusicBot/stargazers)
 [![Forks](https://img.shields.io/github/forks/tecnoagateam/LedyMusicBot?style=flat-square&color=orange)](https://github.com/tecnoagateam/LedyMusicBot/fork)
@@ -47,12 +68,6 @@
 
   <a href="https://t.me/SOQrup"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/ledyplaylist"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
  __________________
- <details>
-<summary><b>☘️ OWNER ☘️</b></summary>
-<br>
-
-[![MR AĞA](https://telegra.ph/file/d12e2aa72629dc7b5c59f.jpg)](https://t.me/Tenha055)
-
 
 <details>
 <summary><b>Credits</b></summary>
