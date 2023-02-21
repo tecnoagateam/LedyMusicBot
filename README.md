@@ -19,6 +19,15 @@
      ✧═════════•❀•══════════✧
 
 ![Ledy](https://www.tamilblasters.lol/uploads/monthly_2020_02/torrborder.gif.76a54db1a11406f9ba80146699b99b74.gif)
+
+[![Stars](https://img.shields.io/github/stars/tecnoagateam/LedyMusicBot?style=flat-square&color=yellow)](https://github.com/tecnoagateam/LedyMusicBot/stargazers)
+[![Forks](https://img.shields.io/github/forks/tecnoagateam/LedyMusicBot?style=flat-square&color=orange)](https://github.com/tecnoagateam/LedyMusicBot/fork)
+[![Size](https://img.shields.io/github/repo-size/tecnoagateam/LedyMusicBot?style=flat-square&color=green)](https://github.com/tecnoagateam/LedyMusicBot)   
+[![Open Source Love svg](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/tecnoagateam/LedyMusicBot)   
+[![Contributors](https://img.shields.io/github/contributors/tecnoagateam/LedyMusicBot?style=flat-square&color=green)](https://github.com/tecnoagateam/LedyMusicBot/graphs/contributors)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/tecnoagateam/LedyMusicBot/blob/main/LICENSE)
+[![Sparkline](https://stars.medv.io/tecnoagateam/LedyMusicBot.svg)](https://stars.medv.io/tecnoagateam/LedyMusicBot)
+
 <details>
 <summary><b>🏹 HEROKU DEPLOY 🏹</b></summary>
 <br>
@@ -27,6 +36,7 @@
 
 ------
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot&template=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot)
+  ## RENDER 
   [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/tecnoagateam/LedyMusicBot)
 
   ------
