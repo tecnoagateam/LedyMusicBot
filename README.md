@@ -25,7 +25,7 @@
 [![Size](https://img.shields.io/github/repo-size/tecnoagateam/LedyMusicBot?style=flat-square&color=green)](https://github.com/tecnoagateam/LedyMusicBot)   
 [![Open Source Love svg](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/tecnoagateam/LedyMusicBot)   
 [![Contributors](https://img.shields.io/github/contributors/tecnoagateam/LedyMusicBot?style=flat-square&color=green)](https://github.com/tecnoagateam/LedyMusicBot/graphs/contributors)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/tecnoagateam/LedyMusicBot/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/tecnoagateam/LedyMusicBot/blob/main/LEDY-LICENSE)
 [![Sparkline](https://stars.medv.io/tecnoagateam/LedyMusicBot.svg)](https://stars.medv.io/tecnoagateam/LedyMusicBot)
 
 <details>
