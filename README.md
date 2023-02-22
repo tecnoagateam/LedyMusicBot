@@ -35,22 +35,24 @@
   </a>  
 </p>
 
-<More>
+<details>
+<summary><b>💠 More 💠</b></summary>
+<br>
+
+
 <details>
 <summary><b>🏹 HEROKU DEPLOY 🏹</b></summary>
 <br>
 
-
-------
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot&template=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot)
-  ------
+
 <details>
 <summary><b>📱 TELEGRAM 📱</b></summary>
 <br>
 
 
   <a href="https://t.me/SOQrup"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/ledyplaylist"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
- __________________
+ 
 
 <details>
 <summary><b>Credits</b></summary>
