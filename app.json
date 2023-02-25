@@ -20,7 +20,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "",
-      "required": true,
+      "required": false
       "value": "https://github.com/AzeMusic/LedyMusicBot"
     },
     "BOT_TOKEN": {
