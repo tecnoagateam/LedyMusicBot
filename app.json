@@ -13,6 +13,16 @@
     "success_url": "https://t.me/SOQrup",
   "stack": "container",
   "env": {
+    "API_ID": {
+      "description": "get my.telegram.org adresinden al ətraflı @agatecno",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "get my.telegram.org adresinden al ətraflı @agatecno",
+      "required": true,
+      "value": ""
+    },
     "SESSION_NAME": {
       "description": "Session @agatecno - ya yaz.",
       "required": true,
@@ -35,13 +45,18 @@
     },
     "BOT_NAME": {
       "description": "Telegram bot adı.",
-      "required": true,
-      "value": ""
+      "required": false
+      "value": "𝐋𝐄𝐃𝐘 𝐌𝐔𝐒𝐈𝐂"
     },
     "BOT_OWNER": {
       "description": "Telegram Sənin İD-in.",
       "required": true,
-      "value": ""
+      "value": "1924693109"
+    },
+    "SUDO_USERS": {
+      "description": "Telegram Sənin İD-in.",
+      "required": true,
+      "value": "1924693109"
     }
   }
 }
