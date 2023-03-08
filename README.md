@@ -44,7 +44,7 @@
 <summary><b>🏹 HEROKU DEPLOY 🏹</b></summary>
 <br>
 
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot&template=https%3A%2F%2Fgithub.com%2Ftecnoagateam%2FLedyMusicBot)
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/tecnoagateam/LedyMusicBot"><img align="center" alt="Heroku" width="52px" src="https://www.nicepng.com/png/full/223-2233246_heroku-logo-salesforce-heroku.png"></p>
 
 <details>
 <summary><b>📱 TELEGRAM 📱</b></summary>
