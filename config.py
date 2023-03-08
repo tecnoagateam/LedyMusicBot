@@ -10,11 +10,11 @@ load_dotenv()
 que = {}
 admins = {}
 
-SESSION_NAME = getenv("SESSION_NAME", "AgDFWMtDaomN7svrvH93ureWs-hC9lBFruqJw15lxWamW5E7mQIK7SPafp5Us9fTBZKO-Z5fx-khL-62MqarssxuaiKURM7tgammGSxOBCrdJ3aABmiwBaepIJ3oeFcUOjqvu3leAOXuL20-HcdpsCYSeOjozAxLtwWSd26GA4ftLlbS-DhwMz6i-O52wnOfPpqaaJSkGJGhdfZ9GZ8oMLUVCZ2dG4ZWQSPESWtBnV4TziNLhd-8A8W9t2sLHFYcRpH3Kf7P7lMsRLFVbDt2FN-1Ho8Kk1Ca3zZFHZHchmi3TqRAwd8rxiQYWppDZz4S8NuH4jk6Q4bmOtVZTCHRPbZPWp7lFQA")
-BOT_TOKEN = getenv("BOT_TOKEN", "5146456073:AAFfxTtTjkRoHEYjRYaz12dICfQoCibX9cY")
+SESSION_NAME = getenv("SESSION_NAME")
+BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_NAME = getenv("BOT_NAME", "𝐋𝐄𝐃𝐘 𝐌𝐔𝐒𝐈𝐂") 
-API_ID = int(getenv("API_ID", "18052289"))
-API_HASH = getenv("API_HASH", "552525f45a3066fee54ca7852235c19c")
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 BOT_USERNAME = getenv("BOT_USERNAME", "SSmusicLedy_bot")
 BOT_OWNER = getenv("BOT_OWNER", "1924693109")
 PMPERMIT = getenv("PMPERMIT", "ENABLE")
