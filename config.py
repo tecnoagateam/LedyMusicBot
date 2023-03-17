@@ -42,3 +42,6 @@ SUPPORT_NAME = getenv("SUPPORT_NAME", "SOQrup")
 CHANNEL_NAME = getenv("CHANNEL_NAME", "ledyplaylist")
 
 #  ------------DahasiLedyServic--------------
+
+
+#TECNO system+cpu+ram+GB=100%
