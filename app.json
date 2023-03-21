@@ -8,7 +8,7 @@
         "super",
         "bot"
     ],
-    "repository": "https://github.com/AzeMusic/LedyMusicBot",
+    "repository": "https://github.com/tecnoagateam/LedyMusicBot",
     "website": "https://t.me/ledyplaylist",
     "success_url": "https://t.me/SOQrup",
   "stack": "container",
@@ -31,7 +31,7 @@
     "UPSTREAM_REPO": {
       "description": "Lazım Deyil",
       "required": false
-      "value": "https://github.com/AzeMusic/LedyMusicBot"
+      "value": "https://github.com/tecnoagateam/LedyMusicBot"
     },
     "BOT_TOKEN": {
       "description": "Telegram @botfateher -den al.",
