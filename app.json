@@ -41,7 +41,7 @@
     "BOT_USERNAME": {
       "description": "Telegram bot kullanıcı adı.",
       "required": true,
-      "value": ""
+      "value": "SSmusicLedy_bot"
     },
     "BOT_NAME": {
       "description": "Telegram bot adı.",
@@ -60,12 +60,12 @@
     },
     "HEROKU_APP_NAME": {
       "description": "HEROKU APP adını kopyala yapisdir.",
-      "required": true,
+      "required": false
       "value": ""
     },
     "HEROKU_API_KEY": {
       "description": "HEROKU APP Açarını kopyala yapisdir.",
-      "required": true,
+      "required": false
       "value": ""
     },
     "COMMAND_PREFIXES": {
@@ -76,7 +76,7 @@
     "DURATION_LIMIT": {
       "description": "Səslidə Səsləndirmə Surəsi özün bil.",
       "required": true,
-      "value": "99"
+      "value": "60"
     },
     "PM_PERMİT": {
       "description": "DƏYMƏ LEN",
