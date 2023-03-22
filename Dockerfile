@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.11-nodejs19
+FROM nikolaik/python-nodejs:python3.10-nodejs19
 RUN apt update && apt upgrade -y
 RUN apt install ffmpeg -y
 COPY . /app
