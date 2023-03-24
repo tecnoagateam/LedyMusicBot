@@ -2,12 +2,7 @@
   "name": "🍁 Ledy Music 🍁",
   "description": "Telegram Səsli söhbət yayın Bot'u.",
   "logo": "https://telegra.ph/file/8a00e1ac6f23335effb76.jpg",
-  "keywords": [
-        "Ledy",
-        "music",
-        "super",
-        "bot"
-    ],
+  "keywords": ["Ledy", "music", "super", "bot", "aga"],
     "repository": "https://github.com/tecnoagateam/LedyMusicBot",
     "website": "https://t.me/ledyplaylist",
     "success_url": "https://t.me/SOQrup",
