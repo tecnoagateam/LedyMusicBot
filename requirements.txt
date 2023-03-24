@@ -23,7 +23,7 @@ Pillow
 ujson
 future
 aiohttp
-heroku3
+python-dotenv
 telegraph
 lyricsgenius
 speedtest-cli
