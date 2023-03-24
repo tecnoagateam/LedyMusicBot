@@ -1,4 +1,7 @@
+
 pyrogram
+git+https://github.com/pytgcalls/pytgcalls
+git+https://github.com/nodejs/node
 telethon==1.24.0
 py-tgcalls
 TgCrypto
