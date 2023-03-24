@@ -1,4 +1,4 @@
-pyrogram==1.4.8
+pyrogram
 telethon==1.24.0
 py-tgcalls
 TgCrypto
