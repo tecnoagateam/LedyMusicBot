@@ -3,7 +3,7 @@ telethon==1.24.0
 ffmpeg-python
 py-tgcalls
 TgCrypto
-SQLAlchemy==1.4.21
+SQLAlchemy
 yt-dlp
 git+https://github.com/tecnoagateam/ledydown
 python-dotenv
