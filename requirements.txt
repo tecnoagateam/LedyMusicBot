@@ -1,5 +1,4 @@
 pyrogram
-git+https://github.com/pytgcalls/pytgcalls
 telethon==1.24.0
 ffmpeg-python
 py-tgcalls
