@@ -3,7 +3,7 @@ import asyncio
 from pyrogram import Client
 
 
-print("Enter your app information from my.telegram.org/apps below.")
+print("Aşağıdakı my.telegram.org/apps ünvanından tətbiq məlumatınızı daxil edin.)
 
 
 async def main():
