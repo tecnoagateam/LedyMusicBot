@@ -34,4 +34,5 @@ cryptg
 dnspython
 gitpython
 motor
+heroku3
 railway
