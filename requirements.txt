@@ -1,7 +1,7 @@
 pyrogram
 telethon==1.24.0
 ffmpeg-python
-py-tgcalls
+git+https://github.com/pytgcalls/pytgcalls
 TgCrypto
 SQLAlchemy==1.4.21
 yt-dlp
