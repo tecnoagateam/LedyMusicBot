@@ -1,0 +1,20 @@
+{
+  "name": "Nilay Music",
+  "description": "Telegram Voice Chat Music Player Bot Based On Callsmusic with Extrac Features!",
+  "keywords": ["music", "voicechat", "telegram"],
+  "repository": "https://github.com/tecnoagateam/LedyMusicBot",
+  "logo": "https://telegra.ph/file/7fa5bd949db5061e6f361.jpg",
+  "stack": "container",
+  "env": {
+    "HEROKU_APP_NAME": {
+      "description": "Your Heroku App Name!",
+      "required": true,
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku Api Key!",
+      "required": true,
+      "value": ""
+    }
+  }
+}
